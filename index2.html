@@ -8,24 +8,61 @@
     <title>Dinner planneeer</title>
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="index.css"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
   <body>
-  	<div class="container-fluid"><h1>Dinner Planner</h1></div>
-	<div class="container-fluid">
 
-		<div class="row">
-    <div class="col">
-      1 of 3
-    </div>
-    <div class="col-md-auto">
-      Variable width content
-    </div>
-    <div class="col col-lg-2">
-      3 of 3
-    </div>
+
+  	<div class="wrapper">
+  <header class="header">Dinner Planner</header>
+  <article class="main">
+  	<div class="form-group row">
+
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+
+    <select class="form-control" id="exampleFormControlSelect2">
+      <option>1<span id="numberOfGuests"></span></option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
   </div>
-	</div>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p> 
+    <aside class="aside aside-2">Aside 2</aside> 
+  </article>
+  <aside class="aside aside-1">
+  	My dinner
+  	<div class="form-group row">
+
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+  </aside>
+  
+  <footer class="footer">Footer</footer>
+</div>
+  	
+
+
+
+
+
 		<div id="exampleView">
 			<div>
 				Number of guests: <span id="numberOfGuests"></span>
