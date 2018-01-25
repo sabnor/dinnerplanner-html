@@ -20,21 +20,27 @@ var DinnerModel = function() {
 	//Returns the dish that is on the menu for selected type 
 	this.getSelectedDish = function(type) {
 		//TODO Lab 1
+		if (dishes['type']==type)
+		{ dishes['name'];
+		}
 	}
 
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
+		return dishes;
 		//TODO Lab 1
 	}
 
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
 		//TODO Lab 1
+		return dishes['ingredients'];
 	}
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
 		//TODO Lab 1
+		dishes.ingredients['price']*nrGuests;
 	}
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
