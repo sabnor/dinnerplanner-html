@@ -17,39 +17,43 @@
   	<div class="wrapper">
   <header class="header">Dinner Planner</header>
   <article class="main">
-  	<div class="form-group row">
-
-    <label for="exampleFormControlSelect1">Example select</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
+  	<form>
+  		<label>ADD ANOTHER ONE</label>
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Enter keywords">
+    </div>
+    <div class="col">
+      <select class="form-control" id="exampleFormControlSelect2">
+      <option selected>ALL</option>
       <option>2</option>
       <option>3</option>
       <option>4</option>
       <option>5</option>
     </select>
+    </div>
+    <div class="col">
+    <button type="button-center" class="btn btn-warning">Warning</button>
 
-    <select class="form-control" id="exampleFormControlSelect2">
-      <option>1<span id="numberOfGuests"></span></option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-    <button type="button" class="btn btn-warning">Warning</button>
+    </div>
   </div>
+
   <div class=container>
-  
     <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p> 
-    <div class="exampleView"> <span id="numberOfGuests"></span> </div>
+    <div id="exampleView"> <span id="numberOfGuests"></span> </div>
 
 </div>
+
     <aside class="aside aside-2">Aside 2</aside> 
   </article>
   <aside class="aside aside-1">
-  	My dinner
-  	<div class="form-group row">
-
-    <label for="exampleFormControlSelect1">Example select</label>
+  	<form>
+  		<label>My dinner</label>
+  	<div class="row">
+<div class="col">
+    <label for="exampleFormControlSelect1">People</label>
+</div>
+<div class="col">
     <select class="form-control" id="exampleFormControlSelect1">
       <option>1</option>
       <option>2</option>
@@ -57,7 +61,9 @@
       <option>4</option>
       <option>5</option>
     </select>
+</div>
   </div>
+</form>
 
   </aside>
   

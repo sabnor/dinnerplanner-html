@@ -36,6 +36,11 @@
   background: white;
 }
 
+.container {
+margin:20px;
+
+
+}
 @media all and (min-width: 600px) {
   .aside { flex: 1 auto; }
 }
@@ -50,4 +55,8 @@
 
 body {
   padding: 0em; 
+}
+
+.btn btn-warning {
+  
 }
