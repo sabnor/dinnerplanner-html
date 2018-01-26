@@ -38,7 +38,7 @@ img.img-thumbnail{
 
 .main {
   text-align: left;
-  background: green;
+  background: white;
 }
 .main2 {
   text-align: center;
@@ -90,3 +90,9 @@ body {
   padding: 0em; 
 }
 
+
+.solid {
+  border-style: solid;
+  background: orange;
+
+}
