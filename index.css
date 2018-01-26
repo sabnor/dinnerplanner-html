@@ -29,7 +29,7 @@ img.tumnagel{
 .centerr{
   text-align: center;
   background: lightgrey;
-  border-style: solid;
+  border: 1px solid black;
 }
 
 .pictureview{
