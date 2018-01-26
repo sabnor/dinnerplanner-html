@@ -21,19 +21,19 @@
 
 .main {
   text-align: left;
-  background: white;
+  background: green;
 }
 .main2 {
   text-align: center;
-  background: white;
+  background: lightgreen;
 }
 
 .aside-1 {
-  background: white;
+  background: yellow;
 }
 
 .aside-2 {
-  background: white;
+  background: red;
 }
 
 .container {
