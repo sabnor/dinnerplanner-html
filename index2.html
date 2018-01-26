@@ -16,10 +16,35 @@
 
   	<div class="wrapper">
   <header class="header">Dinner Planner</header>
+  <aside class="aside aside-1">
+  	<form>
+  		<label>My dinner</label>
+  	<div class="row">
+<div class="col">
+    <label for="exampleFormControlSelect1">People</label>
+</div>
+<div class="col">
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+</div>
+  </div>
+</form>
+
+<div class="row"> 
+	<div class="col">Dish name</div>
+	<div class="col">Cost</div>
+</div>
+
+  </aside>
   
   <article class="main">
   	<form>
-  		<label>ADD ANOTHER ONE</label>
+  		<label>FIND A DISH</label>
   <div class="row">
     <div class="col">
       <input type="text" class="form-control" placeholder="Enter keywords">
@@ -47,28 +72,8 @@
 
     <aside class="aside aside-2">Aside 2</aside> 
   </article>
-  <aside class="aside aside-1">
-  	<form>
-  		<label>My dinner</label>
-  	<div class="row">
-<div class="col">
-    <label for="exampleFormControlSelect1">People</label>
-</div>
-<div class="col">
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-</div>
-  </div>
-</form>
-
-  </aside>
   
-  <footer class="footer">Footer</footer>
+
 </div>
   	
 
@@ -76,15 +81,7 @@
 
 
 
-		<div id="exampleView">
-			<div>
-				Number of guests: <span id="numberOfGuests"></span>
-			</div>
-			<div>
-          <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
-				<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
-			</div>
-		</div>
+		
 	</div>
 
     <!-- jQuery -->

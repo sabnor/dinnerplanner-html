@@ -2,7 +2,7 @@
   display: flex;  
   flex-flow: row wrap;
   font-weight: bold;
-  text-align: center;
+  
 }
 
 .wrapper > * {
@@ -13,7 +13,10 @@
 .header {
   background: lightgrey;
   font-size: 45px;
+  text-align: center;
 }
+
+
 
 .footer {
   background: white;
@@ -29,7 +32,8 @@
 }
 
 .aside-1 {
-  background: yellow;
+  width:50px;
+  border-style: solid;
 }
 
 .aside-2 {
@@ -45,7 +49,7 @@ margin:20px;
   .aside { flex: 1 auto; }
 }
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 100px) {
   .main    { flex: 3 0px; }
   .aside-1 { order: 1; } 
   .main    { order: 2; }
