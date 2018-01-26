@@ -19,10 +19,13 @@
 img.img-thumbnail{ 
   object-fit: cover; /* Do not scale the image */
   object-position: center; /* Center the image within the element */
-  height:140px;
+  height:110px;
     width:140px; 
 }
 
+.widththingy{
+  width: 60px;
+}
 .centerr{
   text-align: center;
   background: lightgrey;
@@ -38,7 +41,7 @@ img.img-thumbnail{
 
 .main {
   text-align: left;
-  background: green;
+  background: white;
 }
 .main2 {
   text-align: center;
