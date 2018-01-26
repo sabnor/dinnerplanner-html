@@ -50,7 +50,7 @@ img.tumnagel{
 
 .aside-1 {
   width:50px;
-  border-style: solid;
+  border: 1px solid black;
 }
 
 .aside-2 {
@@ -92,4 +92,12 @@ margin-left: 40px;
 body {
   padding: 0em; 
 }
+
+
+.solid {
+  border: 1px solid black;
+  background: orange;
+
+}
+
 
