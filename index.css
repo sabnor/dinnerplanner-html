@@ -34,6 +34,8 @@ img.tumnagel{
 
 .pictureview{
   width: 150px;
+  margin:30px;
+  margin-top: 0px;
 }
 .footer {
   background: white;
@@ -100,4 +102,6 @@ body {
 
 }
 
-
+.nomarginleft{
+  margin-left: 0px;
+}
