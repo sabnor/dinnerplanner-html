@@ -33,7 +33,7 @@ var ExampleView = function (container, model) {
 	 * in some other view gives the same ID to another element.
 	 * 
 	 */
-	var numberOfGuests = container.find("#dinnerplan.numberOfGuests");
+	var numberOfGuests = container.find("#numberOfGuests");
 
 
 	/**
