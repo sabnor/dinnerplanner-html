@@ -1,7 +1,7 @@
 .wrapper {
   display: flex;  
   flex-flow: row wrap;
-  font-weight: bold;
+  *//font-weight: bold;
   
 }
 
@@ -23,6 +23,13 @@ img.tumnagel{
     width:140px; 
 }
 
+img.Square{ 
+  object-fit: cover; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+  height:110px;
+    width:110px; 
+}
+
 .widththingy{
   width: 60px;
 }
@@ -37,6 +44,9 @@ img.tumnagel{
   margin:30px;
   margin-top: 0px;
 }
+
+
+
 .footer {
   background: white;
 }
@@ -103,5 +113,5 @@ body {
 }
 
 .nomarginleft{
-  margin-left: 0px;
+  margin-right: 0px;
 }
