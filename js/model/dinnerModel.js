@@ -30,7 +30,7 @@ var DinnerModel = function() {
 
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
-		return dishes.name;
+		return this.menu;
 		//TODO Lab 1
 	}
 
