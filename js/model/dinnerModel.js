@@ -5,12 +5,13 @@ var DinnerModel = function() {
 	// and selected dishes for the dinner menu
 
 	var dinnerplan = new dinnerModel ();
+	dinnerplan.numberOfGuests = 3;
 	
-
-
-	this.setNumberOfGuests = function(numberOfGuests) {
+	this.setNumberOfGuests = function() {
+		
 		//TODO Lab 1
-		dinnerplan.numberOfGuests = 3;
+	
+		
 	}
 	
 	this.getNumberOfGuests = function() {
