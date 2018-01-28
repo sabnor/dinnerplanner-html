@@ -39,6 +39,11 @@ img.Square{
   border: 1px solid black;
 }
 
+.centerrr{
+  background: lightgrey;
+  border: 1px solid black;
+}
+
 .pictureview{
   width: 150px;
   margin:30px;
