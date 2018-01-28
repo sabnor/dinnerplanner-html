@@ -113,8 +113,10 @@ body {
 
 .solid {
   border: 1px solid black;
-  background: orange;
+}
 
+.orange {
+  background: orange;
 }
 
 .nomarginleft{
