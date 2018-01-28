@@ -1,7 +1,9 @@
 .wrapper {
   display: flex;  
   flex-flow: row wrap;
+  font-family:Tahoma, Geneva, sans-serif;
   *//font-weight: bold;
+  
   
 }
 .smallcontainer{

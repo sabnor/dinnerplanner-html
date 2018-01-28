@@ -54,6 +54,8 @@ var ExampleView = function (container, model) {
 	 * in our view to dynamically set it's value to "Hello World".
 	 */
 	numberOfGuests.html('dinnerplan.numberOfGuests');
+
+}
 	
 
 
