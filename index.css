@@ -4,6 +4,18 @@
   *//font-weight: bold;
   
 }
+.smallcontainer{
+  width:200px;
+  margin:20px;
+}
+
+.centerobjects {
+  position: relative;
+}
+
+.rightcorner {
+  text-align: right;
+}
 
 .wrapper > * {
   padding: 15px;
@@ -45,6 +57,11 @@ img.Square{
   margin-top: 0px;
 }
 
+.pictureview2{
+  width: 110px;
+  margin:30px;
+  margin-top: 0px;
+}
 
 
 .footer {
