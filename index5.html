@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dinner planneeer</title>
+    <title>Dinner planner</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="index.css"/>
@@ -27,43 +27,68 @@
 
 
 <div class="printout">
-	<div class="row">
-		
-			<div class="pictureview">
+	<div class="row centerobjects col">
+		<div class="smallcontainer">
+			<div class="pictureview centerr">
+
   				<a href="#">
-         			<img src="images/meatballs.jpg" alt="" class="Square mb-1">
+         			<img src="images/bakedbrie.jpg" alt="" class="tumnagel mb-1">
     			</a>
+    		<label id="FoodView"><span id="foodTitle"></span>Baked brie</label>
+
+			</div>
+    		<div class="sum">77.20</div>
+    	</div>
     		
+		<div class="smallcontainer">
+			<div class="pictureview centerr">
 
-		
-   </div>
-		<div class="col"><h2>Meatball</h2>
-    <p>
-  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
-  </p>
+  				<a href="#">
+         			<img src="images/icecream.jpg" alt="" class="tumnagel mb-1">
+    			</a>
+    		<label id="FoodView"><span id="foodTitle"></span>Baked brie</label>
 
-    </div>
+			</div>
+    		<div class="sum">77.20</div>
 
+		</div>
+		<div class="smallcontainer">
+			<div class="pictureview centerr">
 
+  				<a href="#">
+         			<img src="images/meatballs.jpg" alt="" class="tumnagel mb-1">
+    			</a>
+    		<label id="FoodView"><span id="foodTitle"></span>Baked brie</label>
 
-
-		<div class="col">PREPARATION
-			<br/><br/>
-			<div id="foodView"> <span id="dinnerPreparation"></span>
+			</div>
+    		<div class="sum">77.20</div>
+			
+		</div>
+		<div class="smallcontainer">
+			<div class ="rightcorner">
+				Total
+			<br/>
+			<div class="sum">77.20</div>
+			</div>
 		</div>
 
+	
 
+  
+  <div class="row">
+  	<div>
 
-  </aside>
-  
-  
+<button type="button" class="btn btn-warning ">Print full recipe</button>
+</div>
+</div>	
 
   <div class=container>
   	
-    <div id="exampleView"> 
-      <span id="numberOfGuests"></span> </div>
+    <div id="exampleView"> <span id="numberOfGuests"></span> </div>
 
 </div>
+
+  </aside>
 
 
 </div>
@@ -85,7 +110,6 @@
 	<script src="js/app.js"></script>
 	<script src="js/model/dinnerModel.js"></script>
 	<script src="js/view/exampleView.js"></script>
-  <script src="js/view/foodView.js"></script>
 	<!-- TODO: Here you should include JS code for your other views -->
 
 
