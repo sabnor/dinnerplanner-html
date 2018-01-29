@@ -6,7 +6,7 @@ var DinnerModel = function() {
 	var dinnerPlan = new Object();
 	
 	dinnerPlan.setNumberOfGuests() = setNumberOfGuests;
-
+	dinnerPlan.getNumberOfGuests() = setNumberOfGuests;
 	
 
 	this.setNumberOfGuests = function(num) {
