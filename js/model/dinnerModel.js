@@ -7,24 +7,11 @@ var DinnerModel = function() {
 	
 	dinnerPlan.setNumberOfGuests() = setNumberOfGuests;
 
-<<<<<<< HEAD
-	var dinnerplan = new dinnerModel ();
-	dinnerplan.numberOfGuests = 3;
-	
-	this.setNumberOfGuests = function() {
-		
-		//TODO Lab 1
-	
-		
-=======
-	
 
 	this.setNumberOfGuests = function(num) {
 		//TODO Lab 1
 		this.numberOfGuests = num;
->>>>>>> 7767327b775dbe580e2fb8414cb896968b204585
 	}
-
 
 	this.getNumberOfGuests = function() {
 		//TODO Lab 1
