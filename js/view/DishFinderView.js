@@ -34,7 +34,7 @@ var DishFinderView = function (container, model) {
 	 * 
 	 */
 	var numberOfGuests = container.find("#numberOfGuests");
-	numberOfGuests.html("<h1>"+model.getNumberOfGuests()+"</h1>");
+	numberOfGuests.html("<h1>"+model.getSelectedDish('starter')+"</h1>");
 	console.log("Wazzap");
 
 	/**
