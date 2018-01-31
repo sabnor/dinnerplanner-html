@@ -5,8 +5,7 @@ var DinnerModel = function() {
 	// and selected dishes for the dinner menu
 	var dinnerPlan = new Object();
 	
-	dinnerPlan.setNumberOfGuests() = setNumberOfGuests;
-
+	var numberOfGuests = 3;
 
 	this.setNumberOfGuests = function(num) {
 		//TODO Lab 1
@@ -15,7 +14,7 @@ var DinnerModel = function() {
 
 	this.getNumberOfGuests = function() {
 		//TODO Lab 1
-		return this.numberOfGuests;
+		return numberOfGuests;
 	}
 
 	//Returns the dish that is on the menu for selected type 
