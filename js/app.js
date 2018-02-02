@@ -2,6 +2,9 @@ $(function() {
 	//We instantiate our model
 	var model = new DinnerModel();
 
+	$("#header").load("views/headerView.html");
+
+
 	// And create the instance of ExampleView
 	var exampleView = new ExampleView($("#exampleView"),model);
 	var dishFinderView = new DishFinderView($("#dishFinderView"),model);

@@ -9,25 +9,32 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="index.css"/>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
   <body>
 
 
 <div class="wrapper">
-  <header class="header">Dinner Planner</header>
-  <aside class="aside aside-1">
-  	<form>
-  		<label>My dinner</label>
-  	<div class="row">
+  <!--Header-->
+  <div id="header"></div>
+    <header class="header">Dinner Planner</header>
+
+  <div class="row">
+
+<!--Sidebar-->
+<div class="col-xs-3" id="sidebarView">
+    <div>
+      <label>My dinner</label>
+    </div>
+    <div class="row">
       <div class="col">
         <label for="exampleFormControlSelect1">People</label>
       </div>
-      <div class="col widththingy">
+      <div class="col">
         <input class="widththingy" type="number" min=1 value="3">
       </div>
     </div>
-    </form>
+
 
  <div class="centerrr">
     <div class="row">
@@ -42,18 +49,21 @@
 <button type="button" disabled>Confirm dinner</button>
 </div>
 
+</div>
 
-  </aside>
+<!--Dishes-->
+<div class="col">
+  <section id="dishFinderView">
 
-  <div id="dishFinderView">
+  <div class="container">
+    <label>FIND A DISH</label>
 
-  <article class="main">
-  	<form>
-  		<label>FIND A DISH</label>
-  <div class="row">
+  <form>
+  <div class="form-row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="Enter keywords">
+      <input type="text" class="form-control" placeholder="Enter dishname">
     </div>
+
     <div class="col">
       <select class="form-control" id="exampleFormControlSelect2">
       <option selected>ALL</option>
@@ -63,67 +73,18 @@
       <option>Appetizer</option>
     </select>
     </div>
+
     <div class="col">
     <button type="button-center" class="btn btn-warning">Search</button>
-
     </div>
   </div>
-
-<div id="dishView" class="container">
-<span id="dishCard"></span>
-
-  <div class="row">
-    <div class="pictureview centerr">
-
-    <a href="#">
-         <img src="images/bakedbrie.jpg" alt="" class="tumnagel mb-1">
-    </a>
-    <label id="FoodView">Baked brie</label>
-
-  </div>
-
-    <div class="pictureview centerr">
-
-    <a href="#">
-         <img src="images/icecream.jpg" alt="" class="tumnagel mb-1">
-    </a>
-    <label id="FoodView">
-
-    <span id="dishSearchview"></span>
-
-    Ice cream</label>
-
-  </div>
-
-
-    <div class="pictureview centerr">
-
-    <a href="#">
-         <img src="images/meatballs.jpg" alt="" class="tumnagel mb-1">
-    </a>
-    <label id="FoodView"><span id="foodTitle"></span>Meatballs</label>
-
-  </div>
-
-  <div class="pictureview centerr">
-
-    <a href="#">
-         <img src="images/sourdough.jpg" alt="" class="tumnagel mb-1">
-    </a>
-    <label id="FoodView"><span id="foodTitle"></span>Sourdough</label>
-
-  </div>
-
-  <span id="numberOfGuests"></span>
-
-  </article>
-  </div>
-
+</form>
 </div>
 
-
-
-
+<div class ="container">
+  <div class="row" id="dishView">
+  </div>
+</div>
 
 
 
