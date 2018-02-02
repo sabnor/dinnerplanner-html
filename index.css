@@ -1,10 +1,30 @@
+
+//* Center our content on page */
+.centerPage {
+background: lightgrey;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .wrapper {
-  display: flex;  
+  display: flex;
   flex-flow: row wrap;
   font-family:Tahoma, Geneva, sans-serif;
   *//font-weight: bold;
-  
-  
+
+
 }
 .smallcontainer{
   width:200px;
@@ -32,18 +52,18 @@
   text-align: center;
 }
 
-img.tumnagel{ 
+img.tumnagel{
   object-fit: cover; /* Do not scale the image */
   object-position: center; /* Center the image within the element */
   height:110px;
-    width:140px; 
+    width:140px;
 }
 
-img.Square{ 
+img.Square{
   object-fit: cover; /* Do not scale the image */
   object-position: center; /* Center the image within the element */
   height:110px;
-    width:110px; 
+    width:110px;
 }
 
 .widththingy{
@@ -121,14 +141,14 @@ margin-left: 40px;
 
 @media all and (min-width: 100px) {
   .main    { flex: 3 0px; }
-  .aside-1 { order: 1; } 
+  .aside-1 { order: 1; }
   .main    { order: 2; }
   .aside-2 { order: 3; }
   .footer  { order: 4; }
 }
 
 body {
-  padding: 0em; 
+  padding: 0em;
 }
 
 

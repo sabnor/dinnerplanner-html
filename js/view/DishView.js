@@ -12,17 +12,21 @@ var DishView = function (container, model) {
 	 * @var {jQuery object} numberOfGuests is a reference to the <span> element that
 	 * represents the placeholder for where we want to show the number of guests.
 	 */
-	var numberOfGuests = container.find("#dishViewCard");
+var numberOfGuests = container.find("#dishViewCard");
 
 function makeDishView(dish) {
+  //Outer div
 	var divElement = document.createElement('div')
-	var divObject = $(divElement).addClass('row');
+	var divObject = $(divElement).addClass('col-xs-3');
 
+  //Card
 	var card = document.createElement('div');
 	$(card).addClass('pictureview centerr')
 			.appendTo(divObject);
 
-
+  var dishImg = document.createElement('img');
+  $(dishImg).addClass('tumnagel xs-1').attr('src','images/'+dish.image)
+			.appendTo(divObject);
 
 	<div class="row">
     <div class="pictureview centerr">
