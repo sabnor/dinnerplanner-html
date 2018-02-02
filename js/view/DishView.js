@@ -2,37 +2,10 @@
   //@param {Object} model - the reference to the Dinner Model
 
   var DishView = function (container, model) {
-    console.log("test1")
-loadDishes();
-// When changing the dish type in the dropdown
-container.find("#select-dish-type").change(function () {
-  var type = $(this).find(":selected").val();
-  loadDishes(type);
-})
+makeDishView();
 
-
-	// This function loads the dishes for a given type
-	function loadDishes() {
-    console.log("test2")
-
-		// Gather data, find the dish list div and empty it
-		var dishData = model.getAllDishes();
-    console.log(dishData)
-
-		var dishList = container.find("#dishList");
-		dishList.empty();
-
-// Create all the cards for dishes
-		dishData.forEach(function (dish) {
-console.log("test3")
-			var div = makeDishView(dish);
-      console.log(div)
-			div.appendTo(dishList);
-		});
-	}
-
-function makeDishView(dish) {
-  console.log("test4")
+function makeDishView() {
+  console.log("Enters function")
 
   //Outer div
 	var divElement = document.createElement('div')
@@ -44,17 +17,16 @@ function makeDishView(dish) {
 			.appendTo(divObject);
 
   var dishImg = document.createElement('img');
-  $(dishImg).addClass('tumnagel xs-1').attr('src','images/'+dish.image)
+  $(dishImg).addClass('tumnagel xs-1').attr('src','images/'+"bakedbrie.jpg")
 			.appendTo(box);
 
   var label = document.createElement('label');
-  $(label).text(dish.name)
+  $(label).text("Label")
   .appendTo(box)
-console.log("test5")
-
+console.log("Done")
+console.log(divObject)
     return divObject;
   }
-  console.log("test6")
 
 }
 
