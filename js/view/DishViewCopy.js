@@ -4,12 +4,6 @@
   var DishView = function (container, model) {
     console.log("test1")
 loadDishes();
-// When changing the dish type in the dropdown
-container.find("#select-dish-type").change(function () {
-  var type = $(this).find(":selected").val();
-  loadDishes(type);
-})
-
 
 	// This function loads the dishes for a given type
 	function loadDishes() {
@@ -24,7 +18,7 @@ container.find("#select-dish-type").change(function () {
 
 // Create all the cards for dishes
 		dishData.forEach(function (dish) {
-console.log("test3")
+      console.log('ForEach')
 			var div = makeDishView(dish);
       console.log(div)
 			div.appendTo(dishList);
