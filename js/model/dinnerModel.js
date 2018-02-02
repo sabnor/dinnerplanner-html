@@ -6,6 +6,9 @@ var DinnerModel = function() {
 
 var numberOfGuests = 0;
 var menu = [];
+var fullMenu = [];
+var selectedDish = {};
+var currency = "SEK";
 
 	this.setNumberOfGuests = function(num) {
 		//TODO Lab 1
@@ -20,45 +23,71 @@ var menu = [];
 	//Returns the dish that is on the menu for selected type
 	this.getSelectedDish = function(type) {
 		//TODO Lab 1
-		for(key in dishes){
-			if(dishes[key].type == type) {
-				return 'jahapp'+dishes[key].name;
-			}
-		}
+		// for(key in dishes){
+		// 	if(dishes[key].type == type) {
+		// 		return 'jahapp'+dishes[key].name;}}
+    return this.selectedDish;
 	}
 
 
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
-		return this.menu;
-		//TODO Lab 1
+		return this.fullMenu;
+		// Todo Lab 1
 	}
 
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
-		//TODO Lab 1
-		return dishes.ingredients;
+		//Todo Lab 1
+    var ingredients = [];
+    this.fullMenu.forEach(function (dish){
+      dish["ingredients"].forEach(function (ingredient) {
+        ingredients.append(ingredient);
+      })
+    })
+		console.log(ingredients);
 	}
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
-		//TODO Lab 1
-		for (var i = ingredients.length - 1; i >= 0; i++) {
-			ingedients[i]
-		}
-		dishes.ingredients['price'].price*this.numberOfGuests;
+		//Todo Lab 1
+		//for (var i = 0 - 1; i >= ingredients.length; i++) {
+		//	ingedients[i]
+		//}
+		//dishes.ingredients['price'].price*this.numberOfGuests;
+    var ingredients = this.getAllIngredients();
+    var price = 0;
+    ingredients.forEach(function (ingredient){
+      price += ingredient["price"]
+    });
+    price *= this.getNumberOfGuests();
+    return price;
 	}
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
-		//TODO Lab 1
+		//Todo Lab 1
+    var dishToAdd = this.getDish(id);
+    this.getFullMenu().forEach(function (dishInMenue) {
+      // Check if there is already a dish with the same type in the menu, if so remove it
+      if (dishInMenu["type"] === dishToAdd["type"]){
+        this.removeDishFromMenu(dishInMenu["id"]);
+      }
+      // Add the selected dish
+      this.addDishToMenu(dishToAdd["id"]);
+    })
 
 	}
 
 	//Removes dish from menu
 	this.removeDishFromMenu = function(id) {
-		//TODO Lab 1
+		 //Todo Lab 1
+     for (key in this.fullMenu) {
+       if (this.fullMenu[key].id == id) {
+         this.fullMenu.splice(key, 1);
+       }
+     }
 	}
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
@@ -91,6 +120,14 @@ var menu = [];
 			}
 		}
 	}
+
+this.setCurrency = function (newCurrency) {
+  this.currency = newCurrency.toUpperCase();
+}
+
+this.getCurrency = function(){
+  return this.currency;
+}
 
 
 	// the dishes variable contains an array of all the
