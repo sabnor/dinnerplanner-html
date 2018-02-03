@@ -8,9 +8,10 @@
 
     var outerDiv = document.createElement('div');
 
-    for (var i = 0; i < 4; i++){
-      var divObject = makeDishView(i)
-      .appendTo(outerDiv);
+    for (var i = 1; i < 4; i++){
+      var innerDiv = makeDishView(i)
+        .appendTo(outerDiv);
+
       }
 //var code2 = code.clone(1);
 
