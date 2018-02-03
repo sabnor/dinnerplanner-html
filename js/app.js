@@ -7,8 +7,9 @@ $(function() {
 
 	// And create the instance of ExampleView
 	var exampleView = new ExampleView($("#exampleView"),model);
+	var dishThumbnailView = new DishThumbnailView($("#dishThumbnailView"),model);
 	var dishFinderView = new DishFinderView($("#dishFinderView"),model);
-	var dishView = new DishView($("#dishView"),model);
+
 	/**
 	 * IMPORTANT: app.js is the only place where you are allowed to
 	 * use the $('someSelector') to search for elements in the whole HTML.
