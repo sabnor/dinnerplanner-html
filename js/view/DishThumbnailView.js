@@ -8,7 +8,12 @@
 
     var outerDiv = document.createElement('div');
 
-    for (var i = 1; i < 4; i++){
+    //for (key in model.getSelectedDish("starter")){
+      //var innerDiv = makeDishView(key['id'])
+        //.appendTo(outerDiv);
+console.log(model.getSelectedDish("starter"))
+    for (var i = 1; i < model.getSelectedDish("starter").length; i++){
+      console.log(i)
       var innerDiv = makeDishView(i)
         .appendTo(outerDiv);
 
