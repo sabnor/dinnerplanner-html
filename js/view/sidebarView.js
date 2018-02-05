@@ -2,7 +2,10 @@ var SidebarView = function (container, model) {
 
 	var numberOfGuests = container.find("#numberOfGuests");
 	numberOfGuests.html(model.getNumberOfGuests());
+  var totalSum = container.find("#totalSum");
+	totalSum.text("33");
 
+  function dishRowObjects() {
   model.getFullMenu().forEach(function(id){
     var dishObject = model.getDish(id)
 
@@ -22,9 +25,14 @@ var SidebarView = function (container, model) {
     var priceCol = $(priceElement).addClass('col').text(sum + " " +model.getCurrency())
       .appendTo(rowElement);
 
-    rowObject
-      .appendTo(container);
+    //rowObject
+      //.appendTo(container);
+      return rowElement;
   });
+}
+
+var dishRows = container.find("#dishRows");
+dishRows.html(dishRowObjects());
 
 	this.plusButton = container.find("#plusGuest");
 	this.minusButton = container.find("#minusGuest");
