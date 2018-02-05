@@ -10,6 +10,7 @@ $(function() {
 	var dishThumbnailView = new DishThumbnailView($("#dishThumbnailView"),model);
 	var dishFinderView = new DishFinderView($("#dishFinderView"),model);
 	var sidebarView = new SidebarView($("#sidebarView"),model);
+	var dishView = new DishView($("#dishView"),model);
 
 	/**
 	 * IMPORTANT: app.js is the only place where you are allowed to
