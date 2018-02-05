@@ -2,7 +2,6 @@
   //@param {Object} model - the reference to the Dinner Model
 
   var DishThumbnailView = function (container, model) {
-    console.log("Wazzap");
 
     var outerDiv = document.createElement('div');
     $(outerDiv).addClass('row');
@@ -10,7 +9,6 @@
     model.getAllDishes("dessert").forEach(function(key){
       var innerDiv = makeDishView(key['id'])
         .appendTo(outerDiv);
-      console.log("Wazzap");
     });
 
 
@@ -20,7 +18,6 @@
         //.appendTo(outerDiv);
 
 
-console.log(model.getAllDishes("starter"))
 
 
     //for (var i = 1; i < model.getAllDishes("main dish").length+1; i++){
@@ -32,7 +29,6 @@ console.log(model.getAllDishes("starter"))
 //var code2 = code.clone(1);
 
 function makeDishView(dish) {
-  console.log("Enters function")
 
   //Outer div
 	var divElement = document.createElement('div')
@@ -50,8 +46,6 @@ function makeDishView(dish) {
   var label = document.createElement('label');
   $(label).text(model.getDish(dish).name)
   .appendTo(box)
-console.log("Done")
-console.log(divObject)
     return divObject;
 
   };

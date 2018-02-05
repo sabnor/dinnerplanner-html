@@ -19,13 +19,11 @@ var SidebarView = function (container, model) {
       var price = ingredientObject['price']
       sum = sum+price
     });
-    console.log(sum)
     var priceCol = $(priceElement).addClass('col').text(sum + " " +model.getCurrency())
       .appendTo(rowElement);
 
     rowObject
       .appendTo(container);
-    console.log("Wazzap");
   });
 
 	this.plusButton = container.find("#plusGuest");
