@@ -4,20 +4,31 @@
   var DishThumbnailView = function (container, model) {
     console.log("Wazzap");
 
-
-
     var outerDiv = document.createElement('div');
+    $(outerDiv).addClass('row');
+
+    model.getAllDishes("dessert").forEach(function(key){
+      var innerDiv = makeDishView(key['id'])
+        .appendTo(outerDiv);
+      console.log("Wazzap");
+    });
+
 
     //for (key in model.getSelectedDish("starter")){
-      //var innerDiv = makeDishView(key['id'])
+      //console.log(key['id']);
+      //var innerDiv = makeDishView(1)
         //.appendTo(outerDiv);
-console.log(model.getSelectedDish("starter"))
-    for (var i = 1; i < model.getSelectedDish("starter").length; i++){
-      console.log(i)
-      var innerDiv = makeDishView(i)
-        .appendTo(outerDiv);
 
-      }
+
+console.log(model.getAllDishes("starter"))
+
+
+    //for (var i = 1; i < model.getAllDishes("main dish").length+1; i++){
+      //console.log(i)
+      //var innerDiv = makeDishView(i)
+        //.appendTo(outerDiv);
+
+    //}
 //var code2 = code.clone(1);
 
 function makeDishView(dish) {

@@ -22,7 +22,7 @@
   <div class="row">
 
 <!--Sidebar-->
-    <div class="col-xs-3">
+    <div class="col-sm-3">
         <div>
           <label>My dinner</label>
         </div>
@@ -41,6 +41,13 @@
       <div class="col">Dish name</div>
        <div class="col">Cost</div>
     </div>
+    <span id="sidebarView">
+      <div class="row">
+        <div class="col">French Toast</div>
+         <div class="col">19 SEK</div>
+      </div>
+    </span>
+
   </div>
 
 <div class="sum">SEK 0.00</div>
@@ -67,12 +74,12 @@
     </div>
 
     <div class="col">
-      <select class="form-control" id="exampleFormControlSelect2">
-      <option selected>ALL</option>
-      <option>Main course</option>
+      <select class="form-control" id="exampleFormControlSelect2" onchange="handleChange">
+      <option selected value="all">ALL</option>
+      <option value="main dish">Main course</option>
       <option>Side dish</option>
-      <option>Dessert</option>
-      <option>Appetizer</option>
+      <option value="dessert">Dessert</option>
+      <option value="starter">Appetizer</option>
     </select>
     </div>
 
@@ -88,7 +95,6 @@
 
 <div class ="container">
   <div class="row">
-    här ska det hamna
     <span id="dishThumbnail"></span>
   </div>
 </div>
@@ -116,6 +122,7 @@
   <script src="js/view/exampleView.js"></script>
   <script src="js/view/DishFinderView.js"></script>
   <script src="js/view/DishThumbnailView.js"></script>
+  <script src="js/view/sidebarView.js"></script>
 
 
 

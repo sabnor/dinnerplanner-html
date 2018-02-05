@@ -9,6 +9,7 @@ $(function() {
 	var exampleView = new ExampleView($("#exampleView"),model);
 	var dishThumbnailView = new DishThumbnailView($("#dishThumbnailView"),model);
 	var dishFinderView = new DishFinderView($("#dishFinderView"),model);
+	var sidebarView = new SidebarView($("#sidebarView"),model);
 
 	/**
 	 * IMPORTANT: app.js is the only place where you are allowed to

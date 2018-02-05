@@ -4,9 +4,9 @@ var DinnerModel = function() {
 	//Todo Lab 1 implement the data structure that will hold number of guest
 	// and selected dishes for the dinner menu
 
-var numberOfGuests = 3;
-var fullMenu = [];
-var selectedDish = [1,100];
+var numberOfGuests = 4;
+var fullMenu = [1,100];
+//var selectedDish = [1,100];
 var currency = "SEK";
 
 	this.setNumberOfGuests = function(num) {
@@ -32,12 +32,12 @@ var currency = "SEK";
 
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
-		var menu = [];
-		for (var i = 0; i < selectedDish.length; i++) {
-			var dish = this.getDish(selectedDish[i]);
-			menu.push(dish);
-		}
-		return menu;
+		// var menu = [];
+		// for (var i = 0; i < selectedDish.length; i++) {
+		// 	var dish = this.getDish(selectedDish[i]);
+		// 	menu.push(dish);
+		// }
+		return fullMenu;
 		// Todo Lab 1
 	}
 
@@ -158,11 +158,11 @@ selectedDish.push(id);
 	}
 
 this.setCurrency = function (newCurrency) {
-  this.currency = newCurrency.toUpperCase();
+  currency = newCurrency.toUpperCase();
 }
 
 this.getCurrency = function(){
-  return this.currency;
+  return currency;
 }
 
 
