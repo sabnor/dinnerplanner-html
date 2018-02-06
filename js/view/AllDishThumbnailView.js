@@ -6,7 +6,7 @@
     var outerDiv = document.createElement('div');
     $(outerDiv).addClass('row');
 
-    model.getFullMenu("dessert").forEach(function(key){
+    model.getAllDishes("dessert").forEach(function(key){
       var innerDiv = makeDishView(key['id'])
         .appendTo(outerDiv);
     });
