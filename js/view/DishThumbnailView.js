@@ -17,9 +17,6 @@
       //var innerDiv = makeDishView(1)
         //.appendTo(outerDiv);
 
-
-
-
     //for (var i = 1; i < model.getAllDishes("main dish").length+1; i++){
       //console.log(i)
       //var innerDiv = makeDishView(i)
