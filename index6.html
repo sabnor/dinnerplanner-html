@@ -14,11 +14,11 @@
   <body>
 
 
-<div class="wrapper">
+<div class="wrapper" id="printSummaryView">
   <header class="header">Dinner Planner</header>
-  	
-<div class="row"> 
-	<div class="col">My dinner: 3 people</div>
+
+<div class="row">
+	<div class="col">My dinner: <span id="numberOfGuests"></span> people</div>
 	<div class="col nomargainleft"><div class="button"><button type="button-center" class="btn btn-warning">Go back and edit dinner</button></div></div>
 </div>
 <div class="solid">
@@ -26,54 +26,51 @@
 
 
 
-<div class="printout">
+<div id="mealSummary">
 	<div class="row">
-		
-			<div class="pictureview">
-  				<a href="#">
-         			<img src="images/meatballs.jpg" alt="" class="Square mb-1">
-    			</a>
-    		
+    <div class="col">
 
-		
-   </div>
-		<div class="col"><h2>Meatball</h2>
-    <p>
-  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
-  </p>
+			<div class="pictureview">
+         			<img src="images/meatballs.jpg" alt="" class="Square mb-1">
+      </div>
+ </div>
+
+		<div class="col">
+        <h2>Meatball</h2>
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+            </p>
 
     </div>
 
+		<div class="col">
+      <h2>Preparation</h2>
 
-
-
-		<div class="col">PREPP
 			<br/><br/>
-			<div id="foodView"> <span id="dinnerPreparation"></span>
+      BESKRIVNING
 		</div>
 
 
 
   </aside>
-  
-  
+
+
 
   <div class=container>
-  	
-    <div id="exampleView"> 
-      <span id="numberOfGuests"></span> </div>
+
+    <div id="exampleView">
+       </div>
 
 </div>
 
 
 </div>
-  	
 
 
 
 
 
-		
+
+
 	</div>
 
     <!-- jQuery -->
@@ -82,12 +79,15 @@
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
 	<!-- The application JavaScript code -->
-	<script src="js/app.js"></script>
+  <script src="js/app.js"></script>
 	<script src="js/model/dinnerModel.js"></script>
-	<script src="js/view/exampleView.js"></script>
-  <script src="js/view/foodView.js"></script>
-	<!-- TODO: Here you should include JS code for your other views -->
-
+	<!-- Todo: Here you should include JS code for your other views -->
+  <script src="js/view/exampleView.js"></script>
+  <script src="js/view/DishFinderView.js"></script>
+  <script src="js/view/AllDishThumbnailView.js"></script>
+  <script src="js/view/sidebarView.js"></script>
+  <script src="js/view/dishView.js"></script>
+  <script src="js/view/PrintSummaryView.js"></script>
 
 
 

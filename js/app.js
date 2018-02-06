@@ -11,6 +11,7 @@ $(function() {
 	var dishFinderView = new DishFinderView($("#dishFinderView"),model);
 	var sidebarView = new SidebarView($("#sidebarView"),model);
 	var dishView = new DishView($("#dishView"),model);
+	var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
 
 	/**
 	 * IMPORTANT: app.js is the only place where you are allowed to
