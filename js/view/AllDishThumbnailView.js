@@ -49,7 +49,7 @@ function makeDishView(dish) {
     return divObject;
 
   };
-var allDishThumbnail = container.find("#allDishThumbnail");
+var allDishThumbnail = container.find("#allDishImg");
 allDishThumbnail.html(outerDiv);
 
 }

@@ -3,6 +3,8 @@
 
   var DishThumbnailView = function (container, model) {
 
+
+
     var outerDiv = document.createElement('div');
     $(outerDiv).addClass('row');
 
