@@ -1,7 +1,7 @@
 //@param {jQuery object} container - references the HTML parent element that contains the view.
   //@param {Object} model - the reference to the Dinner Model
 
-  var DishThumbnailView = function (container, model) {
+  var AllDishThumbnailView = function (container, model) {
 
     var outerDiv = document.createElement('div');
     $(outerDiv).addClass('row');
@@ -49,8 +49,8 @@ function makeDishView(dish) {
     return divObject;
 
   };
-var dishThumbnail = container.find("#dishThumbnail");
-dishThumbnail.html(outerDiv);
+var allDishThumbnail = container.find("#allDishThumbnail");
+allDishThumbnail.html(outerDiv);
 
 }
 

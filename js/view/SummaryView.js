@@ -17,7 +17,7 @@ var SummaryView= function (container, model) {
 
 	var numberOfGuests = container.find("#numberOfGuests");
 	numberOfGuests.html(model.getNumberOfGuests());
-	console.log("Wazzap");
+
 
 
 
