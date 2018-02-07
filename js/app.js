@@ -8,15 +8,11 @@ $(function() {
 	// And create the instance of ExampleView
 	var exampleView = new ExampleView($("#exampleView"),model);
 	var dishThumbnailView = new DishThumbnailView($("#dishThumbnailView"),model);
-	var dishFinderView = new DishFinderView($("#dishFinderView"),model);
 	var sidebarView = new SidebarView($("#sidebarView"),model);
 	var dishView = new DishView($("#dishView"),model);
-<<<<<<< HEAD
 	var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
-=======
 	var summaryView = new SummaryView($("#summaryView"),model);
 
->>>>>>> 197376e0d7316b949488b0c2679d264450a05bd3
 
 	/**
 	 * IMPORTANT: app.js is the only place where you are allowed to
