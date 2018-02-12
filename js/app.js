@@ -11,7 +11,9 @@ $(function() {
 
 	// And create the instance of ExampleView
 	var welcomeView= new WelcomeView($("#welcomeView"),model);
-	var exampleView = new ExampleView($("#exampleView"),model);
+	// var exampleView = new ExampleView($("#exampleView"),model);
+	var view = new View($("#view"),model);
+
 	var allDishThumbnailView = new AllDishThumbnailView($("#alldishThumbnailView"),model);
 	//var dishThumbnailView = new DishThumbnailView($("#dishThumbnailView"),model);
 	//var sidebarView = new SidebarView($("#sidebarView"),model);
@@ -21,8 +23,13 @@ $(function() {
 
 
 	//Controllers
-	var exampleViewController = new ExampleViewController(exampleView,model);
-	//var generalStateController = new GeneralStateController(welcomeView);
+	var generalStateController = new GeneralStateController(view, welcomeView);
+	var viewController = new ViewController(view,model,generalStateController);
+
+
+
+//	var exampleViewController = new ExampleViewController(exampleView,model);
+
 
 
 	/**
@@ -32,13 +39,6 @@ $(function() {
 	 * of the specific view you're working with (see exampleView.js).
 	 */
 
-// 	 function showDishSearchScreen() {
-// //hide welcomeView
-// $(".welcomeButton").hide();
-// 		// $("welcomeView").hide();
-// 		// $("allDishThumbnailView").show();
-// 		console.log("hej showDishSearchScreen")
-// };
 
 //Homepage
 	// welcome.show();

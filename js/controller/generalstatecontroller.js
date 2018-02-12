@@ -1,31 +1,37 @@
 //GeneralViewController Object constructor
 //hide and show pages
-var GeneralStateController = function(view, model ) {
+var GeneralStateController = function(view, welcomeView) {
 
- view.plusButton.click(function(){
- model.setNumberOfGuests(model.getNumberOfGuests() + 1);
- });
+//start
+  welcomeView.show()
+  view.hide()
 
- view.minusButton.click(function(){
- model.setNumberOfGuests(model.getNumberOfGuests() - 1);
- });
-}
+    var hideView = function() {
+    	welcomeView.hide()
+    	view.show()
 
-		// $('#welcomeView').show();
-		// $('#sidebarView').hide();
+    	// $('#welcomeView').hide();
+    	// $('#sidebarView').show();
+    	};
+      //
+    	view.welcomeButton.click(function(){
+    	hideView();
+    	});
 
-//Till startsidan-dishes
-var showDishpage = function() {
-	welcomeView.hide()
-	sidebarView.show()
-
-	// $('#welcomeView').hide();
-	// $('#sidebarView').show();
-	};
-  //
-	view.welcomeButton.click(function(){
-	showDishpage();
-	});
+//
+//
+// //Till startsidan-dishes
+// var showDishpage = function() {
+// 	welcomeView.hide()
+// 	sidebarView.show()
+//
+// 	// $('#welcomeView').hide();
+// 	// $('#sidebarView').show();
+// 	};
+//   //
+// 	view.welcomeButton.click(function(){
+// 	showDishpage();
+// 	});
 
 // 	// document.getElementById("welcomeButton").addEventListener("click", showDishpage, false);
 // welcomeView.welcomeButton.onclick = showDishpage();
