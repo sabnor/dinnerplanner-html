@@ -11,7 +11,7 @@ var currency = "SEK";
 
 	this.setNumberOfGuests = function(num) {
 		//Todo Lab 1
-		this.numberOfGuests = num;
+		numberOfGuests = num;
 	}
 
 	this.getNumberOfGuests = function() {
