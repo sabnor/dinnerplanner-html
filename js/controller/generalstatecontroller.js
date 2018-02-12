@@ -1,5 +1,5 @@
 //ExampleViewController Object constructor
-var ExampleViewController = function(view, model ) {
+var genController = function(view, model ) {
 
  view.plusButton.click(function(){
  model.setNumberOfGuests(model.getNumberOfGuests() + 1);
@@ -11,23 +11,5 @@ var ExampleViewController = function(view, model ) {
 }
 
 
-
-
-		$('#welcomeView').show();
-		$('#sidebarView').hide();
-
-
-
-//Till startsidan-dishes
-var showDishpage = function() {
-	// welcome.hide()
-	// side.show()
-	$('#welcomeView').hide();
-	$('#sidebarView').show();
-	};
-  //
-	// $("#welcomeButton").click(function(){
-	// 	showDishpage();
-	// });
-
-	document.getElementById("welcomeButton").addEventListener("click", showDishpage, false);
+//byt state funktion
+// current view
