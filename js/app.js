@@ -11,10 +11,7 @@ $(function() {
 
 	// And create the instance of ExampleView
 	var welcomeView= new WelcomeView($("#welcomeView"),model);
-<<<<<<< HEAD
-=======
 	var exampleView = new ExampleView($("#exampleView"),model);
->>>>>>> 322d1a9bb17a2d06b5aa2390a799cc2480b2f527
 	var allDishThumbnailView = new AllDishThumbnailView($("#alldishThumbnailView"),model);
 	var dishThumbnailView = new DishThumbnailView($("#dishThumbnailView"),model);
 	var sidebarView = new SidebarView($("#sidebarView"),model);
@@ -22,15 +19,12 @@ $(function() {
 	var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
 	var summaryView = new SummaryView($("#summaryView"),model);
 
-<<<<<<< HEAD
-=======
 
 	//Controllers
-	var examplecontroller = new examplecontroller(exampleView);
+	var examplecontroller = new ExampleViewController(exampleView,model);
 	var generalstatecontroller = new generalstatecontroller(welcomeView);
 
 
->>>>>>> 322d1a9bb17a2d06b5aa2390a799cc2480b2f527
 	/**
 	 * IMPORTANT: app.js is the only place where you are allowed to
 	 * use the $('someSelector') to search for elements in the whole HTML.
@@ -50,24 +44,6 @@ $(function() {
 	// welcome.show();
 	// side.hide();
 
-		$('#welcomeView').show();
-		$('#sidebarView').hide();
 
-
-
-//Till startsidan-dishes
-var showDishpage = function() {
-	welcome.hide()
-	// side.show()
-	$('#welcomeView').hide();
-	$('#sidebarView').show();
-	};
-  //
-	// $("#welcomeButton").click(function(){
-	// 	showDishpage();
-	// });
-
-	// document.getElementById("welcomeButton").addEventListener("click", showDishpage, false);
-welcomeView.welcomeButton.onclick = showDishpage();
 
 });

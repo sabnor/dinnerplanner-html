@@ -9,3 +9,25 @@ var ExampleViewController = function(view, model ) {
  model.setNumberOfGuests(model.getNumberOfGuests() - 1);
  });
 }
+
+
+
+
+		$('#welcomeView').show();
+		$('#sidebarView').hide();
+
+
+
+//Till startsidan-dishes
+var showDishpage = function() {
+	// welcome.hide()
+	// side.show()
+	$('#welcomeView').hide();
+	$('#sidebarView').show();
+	};
+  //
+	// $("#welcomeButton").click(function(){
+	// 	showDishpage();
+	// });
+
+	document.getElementById("welcomeButton").addEventListener("click", showDishpage, false);
