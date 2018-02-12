@@ -22,7 +22,7 @@ $(function() {
 
 	//Controllers
 	var exampleViewController = new ExampleViewController(exampleView,model);
-	//var generalStateController = new GeneralStateController(welcomeView);
+	var generalStateController = new GeneralStateController(welcomeView);
 
 
 	/**
