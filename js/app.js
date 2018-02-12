@@ -43,25 +43,4 @@ $(function() {
 //Homepage
 	// welcome.show();
 	// side.hide();
-
-		$('#welcomeView').show();
-		$('#sidebarView').hide();
-
-
-
-//Till startsidan-dishes
-var showDishpage = function() {
-	welcome.hide()
-	// side.show()
-	$('#welcomeView').hide();
-	$('#sidebarView').show();
-	};
-  //
-	// $("#welcomeButton").click(function(){
-	// 	showDishpage();
-	// });
-
-	// document.getElementById("welcomeButton").addEventListener("click", showDishpage, false);
-welcomeView.welcomeButton.onclick = showDishpage();
-
 });
