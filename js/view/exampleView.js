@@ -60,7 +60,7 @@ var ExampleView = function (container, model) {
 	* Updates table data
 	*/
 	this.update = function() {
-		setNumberOfGuests()
+		updateNumberOfGuests()
 	}
 
 	// Initialize the update.
@@ -69,11 +69,11 @@ var ExampleView = function (container, model) {
 	/**
 	* Update total total number of guests.
 	*/
-	function setNumberOfGuests() {
+	function updateNumberOfGuests() {
 		container.find("#numberOfGuests").html(model.getNumberOfGuests());
 	}
 
-// 
+//
 // 	var updatedGuests = model.getNumberOfGuests;
 // 	updatedGuests.observe(model.getNumberOfGuests, function(changes) {
 //   console.log(changes);

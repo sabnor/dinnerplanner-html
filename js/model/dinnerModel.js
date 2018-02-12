@@ -8,21 +8,19 @@ var numberOfGuests = 4;
 var fullMenu = [1,100];
 //var selectedDish = [1,100];
 var currency = "SEK";
-
+var observers = [];
 
 	this.setNumberOfGuests = function(num) {
-		//Todo Lab 1
 		numberOfGuests = num;
+		this.notifyObservers();
 	}
 
 	this.getNumberOfGuests = function() {
-		//Todo Lab 1
 		return numberOfGuests;
 	}
 
 	//Returns the dish that is on the menu for selected type
 	this.getSelectedDish = function(type) {
-		//Todo Lab 1
 		for(var i = 0; i< selectedDish.length; i++){
 			if(this.getDish(selectedDish[i]).type == type) {
 				return this.getDish(selectedDish[i])
