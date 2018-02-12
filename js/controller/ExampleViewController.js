@@ -9,7 +9,6 @@ var ExampleViewController = function(view, model ) {
 
  view.minusButton.click(function(){
    console.log("minus")
-
  model.setNumberOfGuests(model.getNumberOfGuests() - 1);
  });
 }
