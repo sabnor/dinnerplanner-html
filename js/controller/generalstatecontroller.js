@@ -1,5 +1,6 @@
-//ExampleViewController Object constructor
-var genController = function(view, model ) {
+//GeneralViewController Object constructor
+//hide and show pages
+var GeneralStateController = function(view, model ) {
 
  view.plusButton.click(function(){
  model.setNumberOfGuests(model.getNumberOfGuests() + 1);
@@ -10,27 +11,24 @@ var genController = function(view, model ) {
  });
 }
 
-
-
-		$('#welcomeView').show();
-		$('#sidebarView').hide();
-
-
+		// $('#welcomeView').show();
+		// $('#sidebarView').hide();
 
 //Till startsidan-dishes
 var showDishpage = function() {
-	welcome.hide()
-	// side.show()
-	$('#welcomeView').hide();
-	$('#sidebarView').show();
+	welcomeView.hide()
+	sidebarView.show()
+
+	// $('#welcomeView').hide();
+	// $('#sidebarView').show();
 	};
   //
-	// $("#welcomeButton").click(function(){
-	// 	showDishpage();
-	// });
+	$("#welcomeButton").click(function(){
+	showDishpage();
+	});
 
-	// document.getElementById("welcomeButton").addEventListener("click", showDishpage, false);
-welcomeView.welcomeButton.onclick = showDishpage();
+// 	// document.getElementById("welcomeButton").addEventListener("click", showDishpage, false);
+// welcomeView.welcomeButton.onclick = showDishpage();
 
 
 
