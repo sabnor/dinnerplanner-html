@@ -18,6 +18,8 @@ var GeneralStateController = function(view, welcomeView) {
     	hideView();
     	});
 
+}
+
 //
 //
 // //Till startsidan-dishes
