@@ -19,8 +19,6 @@ var SummaryView= function (container, model) {
 	numberOfGuests.html(model.getNumberOfGuests());
 
 
-
-
 	    var outerDiv = document.createElement('div');
 	    $(outerDiv).addClass('row');
 
