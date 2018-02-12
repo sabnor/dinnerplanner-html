@@ -53,21 +53,40 @@ var ExampleView = function (container, model) {
 	 * in our view to dynamically set it's value to "Hello World".
 	 */
 
-	 model.addObserver()
+	 // Let this view observe the model.
+	 model.addObserver(this);
 
-	var updatedGuests = model.getNumberOfGuests;
-	updatedGuests.observe(model.getNumberOfGuests, function(changes) {
-  console.log(changes);
-	});
+	 /**
+	* Updates table data
+	*/
+	this.update = function() {
+		setNumberOfGuests()
+	}
 
-	Object.observe(obj, function(changes) {
-  console.log(changes);
-});
+	// Initialize the update.
+	this.update();
 
+	/**
+	* Update total total number of guests.
+	*/
+	function setNumberOfGuests() {
+		container.find("#numberOfGuests").html(model.getNumberOfGuests());
+	}
 
-	/** numberOfGuests.html(dinnerplan.getNumberOfGuests);**/
-
-	numberOfGuests.html(model.getNumberOfGuests);
-
+// 
+// 	var updatedGuests = model.getNumberOfGuests;
+// 	updatedGuests.observe(model.getNumberOfGuests, function(changes) {
+//   console.log(changes);
+// 	});
+//
+// 	Object.observe(obj, function(changes) {
+//   console.log(changes);
+// });
+//
+//
+// 	/** numberOfGuests.html(dinnerplan.getNumberOfGuests);**/
+//
+// 	numberOfGuests.html(model.getNumberOfGuests);
+//
 
 }
