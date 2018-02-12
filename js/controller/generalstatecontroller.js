@@ -23,7 +23,7 @@ var showDishpage = function() {
 	// $('#sidebarView').show();
 	};
   //
-	$("#welcomeButton").click(function(){
+	view.welcomeButton.click(function(){
 	showDishpage();
 	});
 
