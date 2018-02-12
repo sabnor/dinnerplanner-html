@@ -53,6 +53,18 @@ var ExampleView = function (container, model) {
 	 * in our view to dynamically set it's value to "Hello World".
 	 */
 
+	 model.addObserver()
+
+	var updatedGuests = model.getNumberOfGuests;
+	updatedGuests.observe(model.getNumberOfGuests, function(changes) {
+  console.log(changes);
+	});
+
+	Object.observe(obj, function(changes) {
+  console.log(changes);
+});
+
+
 	/** numberOfGuests.html(dinnerplan.getNumberOfGuests);**/
 	numberOfGuests.html(model.getNumberOfGuests);
 

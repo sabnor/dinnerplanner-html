@@ -9,6 +9,8 @@ var fullMenu = [1,100];
 //var selectedDish = [1,100];
 var currency = "SEK";
 
+
+
 	this.setNumberOfGuests = function(num) {
 		//Todo Lab 1
 		numberOfGuests = num;
