@@ -1,5 +1,5 @@
 //ExampleViewController Object constructor
-var ExampleViewController = function(view, model ) {
+var ViewController = function(view, model, generalStateController) {
 
  view.plusButton.click(function(){
    console.log("plus")
