@@ -10,7 +10,11 @@ $(function() {
 
 
 	// And create the instance of ExampleView
+<<<<<<< HEAD
 	var welcomeView= new WelcomeView($("#welcomeView"),model);
+=======
+	var exampleView = new ExampleView($("#exampleView"),model);
+>>>>>>> 6567fec4ec9da84ebb9fed891aa429762d1ce579
 	var allDishThumbnailView = new AllDishThumbnailView($("#alldishThumbnailView"),model);
 	var dishThumbnailView = new DishThumbnailView($("#dishThumbnailView"),model);
 	var sidebarView = new SidebarView($("#sidebarView"),model);
