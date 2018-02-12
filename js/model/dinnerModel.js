@@ -10,10 +10,6 @@ var fullMenu = [1,100];
 var currency = "SEK";
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 5d600b92c6b59950f703fcd22e1db3f4a24a5a06
 	this.setNumberOfGuests = function(num) {
 		//Todo Lab 1
 		numberOfGuests = num;
