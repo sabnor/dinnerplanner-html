@@ -174,6 +174,7 @@ var notifyObservers = function(obj) {
 	for(var i =0; i < observers.length; i++){
 			observers[i].update()
 }
+}
 
 
 	// the dishes variable contains an array of all the
