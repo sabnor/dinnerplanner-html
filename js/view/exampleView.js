@@ -54,6 +54,7 @@ var ExampleView = function (container, model) {
 	 */
 
 	/** numberOfGuests.html(dinnerplan.getNumberOfGuests);**/
+
 	numberOfGuests.html(model.getNumberOfGuests);
 
 

@@ -9,6 +9,7 @@ var fullMenu = [1,100];
 //var selectedDish = [1,100];
 var currency = "SEK";
 
+
 	this.setNumberOfGuests = function(num) {
 		//Todo Lab 1
 		this.numberOfGuests = num;
@@ -110,6 +111,7 @@ return totalPrice;
 
 	}
 selectedDish.push(id);
+this.notifyObservers();
 }
 
 	//Removes dish from menu
@@ -163,6 +165,16 @@ this.setCurrency = function (newCurrency) {
 
 this.getCurrency = function(){
   return currency;
+}
+
+
+this.addObserver = function(observer) {
+observers.push(observer);
+ }
+
+var notifyObservers = function(obj) {
+	for(var i =0; i < observers.length; i++){
+			observers[i].update()
 }
 
 
