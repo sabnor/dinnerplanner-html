@@ -12,7 +12,7 @@ $(function() {
 	// And create the instance of ExampleView
 	var welcomeView= new WelcomeView($("#welcomeView"),model);
 	// var exampleView = new ExampleView($("#exampleView"),model);
-	var view = new View($("#view"),model);
+	var numberView = new NumberView($("#numberView"),model);
 
 	var allDishThumbnailView = new AllDishThumbnailView($("#alldishThumbnailView"),model);
 	//var dishThumbnailView = new DishThumbnailView($("#dishThumbnailView"),model);
@@ -23,8 +23,8 @@ $(function() {
 
 
 	//Controllers
-	var generalStateController = new GeneralStateController(view, welcomeView);
-	var viewController = new ViewController(view,model,generalStateController);
+	var generalStateController = new GeneralStateController(numberView, welcomeView);
+	var viewController = new ViewController(numberView,model,generalStateController);
 
 
 

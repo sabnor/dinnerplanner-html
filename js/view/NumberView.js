@@ -1,4 +1,4 @@
-var View = function (container, model) {
+var NumberView = function (container, model) {
 
 	var numberOfGuests = container.find("#numberOfGuests");
 

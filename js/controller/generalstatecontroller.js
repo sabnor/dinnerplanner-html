@@ -4,11 +4,11 @@ var GeneralStateController = function(view, welcomeView) {
 
 //start
 $('#welcomeView').show();
-$('#view').hide();
+$('#NumberView').hide();
 
     var hideView = function() {
       $('#welcomeView').hide();
-      $('#view').show();
+      $('#NumberView').show();
 
     	// $('#welcomeView').hide();
     	// $('#sidebarView').show();
