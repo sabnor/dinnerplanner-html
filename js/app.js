@@ -13,16 +13,16 @@ $(function() {
 	var welcomeView= new WelcomeView($("#welcomeView"),model);
 	var exampleView = new ExampleView($("#exampleView"),model);
 	var allDishThumbnailView = new AllDishThumbnailView($("#alldishThumbnailView"),model);
-	var dishThumbnailView = new DishThumbnailView($("#dishThumbnailView"),model);
-	var sidebarView = new SidebarView($("#sidebarView"),model);
-	var dishView = new DishView($("#dishView"),model);
-	var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
-	var summaryView = new SummaryView($("#summaryView"),model);
+	//var dishThumbnailView = new DishThumbnailView($("#dishThumbnailView"),model);
+	//var sidebarView = new SidebarView($("#sidebarView"),model);
+	//var dishView = new DishView($("#dishView"),model);
+	//var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
+	//var summaryView = new SummaryView($("#summaryView"),model);
 
 
 	//Controllers
-	var examplecontroller = new examplecontroller(exampleView);
-	var generalStateController = new GeneralStateController(welcomeView);
+	var exampleViewController = new ExampleViewController(exampleView,model);
+	//var generalStateController = new GeneralStateController(welcomeView);
 
 
 	/**
