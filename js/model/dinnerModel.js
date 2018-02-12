@@ -12,7 +12,7 @@ var observers = [];
 
 	this.setNumberOfGuests = function(num) {
 		numberOfGuests = num;
-		this.notifyObservers();
+		notifyObservers();
 	}
 
 	this.getNumberOfGuests = function() {
@@ -109,7 +109,7 @@ return totalPrice;
 
 	}
 selectedDish.push(id);
-this.notifyObservers();
+notifyObservers();
 }
 
 	//Removes dish from menu
