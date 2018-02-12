@@ -3,18 +3,18 @@
 var GeneralStateController = function(view, welcomeView) {
 
 //start
-  welcomeView.show()
-  view.hide()
+$('#welcomeView').show();
+$('#view').hide();
 
     var hideView = function() {
-    	welcomeView.hide()
-    	view.show()
+      $('#welcomeView').hide();
+      $('#view').show();
 
     	// $('#welcomeView').hide();
     	// $('#sidebarView').show();
     	};
       //
-    	view.welcomeButton.click(function(){
+    	welcomeView.welcomeButton.click(function(){
     	hideView();
     	});
 
