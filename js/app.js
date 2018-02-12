@@ -10,18 +10,13 @@ $(function() {
 
 
 	// And create the instance of ExampleView
-<<<<<<< HEAD
 	var welcomeView= new WelcomeView($("#welcomeView"),model);
-=======
-	var exampleView = new ExampleView($("#exampleView"),model);
->>>>>>> 6567fec4ec9da84ebb9fed891aa429762d1ce579
 	var allDishThumbnailView = new AllDishThumbnailView($("#alldishThumbnailView"),model);
 	var dishThumbnailView = new DishThumbnailView($("#dishThumbnailView"),model);
 	var sidebarView = new SidebarView($("#sidebarView"),model);
 	var dishView = new DishView($("#dishView"),model);
 	var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
 	var summaryView = new SummaryView($("#summaryView"),model);
-
 
 	/**
 	 * IMPORTANT: app.js is the only place where you are allowed to
@@ -41,15 +36,15 @@ $(function() {
 //Homepage
 	// welcome.show();
 	// side.hide();
-
-		$('#welcomeView').show();
-		$('#sidebarView').hide();
+    //
+		// $('#welcomeView').show();
+		// $('#sidebarView').hide();
 
 
 
 //Till startsidan-dishes
 var showDishpage = function() {
-	// welcome.hide()
+	welcomeView.hide()
 	// side.show()
 	$('#welcomeView').hide();
 	$('#sidebarView').show();
@@ -59,7 +54,7 @@ var showDishpage = function() {
 	// 	showDishpage();
 	// });
 
-	document.getElementById("welcomeButton").addEventListener("click", showDishpage, false);
-
+	// document.getElementById("welcomeButton").addEventListener("click", showDishpage, false);
+welcomeView.welcomeButton.onclick = showDishpage();
 
 });
