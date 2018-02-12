@@ -36,15 +36,15 @@ $(function() {
 //Homepage
 	// welcome.show();
 	// side.hide();
-    //
-		// $('#welcomeView').show();
-		// $('#sidebarView').hide();
+
+		$('#welcomeView').show();
+		$('#sidebarView').hide();
 
 
 
 //Till startsidan-dishes
 var showDishpage = function() {
-	welcomeView.hide()
+	welcome.hide()
 	// side.show()
 	$('#welcomeView').hide();
 	$('#sidebarView').show();
