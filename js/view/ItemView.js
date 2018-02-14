@@ -5,9 +5,13 @@ var ItemView = function (container, model, dish) {
 	var divObject = $(divElement).addClass('col-xs-3');
 
   //Card
+	var link = document.createElement('a');
+	$(link).attr('href','#')
+	.appendTo(divObject);
+
 	var box = document.createElement('div');
 	$(box).addClass('pictureview centerr')
-			.appendTo(divObject);
+			.appendTo(link);
 
   var dishImg = document.createElement('img');
   $(dishImg).addClass('tumnagel xs-1').attr('src','images/'+model.getDish(dish).image)
