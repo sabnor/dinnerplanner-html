@@ -8,7 +8,7 @@
 
 
     //--------------------------------------------------------------------
-    //Creating the dish-information
+    //Creating the dish-informations
     var labelElement = document.createElement('label')
     var labelObject = $(labelElement).text(dishObject.name);
 
@@ -29,10 +29,9 @@
     var numberOfGuests = container.find("#numberOfGuests");
     numberOfGuests.html(model.getNumberOfGuests());
 
+
 //--------------------------------------------------------------------
 //Creating the ingredient-rows
-
-
 var outerDiv = document.createElement('div')
 
 dishObject.ingredients.forEach(function(ingredientObject){
