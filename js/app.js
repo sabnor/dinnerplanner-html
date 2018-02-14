@@ -11,6 +11,8 @@ $(function() {
 
 	// And create the instance of ExampleView
 	var welcomeView= new WelcomeView($("#welcomeView"),model);
+	var searchView = new SidebarView($("#searchView"),model);
+
 	// var exampleView = new ExampleView($("#exampleView"),model);
 	//var numberView = new NumberView($("#numberView"),model);
 
