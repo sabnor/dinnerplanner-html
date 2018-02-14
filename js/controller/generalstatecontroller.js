@@ -12,7 +12,7 @@ $('#itemView').hide();
       $('#welcomeView').hide();
       $('#sidebarView').show();
       $('#searchView').show();
-
+      $('#itemView').show();
 
     	// $('#welcomeView').hide();
     	// $('#sidebarView').show();
