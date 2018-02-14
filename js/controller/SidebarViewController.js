@@ -1,5 +1,5 @@
 //SidebarViewController Object constructor
-var SiderbarViewController = function(view, model, generalStateController) {
+var SiderbarViewController = function(view, model) {
 
  view.plusButton.click(function(){
    console.log("plus")
