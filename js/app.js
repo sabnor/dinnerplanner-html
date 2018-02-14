@@ -11,11 +11,7 @@ $(function() {
 
 	var sidebarView = new SidebarView($("#sidebarView"),model);
 	var searchView = new SearchView($("#searchView"),model);
-<<<<<<< HEAD
-=======
 	var detailsView = new DetailsView($("#detailsView"),model);
-
->>>>>>> 954ff4745b3290d65e3713d1c1745e3a23093961
 	//var itemView = new ItemView($("#itemView"),model);
 
 	//var dishThumbnailView = new DishThumbnailView($("#dishThumbnailView"),model);
