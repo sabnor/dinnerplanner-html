@@ -6,7 +6,7 @@ var SearchView = function (container, model) {
 	    var outerDiv = document.createElement('div');
 	    $(outerDiv).addClass('row');
 
-	    model.getAllDishes("dessert").forEach(function(key){
+	    model.getAllDishes("starter").forEach(function(key){
 	      var innerDiv = ItemView(container,model,key['id'])
 	        .appendTo(outerDiv);
 	    });
