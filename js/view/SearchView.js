@@ -1,6 +1,8 @@
 
 var SearchView = function (container, model) {
 
+	this.openImg = container.find("#openImg");
+
 
 //loopar igenom alla dishes för bild och namn
 	    var outerDiv = document.createElement('div');
