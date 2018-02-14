@@ -1,6 +1,6 @@
 //GeneralViewController Object constructor
 //hide and show pages
-var GeneralStateController = function(sidebarView, welcomeView, searchView, itemView) {
+var GeneralStateController = function(sidebarView, welcomeView, searchView, itemView, detailsView) {
 
 //start
 $('#welcomeView').show();
@@ -32,9 +32,11 @@ $('#detailsView').hide();
     $('#searchView').hide();
 
     };
-    //
+
+
     searchView.openImg.on("click", ".pictureview", function(event){
       console.log(this.id) // will always be the element with .pictureview that was clicked
+
       ShowDetailsSidebarView();
     });
 

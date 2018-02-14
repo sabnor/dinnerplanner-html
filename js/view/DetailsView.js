@@ -1,6 +1,6 @@
 
 
-  var DetailsView = function (container, model) {
+  var DetailsView = function (container, model, id) {
 
     var dishObject = model.getDish(100)
 
