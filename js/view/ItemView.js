@@ -16,7 +16,7 @@ var ItemView = function (container, model, dish) {
 
 
   var dishImg = document.createElement('img');
-  $(dishImg).addClass('tumnagel xs-1').attr('id','openImg').attr('src','images/'+model.getDish(dish).image)
+  $(dishImg).addClass('tumnagel xs-1').attr('id',dish).attr('src','images/'+model.getDish(dish).image)
 			.appendTo(box);
 
   var label = document.createElement('label');

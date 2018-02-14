@@ -1,8 +1,6 @@
 
 
   var DetailsView = function (container, model) {
-    console.log("Wazzap");
-
 
     var dishObject = model.getDish(100)
 
@@ -54,7 +52,6 @@ dishObject.ingredients.forEach(function(ingredientObject){
 
     $(rowElement).appendTo(outerDiv)
 });
-console.log(outerDiv)
 
 var ingredientrows = container.find("#ingredientrows");
 ingredientrows.html(outerDiv);
