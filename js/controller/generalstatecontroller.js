@@ -6,7 +6,7 @@ var GeneralStateController = function(view, welcomeView) {
 $('#welcomeView').show();
 $('#NumberView').hide();
 
-    var hideView = function() {
+    var hideWelcomeView = function() {
       $('#welcomeView').hide();
       $('#NumberView').show();
 
@@ -15,7 +15,7 @@ $('#NumberView').hide();
     	};
       //
     	welcomeView.welcomeButton.click(function(){
-    	hideView();
+    	hideWelcomeView();
     	});
 
 }
