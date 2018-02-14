@@ -47,7 +47,7 @@ dishObject.ingredients.forEach(function(ingredientObject){
     .appendTo(rowElement);
 
     var ingredientPriceElement = document.createElement('div');
-    $(ingredientPriceElement).addClass('col').text(ingredientObject['price']+model.getCurrency())
+    $(ingredientPriceElement).addClass('col').text(ingredientObject['price']+' '+model.getCurrency())
     .appendTo(rowElement);
 
     $(rowElement).appendTo(outerDiv)
