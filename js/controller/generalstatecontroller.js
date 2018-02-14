@@ -8,18 +8,18 @@ $('#sidebarView').hide();
 $('#searchView').hide();
 $('#itemView').hide();
 
-    var hideWelcomeView = function() {
+    var ShowSearchSidebarView = function() {
       $('#welcomeView').hide();
       $('#sidebarView').show();
       $('#searchView').show();
-      $('#itemView').show();
+
 
     	// $('#welcomeView').hide();
     	// $('#sidebarView').show();
     	};
       //
     	welcomeView.welcomeButton.click(function(){
-    	hideWelcomeView();
+    	ShowSearchSidebarView();
     	});
 
 }
