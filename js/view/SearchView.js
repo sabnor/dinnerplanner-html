@@ -1,5 +1,5 @@
 
-var searchView = function (container, model) {
+var SearchView = function (container, model) {
 
 
 //loopar igenom alla dishes för bild och namn
@@ -7,11 +7,11 @@ var searchView = function (container, model) {
 	    $(outerDiv).addClass('row');
 
 	    model.getAllDishes("dessert").forEach(function(key){
-	      var innerDiv = makeDishView(key['id'])
+	      var innerDiv = SearchView(key['id'])
 	        .appendTo(outerDiv);
 	    });
 
-			
+
 			var allDishImg = container.find("#allDishImg");
 			allDishImg.html(outerDiv);
 }
