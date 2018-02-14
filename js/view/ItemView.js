@@ -6,7 +6,7 @@ var ItemView = function (container, model, dish) {
 
   //Card
 	var link = document.createElement('a');
-	$(link).attr('href','#')
+	$(link).attr('href','#').attr('id','openImg')
 	.appendTo(divObject);
 
 	var box = document.createElement('div');
