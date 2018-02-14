@@ -18,7 +18,4 @@ var ItemView = function (container, model) {
   .appendTo(box)
     return divObject;
 
-  };
-
-
 }
