@@ -1,6 +1,6 @@
 
 
-  var DishView = function (container, model) {
+  var DetailsView = function (container, model) {
     console.log("Wazzap");
 
 
