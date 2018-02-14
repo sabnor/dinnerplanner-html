@@ -23,8 +23,8 @@ $(function() {
 
 
 	//Controllers
-	var generalStateController = new GeneralStateController(numberView, welcomeView);
-	var viewController = new ViewController(numberView,model);
+	var generalStateController = new GeneralStateController(sidebarView, welcomeView);
+	var viewController = new ViewController(sidebarView,model);
 
 
 
