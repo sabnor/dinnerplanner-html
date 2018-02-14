@@ -1,4 +1,4 @@
-var ItemView = function (container, model) {
+var ItemView = function (container, model, dish) {
 
   //Outer div
 	var divElement = document.createElement('div')
