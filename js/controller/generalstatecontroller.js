@@ -33,7 +33,8 @@ $('#detailsView').hide();
 
     };
     //
-    searchView.openImg.click(function(event){
+    searchView.openImg.on("click", ".pictureview", function(event){
+      console.log(this.id) // will always be the element with .pictureview that was clicked
       ShowDetailsSidebarView();
     });
 

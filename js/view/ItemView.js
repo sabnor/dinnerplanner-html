@@ -11,12 +11,12 @@ var ItemView = function (container, model, dish) {
 	//.appendTo(divObject);
 
 	var box = document.createElement('div');
-	$(box).addClass('pictureview centerr')
+	$(box).addClass('pictureview centerr').attr('id',dish)
 		.appendTo(divObject);
 
 
   var dishImg = document.createElement('img');
-  $(dishImg).addClass('tumnagel xs-1').attr('id',dish).attr('src','images/'+model.getDish(dish).image)
+  $(dishImg).addClass('tumnagel xs-1').attr('src','images/'+model.getDish(dish).image)
 			.appendTo(box);
 
   var label = document.createElement('label');

@@ -1,4 +1,4 @@
-var SomeController = function(view, model){
+var SidebarzViewController = function(view, model){
   console.log("hello world");
   view.plusButton.click(function(){
     console.log("plus");

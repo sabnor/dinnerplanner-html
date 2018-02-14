@@ -13,8 +13,6 @@ $(function() {
 	var searchView = new SearchView($("#searchView"),model);
 	var detailsView = new DetailsView($("#detailsView"),model);
 
-	//var itemView = new ItemView($("#itemView"),model);
-
 	//var dishThumbnailView = new DishThumbnailView($("#dishThumbnailView"),model);
 
 	//var dishView = new DishView($("#dishView"),model);
@@ -26,7 +24,7 @@ $(function() {
 	var generalStateController = new GeneralStateController(sidebarView, welcomeView, searchView);
 	//var sidebarViewController = new SidebarViewController(sidebarView,model);
 
-	var someController = new SomeController(sidebarView, model);
+	var sidebarzViewController = new SidebarzViewController(sidebarView, model);
 
 
 //	var exampleViewController = new ExampleViewController(exampleView,model);
