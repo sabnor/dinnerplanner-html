@@ -33,7 +33,7 @@ $('#detailsView').hide();
 
     };
     //
-    detailsView.welcomeButton.click(function(){
+    detailsView.openImg.click(function(){
       ShowDetailsSidebarView();
     });
 
