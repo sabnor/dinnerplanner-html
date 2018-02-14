@@ -12,11 +12,11 @@ $(function() {
 	// And create the instance of ExampleView
 	var welcomeView= new WelcomeView($("#welcomeView"),model);
 	// var exampleView = new ExampleView($("#exampleView"),model);
-	var numberView = new NumberView($("#numberView"),model);
+	//var numberView = new NumberView($("#numberView"),model);
 
 	var allDishThumbnailView = new AllDishThumbnailView($("#alldishThumbnailView"),model);
 	//var dishThumbnailView = new DishThumbnailView($("#dishThumbnailView"),model);
-	//var sidebarView = new SidebarView($("#sidebarView"),model);
+	var sidebarView = new SidebarView($("#sidebarView"),model);
 	//var dishView = new DishView($("#dishView"),model);
 	//var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
 	//var summaryView = new SummaryView($("#summaryView"),model);
