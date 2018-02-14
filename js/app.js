@@ -40,7 +40,4 @@ $(function() {
 	 */
 
 
-//Homepage
-	// welcome.show();
-	// side.hide();
 });
