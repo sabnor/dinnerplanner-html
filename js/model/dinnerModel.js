@@ -31,26 +31,12 @@ var observers = [];
 
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
-		// var menu = [];
-		// for (var i = 0; i < selectedDish.length; i++) {
-		// 	var dish = this.getDish(selectedDish[i]);
-		// 	menu.push(dish);
-		// }
 		return fullMenu;
 		// Todo Lab 1
 	}
 
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
-		//Todo Lab 1
-    // var ingredients = [];
-    // this.fullMenu.forEach(function (dish){
-    //   dish["ingredients"].forEach(function (ingredient) {
-    //     ingredients.append(ingredient);
-    //   })
-    // })
-		// console.log(ingredients);
-
 		var menu = this.getFullMenu()
 		var ingedients = []
 		for (var i = 0; i < menu.length; i++) {
@@ -61,18 +47,6 @@ var observers = [];
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
-		//Todo Lab 1
-		//for (var i = 0 - 1; i >= ingredients.length; i++) {
-		//	ingedients[i]
-		//}
-		//dishes.ingredients['price'].price*this.numberOfGuests;
-    // var ingredients = this.getAllIngredients();
-    // var price = 0;
-    // ingredients.forEach(function (ingredient){
-    //   price += ingredient["price"]
-    // });
-    // price *= this.getNumberOfGuests();
-    // return price;
 		var totalPrice = [];
 		var allIngredients = this.getAllIngredients();
 		for (var i = 0; i < allIngredients.length; i++){
@@ -89,17 +63,6 @@ return totalPrice;
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
-		//Todo Lab 1
-    // var dishToAdd = this.getDish(id);
-    // this.getFullMenu().forEach(function (dishInMenue) {
-    //   // Check if there is already a dish with the same type in the menu, if so remove it
-    //   if (dishInMenu["type"] === dishToAdd["type"]){
-    //     this.removeDishFromMenu(dishInMenu["id"]);
-    //   }
-    //   // Add the selected dish
-    //   this.addDishToMenu(dishToAdd["id"]);
-    // })
-
 		var type = this.getDish(id).type;
 
 		for (var i = 0; i < selectedDish.length; i++) {
@@ -114,11 +77,6 @@ notifyObservers();
 
 	//Removes dish from menu
 	this.removeDishFromMenu = function(id) {
-		 //Todo Lab 1
-     // for (key in this.fullMenu) {
-     //   if (this.fullMenu[key].id == id) {
-     //     this.fullMenu.splice(key, 1);
-
 		 for (var i = 0; i < selectedDish.length; i++){
 			 if (selectedDish[i] == id){
 				 selectedDish.splice(i,1)
