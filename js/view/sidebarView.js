@@ -1,7 +1,6 @@
 var SidebarView = function (container, model) {
 
 
-
   var outerDiv = document.createElement('div');
 
   var totalSum = 0

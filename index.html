@@ -62,7 +62,47 @@ class="heading-light header fluid">Dinner planner</div>
 
   </div>
 
-  <!--
+  <!--FIND A DISH VIEW-->
+<div class="col">
+
+
+    <div class="container">
+      <label>FIND A DISH</label>
+
+    <form>
+    <div class="form-row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Enter dishname">
+      </div>
+
+      <div class="col">
+        <select class="form-control" id="exampleFormControlSelect2" onchange="handleChange">
+        <option selected value="all">ALL</option>
+        <option value="main dish">Main course</option>
+        <option>Side dish</option>
+        <option value="dessert">Dessert</option>
+        <option value="starter">Appetizer</option>
+      </select>
+      </div>
+
+
+      <div class="col">
+      <button type="button-center" class="btn btn-warning">Search</button>
+      </div>
+
+      </div>
+    </form>
+  </div>
+
+<div id="alldishThumbnailView">
+  <div class ="container">
+    <div class="row">
+      <span id="allDishImg"></span>
+    </div>
+  </div>
+
+</div>
+</div>
 
 
 
