@@ -13,24 +13,57 @@
 </head>
   <body>
 
-<!--Header-->
+<!--HEADER-->
 <div
 class="heading-light header fluid">Dinner planner</div>
 
-<!--Content-->
 
+<!--WELCOMEVIEW-->
     <div class="container">
-      <div id="welcomeView" class="justify-content-center">
+      <div id="welcomeView" class="text-center">
           <span id="textElement"></span>
           <button id="welcomeButton" type="button" class="btn btn-warning ">Create new dinner</button>
       </div>
     </div>
 
-    <div id="numberView">
-    <button id="plusGuest" type="button" class="btn btn-warning ">+</button>
-    <button id="minusGuest" type="button" class="btn btn-warning ">-</button>
-    <span id="numberOfGuests"></span>
+
+<!--INDEX2-->
+
+  <!--SIDEBARVIEW-->
+  <div class="col-sm-3" id="sidebarView">
+      <div>
+        <label>My dinner</label>
+      </div>
+      <div class="row">
+          <div class="col">
+            <label for="exampleFormControlSelect1">People:</label>
+          <span id="numberOfGuests"></span>
+          <button id="plusGuest" type="button" class="btn btn-warning ">+</button>
+          <button id="minusGuest" type="button" class="btn btn-warning ">-</button>
+        </div>
   </div>
+
+
+  <div class="centerrr">
+  <div class="row">
+    <div class="col">Dish name</div>
+     <div class="col">Cost</div>
+  </div>
+  </div>
+  <span id="dishRows"></span>
+
+
+
+  <div class="sum" id="printSum"></div>
+
+  <div class="confirm">
+  <button type="button" disabled>Confirm dinner</button>
+  </div>
+
+  </div>
+
+  <!--
+
 
 
     <!-- jQuery -->

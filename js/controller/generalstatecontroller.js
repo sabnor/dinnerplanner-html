@@ -4,7 +4,7 @@ var GeneralStateController = function(sidebarView, welcomeView) {
 
 //start
 $('#welcomeView').show();
-//$('#sidebarView').hide();
+$('#sidebarView').hide();
 
     var hideWelcomeView = function() {
       $('#welcomeView').hide();
