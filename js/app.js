@@ -24,7 +24,7 @@ $(function() {
 
 	//Controllers
 	var generalStateController = new GeneralStateController(numberView, welcomeView);
-	var viewController = new ViewController(numberView,model,generalStateController);
+	var viewController = new ViewController(numberView,model);
 
 
 
