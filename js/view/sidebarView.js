@@ -1,7 +1,5 @@
 var SidebarView = function (container, model) {
 
-	var numberOfGuests = container.find("#numberOfGuests");
-	numberOfGuests.html(model.getNumberOfGuests());
 
 
   var outerDiv = document.createElement('div');
@@ -39,6 +37,34 @@ dishRows.html(outerDiv);
 var printSum = container.find("#printSum");
 printSum.text(totalSum*model.getNumberOfGuests()+ " " +model.getCurrency());
 
-	this.plusButton = container.find("#plusGuest");
-	this.minusButton = container.find("#minusGuest");
+
+
+var numberOfGuests = container.find("#numberOfGuests");
+
+this.plusButton = container.find("#plusGuest");
+this.minusButton = container.find("#minusGuest");
+
+// Let this view observe the model.
+ model.addObserver(this);
+
+ /**
+* Updates table data
+*/
+this.update = function() {
+	updateNumberOfGuests()
+}
+
+// Initialize the update.
+this.update();
+
+/**
+* Update total total number of guests.
+*/
+function updateNumberOfGuests() {
+	container.find("#numberOfGuests").html(model.getNumberOfGuests());
+}
+
+
+
+
 }

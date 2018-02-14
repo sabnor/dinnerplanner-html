@@ -1,8 +1,4 @@
-//ExampleViewController Object constructor
-<<<<<<< HEAD
-
-=======
->>>>>>> 3a3dd8fb662e4b75391750d617dbb428255f9465
+//ViewController Object constructor
 var ViewController = function(view, model, generalStateController) {
 
  view.plusButton.click(function(){

@@ -29,10 +29,10 @@
         <div class="row">
             <div class="col">
               <label for="exampleFormControlSelect1">People</label>
-            </div>
-            <div class="col">
-              <input class="widththingy" type="number" min=1 value="3">
-            </div>
+            <button id="plusGuest" type="button" class="btn btn-warning ">+</button>
+            <button id="minusGuest" type="button" class="btn btn-warning ">-</button>
+            <span id="numberOfGuests"></span>
+          </div>
     </div>
 
 
@@ -115,13 +115,17 @@
 	<script src="js/app.js"></script>
 	<script src="js/model/dinnerModel.js"></script>
 	<!-- Todo: Here you should include JS code for your other views -->
-  <script src="js/view/exampleView.js"></script>
+  <!-- <script src="js/view/exampleView.js"></script> -->
   <script src="js/view/AllDishThumbnailView.js"></script>
   <script src="js/view/DishThumbnailView.js"></script>
+  <script src="js/view/WelcomeView.js"></script>
   <script src="js/view/sidebarView.js"></script>
-  <script src="js/view/dishView.js"></script>
-  <script src="js/view/PrintSummaryView.js"></script>
-  <script src="js/view/SummaryView.js"></script>
+  <!-- <script src="js/view/dishView.js"></script> -->
+  <!-- <script src="js/view/PrintSummaryView.js"></script>
+  <script src="js/view/SummaryView.js"></script> -->
+  <script src="js/controller/GeneralStateController.js"></script>
+  <script src="js/controller/ViewController.js"></script>
+
 
 
 
