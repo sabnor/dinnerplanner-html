@@ -4,44 +4,40 @@ var GeneralStateController = function(sidebarView, welcomeView, searchView, item
 
 //start
 $('#welcomeView').show();
+
 $('#sidebarView').hide();
 $('#searchView').hide();
-$('#itemView').hide();
+$('#detailsView').hide();
 
-    var ShowSearchSidebarView = function() {
-      $('#welcomeView').hide();
-      $('#sidebarView').show();
-      $('#searchView').show();
-      $('#itemView').show();
+//index2
+  var ShowSearchSidebarView = function() {
+    $('#sidebarView').show();
+    $('#searchView').show();
 
-    	// $('#welcomeView').hide();
-    	// $('#sidebarView').show();
-    	};
-      //
-    	welcomeView.welcomeButton.click(function(){
-    	ShowSearchSidebarView();
-    	});
+    $('#welcomeView').hide();
+    $('#detailsView').hide();
+
+  	};
+  	welcomeView.welcomeButton.click(function(){
+  	ShowSearchSidebarView();
+  	});
+
+
+//index3
+  var ShowDetailsSidebarView = function() {
+    $('#sidebarView').show();
+    $('#detailsView').show();
+
+    $('#welcomeView').hide();
+    $('#searchView').hide();
+
+    };
+    //
+    detailsView.welcomeButton.click(function(){
+      ShowDetailsSidebarView();
+    });
 
 }
-
-//
-//
-// //Till startsidan-dishes
-// var showDishpage = function() {
-// 	welcomeView.hide()
-// 	sidebarView.show()
-//
-// 	// $('#welcomeView').hide();
-// 	// $('#sidebarView').show();
-// 	};
-//   //
-// 	view.welcomeButton.click(function(){
-// 	showDishpage();
-// 	});
-
-// 	// document.getElementById("welcomeButton").addEventListener("click", showDishpage, false);
-// welcomeView.welcomeButton.onclick = showDishpage();
-
 
 
 //byt state funktion
