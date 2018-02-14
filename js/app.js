@@ -12,6 +12,7 @@ $(function() {
 	var sidebarView = new SidebarView($("#sidebarView"),model);
 	var searchView = new SearchView($("#searchView"),model);
 	var detailsView = new DetailsView($("#detailsView"),model);
+	
 	//var itemView = new ItemView($("#itemView"),model);
 
 	//var dishThumbnailView = new DishThumbnailView($("#dishThumbnailView"),model);
