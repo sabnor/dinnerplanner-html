@@ -57,6 +57,7 @@ function updateIngredients() {
 //--------------------------------------------------------------------
 //Creating the ingredient-rows
 var outerDiv = document.createElement('div')
+$(outerDiv).addClass('text-center');
 
 dishObject.ingredients.forEach(function(ingredientObject){
     var price = ingredientObject['price']
