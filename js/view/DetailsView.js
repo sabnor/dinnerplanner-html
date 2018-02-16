@@ -33,14 +33,14 @@ function updateIngredients() {
 
     //--------------------------------------------------------------------
     //Creating the dish-informations
-    var labelElement = document.createElement('label')
-    var labelObject = $(labelElement).text(dishObject.name);
-
+    var labelElement = document.createElement('div')
+    //var labelObject = $(labelElement).addClass('smallTitle').text(dishObject.name);
+    container.find("#dishTitle").html(dishObject.name);
     var divElement = document.createElement('div');
     $(divElement).appendTo(labelElement);
 
     var dishImg = document.createElement('img');
-    $(dishImg).addClass('img-thumbnail mb-1').attr('src','images/'+dishObject.image)
+    $(dishImg).addClass('imgDetailsView mb-1').attr('src','images/'+dishObject.image)
   			.appendTo(divElement);
 
     var descriptionElement = document.createElement('p');

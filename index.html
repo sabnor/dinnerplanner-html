@@ -20,11 +20,12 @@
 
 
 <!--WELCOMEVIEW-->
-    <div class="container centerObjects">
+    <div class="container-xs centerObjects">
       <div id="welcomeView" class="text-center">
           <span id="textElement"></span>
           <button id="welcomeButton" type="button" class="btn btn-warning ">Create new dinner</button>
       </div>
+
     </div>
 
 
@@ -33,14 +34,14 @@
 
   <!--SIDEBARVIEW-->
   <div class="row">
-  <div class="col-sm-3" id="sidebarView">
+  <div class="regularContainer col-sm-3" id="sidebarView">
       <div class="smallTitle">My dinner</div>
       <div class="row">
           <div class="col">
             <label for="exampleFormControlSelect1">People:</label>
           <span id="numberOfGuests"></span>
-          <button id="plusGuest" type="button" class="btn btn-warning ">+</button>
-          <button id="minusGuest" type="button" class="btn btn-warning ">-</button>
+          <button id="plusGuest" type="button" class="btn-sm btn-warning">+</button>
+          <button id="minusGuest" type="button" class="btn-sm btn-warning ">-</button>
         </div>
   </div>
 
@@ -52,8 +53,6 @@
   </div>
   </div>
   <span id="dishRows"></span>
-
-
 
   <div class="sum" id="printSum"></div>
 
@@ -67,7 +66,7 @@
 
 
   <!--FIND A DISH VIEW-->
-<div class="col-sm-9" id="searchView">
+<div class="col" id="searchView">
 
     <div class="container">
       <div class="smallTitle">Find a dish</div>
@@ -115,6 +114,7 @@
 
 
 <div class="col-sm-4">
+<div class="smallTitle" id="dishTitle"></div>
 <span id="dishLabel"></span>
 
 

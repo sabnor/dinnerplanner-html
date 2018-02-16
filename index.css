@@ -1,12 +1,16 @@
 
 /* Center our content on page */
 .centerObjects {
-display: flex;
-justify-content: center;
-align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 
 }
+.regularContainer{
+margin: 15px;
 
+}
 
 .header {
   height:100px;
@@ -26,14 +30,22 @@ font-family: Georgia, serif;
 font-size: 26px;
 
 margin-bottom: 10px;
-margin-top: 20px;
+margin-top: 10px;
 
 }
 
+.imgDetailsView{
 
+  object-fit: cover; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+  height:100%;
+    width:100%;
+
+}
 .headerburger {
 
 margin: 8px;
+margin-bottom: 0px;
 width: 15px;
 
 }

@@ -7,6 +7,8 @@ var SidebarzViewController = function(view, model){
 
   view.minusButton.click(function(){
     console.log("minus");
+    if (model.getNumberOfGuests()>1) {
   model.setNumberOfGuests(model.getNumberOfGuests() - 1);
-  });
+}
+});
 };
