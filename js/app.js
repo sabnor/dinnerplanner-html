@@ -25,6 +25,7 @@ $(function() {
 	//var sidebarViewController = new SidebarViewController(sidebarView,model);
 
 	var sidebarzViewController = new SidebarzViewController(sidebarView, model);
+	var selectedDishController = new SelectedDishController(detailsView, model);
 
 //	var exampleViewController = new ExampleViewController(exampleView,model);
 

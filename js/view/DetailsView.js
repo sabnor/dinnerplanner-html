@@ -3,6 +3,7 @@
   var DetailsView = function (container, model) {
 
       this.backButton = container.find("#backButton");
+      this.addDishButton = container.find("#addDishButton");
 
       // Let this view observe the model.
        model.addObserver(this);

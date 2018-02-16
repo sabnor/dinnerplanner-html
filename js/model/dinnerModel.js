@@ -3,7 +3,7 @@ var DinnerModel = function() {
 
 	//Todo Lab 1 implement the data structure that will hold number of guest
 	// and selected dishes for the dinner menu
-
+//----------------------------------------------------------------------
 var numberOfGuests = 4;
 var fullMenu = [1,100];
 //var selectedDish = [1,100];
@@ -11,32 +11,33 @@ var currency = "SEK";
 var observers = [];
 
 var chosenId = "3";
-
+//----------------------------------------------------------------------
 this.setChosenId = function(id) {
 	chosenId = id;
 	notifyObservers();
 }
 	this.getChosenId = function() {
 		return chosenId;
-
 }
+//----------------------------------------------------------------------
 	this.setNumberOfGuests = function(num) {
 		numberOfGuests = num;
 		notifyObservers();
 	}
-
 	this.getNumberOfGuests = function() {
 		return numberOfGuests;
 	}
+//----------------------------------------------------------------------
 
 	//Returns the dish that is on the menu for selected type
 	this.getSelectedDish = function(type) {
-		for(var i = 0; i< selectedDish.length; i++){
-			if(this.getDish(selectedDish[i]).type == type) {
-				return this.getDish(selectedDish[i])
+		for(var i = 0; i< fullMenu.length; i++){
+			if(this.getDish(fullMenu[i]).type == type) {
+				return this.getDish(fullMenu[i])
 			}
 		}
 	}
+
 
 
 	//Returns all the dishes on the menu.
@@ -74,15 +75,12 @@ return totalPrice;
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
 		var type = this.getDish(id).type;
-
-		for (var i = 0; i < selectedDish.length; i++) {
-			if (type == this.getDish(selectedDish[i]).type){
-				selectedDish.splice(i,1);
-			}
-
-	}
-selectedDish.push(id);
-notifyObservers();
+		for (var i = 0; i < fullMenu.length; i++) {
+			if (type == this.getDish(fullMenu[i]).type){
+				fullMenu.splice(i,1);
+			}}
+		fullMenu.push(id);
+			notifyObservers();
 }
 
 	//Removes dish from menu
