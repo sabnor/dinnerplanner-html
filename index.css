@@ -50,9 +50,27 @@ width: 15px;
 
 }
 
+.imgWelcome{
+width: 250px;
+margin: 30px;
+opacity: 0.5;
+}
+
+img.tumnagel{
+  object-fit: cover; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+  height:140px;
+    width:100%;
+}
 
 
+/*---------------------*/
 
+.pictureview{
+  width: 165px;
+  margin:30px;
+  margin: 15px;
+}
 
 
 
@@ -88,12 +106,7 @@ width: 15px;
 
 
 
-img.tumnagel{
-  object-fit: cover; /* Do not scale the image */
-  object-position: center; /* Center the image within the element */
-  height:110px;
-    width:140px;
-}
+
 
 img.Square{
   object-fit: cover; /* Do not scale the image */
@@ -116,11 +129,7 @@ img.Square{
   border: 1px solid #CCC;
 }
 
-.pictureview{
-  width: 150px;
-  margin:30px;
-  margin-top: 0px;
-}
+
 
 .pictureview2{
   width: 110px;
