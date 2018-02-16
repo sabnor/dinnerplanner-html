@@ -21,7 +21,7 @@ $(function() {
 
 
 	//Controllers
-	var generalStateController = new GeneralStateController(model,sidebarView, welcomeView, searchView, detailsView);
+	var generalStateController = new GeneralStateController(sidebarView, welcomeView, searchView, detailsView);
 	//var sidebarViewController = new SidebarViewController(sidebarView,model);
 
 	var sidebarzViewController = new SidebarzViewController(sidebarView, model);
