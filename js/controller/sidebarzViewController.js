@@ -1,5 +1,4 @@
 var SidebarzViewController = function(view, model){
-  console.log("hello world");
   view.plusButton.click(function(){
     console.log("plus");
     console.log(model.getNumberOfGuests())

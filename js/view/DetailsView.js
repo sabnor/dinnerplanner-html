@@ -1,9 +1,34 @@
 
 
-  var DetailsView = function (container, model, id) {
+  var DetailsView = function (container, model) {
 
-    var dishObject = model.getDish(100)
+      this.backButton = container.find("#backButton");
 
+      // Let this view observe the model.
+       model.addObserver(this);
+
+       /**
+      * Updates table data
+      */
+      this.update = function() {
+      	updateIngredients()
+      }
+
+      // Initialize the update.
+      this.update();
+
+      /**
+      * Update total total number of guests.
+      */
+      function updateNumberOfGuests() {
+      	container.find("#numberOfGuests").html(model.getNumberOfGuests());
+      }
+
+
+
+function updateIngredients() {
+
+    var dishObject = model.getDish(model.getChosenId())
 
     //--------------------------------------------------------------------
     //Creating the dish-informations
@@ -39,7 +64,7 @@ dishObject.ingredients.forEach(function(ingredientObject){
     $(rowElement).addClass('row');
 
     var ingredientQuantityElement = document.createElement('div');
-    $(ingredientQuantityElement).addClass('col').text(ingredientObject['quantity']+' '+ingredientObject['unit'])
+    $(ingredientQuantityElement).addClass('col').text(ingredientObject['quantity']*model.getNumberOfGuests()+' '+ingredientObject['unit'])
     .appendTo(rowElement);
 
     var ingredientNameElement = document.createElement('div');
@@ -47,7 +72,7 @@ dishObject.ingredients.forEach(function(ingredientObject){
     .appendTo(rowElement);
 
     var ingredientPriceElement = document.createElement('div');
-    $(ingredientPriceElement).addClass('col').text(ingredientObject['price']+' '+model.getCurrency())
+    $(ingredientPriceElement).addClass('col').text(ingredientObject['price']*model.getNumberOfGuests()+' '+model.getCurrency())
     .appendTo(rowElement);
 
     $(rowElement).appendTo(outerDiv)
@@ -55,7 +80,7 @@ dishObject.ingredients.forEach(function(ingredientObject){
 
 var ingredientrows = container.find("#ingredientrows");
 ingredientrows.html(outerDiv);
-
+}
 
 
     //var nameElement = document.createElement('div')

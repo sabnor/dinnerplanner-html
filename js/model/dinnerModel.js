@@ -10,6 +10,16 @@ var fullMenu = [1,100];
 var currency = "SEK";
 var observers = [];
 
+var chosenId = "3";
+
+this.setChosenId = function(id) {
+	chosenId = id;
+	notifyObservers();
+}
+	this.getChosenId = function() {
+		return chosenId;
+
+}
 	this.setNumberOfGuests = function(num) {
 		numberOfGuests = num;
 		notifyObservers();

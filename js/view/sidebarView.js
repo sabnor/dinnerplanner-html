@@ -13,6 +13,7 @@ var SidebarView = function (container, model) {
   */
   this.update = function() {
   	updateNumberOfGuests()
+    updateCost()
   }
 
   // Initialize the update.
@@ -27,6 +28,8 @@ var SidebarView = function (container, model) {
 
 
 //----------------------------------------
+
+function updateCost() {
   var outerDiv = document.createElement('div');
   var totalSum = 0
 
@@ -46,7 +49,7 @@ var SidebarView = function (container, model) {
       var price = ingredientObject['price']
       sum = sum+price
     });
-    var priceCol = $(priceElement).addClass('col').text(sum*model.getNumberOfGuests() +model.getCurrency())
+    var priceCol = $(priceElement).addClass('col').text(sum*model.getNumberOfGuests() +' '+model.getCurrency())
       .appendTo(rowElement);
 
       rowObject
@@ -60,8 +63,8 @@ dishRows.html(outerDiv);
 
 var printSum = container.find("#printSum");
 printSum.text(totalSum*model.getNumberOfGuests()+ " " +model.getCurrency());
-//var numberOfGuests = container.find("#numberOfGuests");
 
+}
 //----------------------------------------------------------
 
 
