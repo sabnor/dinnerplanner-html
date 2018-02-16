@@ -26,6 +26,7 @@ $(function() {
 
 	var sidebarzViewController = new SidebarzViewController(sidebarView, model);
 	var selectedDishController = new SelectedDishController(detailsView, model);
+	var searchViewController = new SearchViewController(searchView, model);
 
 //	var exampleViewController = new ExampleViewController(exampleView,model);
 

@@ -14,12 +14,13 @@
   <body>
 
 <!--HEADER-->
-<div
-class="heading-light header fluid">Dinner planner</div>
+<div class="header fluid">
+  <img class="headerburger" src='images/hamburgericon.png'>Dinner planner<img class="headerburger" src='images/hamburgericon.png'>
+</div>
 
 
 <!--WELCOMEVIEW-->
-    <div class="container">
+    <div class="container centerObjects">
       <div id="welcomeView" class="text-center">
           <span id="textElement"></span>
           <button id="welcomeButton" type="button" class="btn btn-warning ">Create new dinner</button>
@@ -33,9 +34,7 @@ class="heading-light header fluid">Dinner planner</div>
   <!--SIDEBARVIEW-->
   <div class="row">
   <div class="col-sm-3" id="sidebarView">
-      <div>
-        <label>My dinner</label>
-      </div>
+      <div class="smallTitle">My dinner</div>
       <div class="row">
           <div class="col">
             <label for="exampleFormControlSelect1">People:</label>
@@ -68,10 +67,10 @@ class="heading-light header fluid">Dinner planner</div>
 
 
   <!--FIND A DISH VIEW-->
-<div class="col" id="searchView">
+<div class="col-sm-9" id="searchView">
 
     <div class="container">
-      <label>FIND A DISH</label>
+      <div class="smallTitle">Find a dish</div>
 
     <form>
     <div class="form-row">
@@ -80,7 +79,7 @@ class="heading-light header fluid">Dinner planner</div>
       </div>
 
       <div class="col">
-        <select class="form-control" id="exampleFormControlSelect2" onchange="handleChange">
+        <select class="form-control" id="chooseDish" onchange="handleChange">
         <option selected value="all">ALL</option>
         <option value="main dish">Main course</option>
         <option>Side dish</option>
@@ -90,7 +89,7 @@ class="heading-light header fluid">Dinner planner</div>
       </div>
 
       <div class="col">
-      <button type="button-center" class="btn btn-warning">Search</button>
+      <button id="searchButton" type="button-center" class="btn btn-warning">Search</button>
       </div>
 
       </div>
@@ -168,6 +167,8 @@ class="heading-light header fluid">Dinner planner</div>
   <script src="js/controller/GeneralStateController.js"></script>
   <!--<script src="js/controller/SomeController.js"></script>-->
   <script src="js/controller/SelectedDishController.js"></script>
+  <script src="js/controller/SearchViewController.js"></script>
+
 
   <script src="js/controller/SidebarzViewController.js"></script>
 

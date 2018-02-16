@@ -1,14 +1,42 @@
 
-//* Center our content on page */
-.centerPage {
-background: lightgrey;
+/* Center our content on page */
+.centerObjects {
+display: flex;
+justify-content: center;
+align-items: center;
+
 }
 
 
+.header {
+  height:100px;
+  background:#F0F0F0;
+  border:1px solid #CCC;
+  font-size: 45px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, serif;
+
+}
+
+.smallTitle {
+font-family: Georgia, serif;
+font-size: 26px;
+
+margin-bottom: 10px;
+margin-top: 20px;
+
+}
 
 
+.headerburger {
 
+margin: 8px;
+width: 15px;
 
+}
 
 
 
@@ -46,11 +74,7 @@ background: lightgrey;
   flex: 1 100%;
 }
 
-.header {
-  background: lightgrey;
-  font-size: 45px;
-  text-align: center;
-}
+
 
 img.tumnagel{
   object-fit: cover; /* Do not scale the image */
@@ -71,13 +95,13 @@ img.Square{
 }
 .centerr{
   text-align: center;
-  background: lightgrey;
-  border: 1px solid black;
+  background: #F0F0F0;
+  border: 1px solid #CCC;
 }
 
 .centerrr{
-  background: lightgrey;
-  border: 1px solid black;
+  background: #F0F0F0;
+  border: 1px solid #CCC;
 }
 
 .pictureview{
@@ -108,7 +132,7 @@ img.Square{
 
 .aside-1 {
   width:50px;
-  border: 1px solid black;
+  border: 1px solid #CCC;
 }
 
 .aside-2 {
@@ -151,7 +175,7 @@ body {
 
 
 .solid {
-  border: 1px solid black;
+  border: 1px solid #CCC;
 }
 
 .orange {

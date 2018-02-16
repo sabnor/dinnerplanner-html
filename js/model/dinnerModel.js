@@ -11,6 +11,16 @@ var currency = "SEK";
 var observers = [];
 
 var chosenId = "3";
+
+var chosenType = "3";
+//----------------------------------------------------------------------
+this.setChosenType = function(type) {
+	chosenType = type;
+	notifyObservers();
+}
+	this.getChosenType = function() {
+		return chosenType;
+}
 //----------------------------------------------------------------------
 this.setChosenId = function(id) {
 	chosenId = id;
