@@ -14,15 +14,20 @@
   <body>
 
 <!--HEADER-->
-<div class="heading-light header fluid">Dinner planner</div>
+<div class="header fluid">
+  <img class="headerburger" src='images/hamburgericon.png'>Dinner planner<img class="headerburger" src='images/hamburgericon.png'>
+</div>
+
 
 
 <!--WELCOMEVIEW-->
-    <div class="container">
+    <div class="container-xs centerObjects">
       <div id="welcomeView" class="text-center">
+        <img class="imgWelcome" src="images/spagetti.png"></img>
           <span id="textElement"></span>
           <button id="welcomeButton" type="button" class="btn btn-warning ">Create new dinner</button>
       </div>
+
     </div>
 
 
@@ -31,16 +36,14 @@
 
   <!--SIDEBARVIEW-->
   <div class="row">
-  <div class="col-sm-3" id="sidebarView">
-      <div>
-        <label>My dinner</label>
-      </div>
+  <div class="regularContainer col-sm-3" id="sidebarView">
+      <div class="smallTitle">My dinner</div>
       <div class="row">
           <div class="col">
             <label for="exampleFormControlSelect1">People:</label>
           <span id="numberOfGuests"></span>
-          <button id="plusGuest" type="button" class="btn btn-warning ">+</button>
-          <button id="minusGuest" type="button" class="btn btn-warning ">-</button>
+          <button id="plusGuest" type="button" class="btn-sm btn-warning">+</button>
+          <button id="minusGuest" type="button" class="btn-sm btn-warning ">-</button>
         </div>
   </div>
 
@@ -53,12 +56,11 @@
   </div>
   <span id="dishRows"></span>
 
-
-
   <div class="sum" id="printSum"></div>
 
   <div class="confirm">
-  <button type="button" disabled>Confirm dinner</button>
+  <span id="confirmButton"></span>
+  <!-- <button class="btn-sm light" type="button" disabled>Confirm dinner</button> -->
   </div>
 
   </div>
@@ -66,11 +68,11 @@
 
 
 
-  <!--FIND A DISH/SEARCH VIEW-->
+  <!--FIND A DISH VIEW-->
 <div class="col" id="searchView">
 
     <div class="container">
-      <label>FIND A DISH</label>
+      <div class="smallTitle">Find a dish</div>
 
     <form>
     <div class="form-row">
@@ -79,7 +81,7 @@
       </div>
 
       <div class="col">
-        <select class="form-control" id="exampleFormControlSelect2" onchange="handleChange">
+        <select class="form-control" id="chooseDish" onchange="handleChange">
         <option selected value="all">ALL</option>
         <option value="main dish">Main course</option>
         <option>Side dish</option>
@@ -89,7 +91,7 @@
       </div>
 
       <div class="col">
-      <button type="button-center" class="btn btn-warning">Search</button>
+      <button id="searchButton" type="button-center" class="btn btn-warning">Search</button>
       </div>
 
       </div>
@@ -104,7 +106,7 @@
 
 </div>
 
-<!--Find a dish/Search view tar slut-->
+<!--Find a dish view tar slut-->
 
 <!--Index2 tar slut-->
 
@@ -115,22 +117,23 @@
 
 
 <div class="col-sm-4">
+<div class="smallTitle" id="dishTitle"></div>
 <span id="dishLabel"></span>
 
 
   <div class="button">
-  <button type="button-center" class="btn btn-warning">Back to search</button>
+  <button id='backButton' type="button-center" class="btn btn-warning">Back to search</button>
   </div>
   </div>
 
   <div class="col">
-    <div class="solid orange">
-      <label>Ingredients for <span id="numberOfGuests"></span> people</label>
+    <div class="solid orange regularContainer">
+      <div class='superSmallTitle text-center'>Ingredients for <span id="numberOfGuests"></span> people</div>
       <div class="solid">
       </div>
       <span id="ingredientrows"></span>
-      <div class="button">
-          <button type="button-center" class="btn btn-warning">Add to menue</button>
+      <div class="button text-center">
+          <button id="addDishButton" type="button-center" class="btn btn-warning regularContainer">Add to menue</button>
       </div>
     </div>
   </div>
@@ -142,68 +145,7 @@
 <!--Index3 tar slut-->
 
 
-<!--Index5: SUMMARYVIEW-->
 
-<div id="summaryView">
-  <header class="header">Dinner Planner</header>
-<div class="container">
-    <div class="row">
-  	<div class="col superSmallTitle">My dinner: <span id="numberOfGuests"></span> people</div>
-  	<div class="col">
-      <button id="editButton" type="button" class="btn btn-warning">Go back and edit dinner</button>
-    </div>
-  </div>
-
-  <div class="solid"></div>
-
-	<div class="row centerobjects col">
-
-		<div class="smallcontainer">
-			<div class="pictureview centerr">
-        <div class ="container">
-          <div class="row">
-            <span id="menuSummary"></span>
-          </div>
-        </div>
-
-			</div>
-    		<div class="sum">77.20</div>
-    </div>
-
-    <div class="smallcontainer">
-      <div class="pictureview centerr">
-        <div class ="container">
-          <div class="row">
-            <span id="menuSummary"></span>
-          </div>
-        </div>
-
-      </div>
-        <div class="sum">77.20</div>
-    </div>
-
-
-
-		<div class="smallcontainer">
-			<div class ="rightcorner">
-				Total
-			<br/>
-			<div class="sum">77.20</div>
-			</div>
-		</div>
-
-
-
-    </div>
-
-
-  <div class="row">
-    <button type="button" class="btn btn-warning ">Print full recipe</button>
-  </div>
-
-</div>
-</div>
-<!--Summaryview tar slut-->
 
 
 

@@ -18,8 +18,8 @@ $('#summaryView').hide();
 
     $('#welcomeView').hide();
     $('#detailsView').hide();
-    $('#detailsView').hide();
-    $('#summaryView').hide();
+    //$('#detailsView').hide();
+    //$('#summaryView').hide();
 
   	};
   	welcomeView.welcomeButton.click(function(){
