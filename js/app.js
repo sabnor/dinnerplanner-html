@@ -13,18 +13,15 @@ $(function() {
 	var searchView = new SearchView($("#searchView"),model);
 	var detailsView = new DetailsView($("#detailsView"),model);
 
-	//var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
-	//var summaryView = new SummaryView($("#summaryView"),model);
 	//var dishThumbnailView = new DishThumbnailView($("#dishThumbnailView"),model);
 
 	//var dishView = new DishView($("#dishView"),model);
 	//var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
-	//var summaryView = new SummaryView($("#summaryView"),model);
-
+	var summaryView = new SummaryView($("#summaryView"),model);
 
 
 	//Controllers
-	var generalStateController = new GeneralStateController(model,sidebarView, welcomeView, searchView, detailsView);
+	var generalStateController = new GeneralStateController(model,sidebarView, welcomeView, searchView, detailsView, summaryView);
 	//var sidebarViewController = new SidebarViewController(sidebarView,model);
 
 	var sidebarzViewController = new SidebarzViewController(sidebarView, model);

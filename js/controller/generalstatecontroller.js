@@ -9,6 +9,7 @@ $('#sidebarView').hide();
 $('#searchView').hide();
 $('#detailsView').hide();
 
+
 //index2
   var ShowSearchSidebarView = function() {
     $('#sidebarView').show();
@@ -16,6 +17,8 @@ $('#detailsView').hide();
 
     $('#welcomeView').hide();
     $('#detailsView').hide();
+    $('#summaryView').hide();
+
 
   	};
   	welcomeView.welcomeButton.click(function(){
@@ -23,6 +26,10 @@ $('#detailsView').hide();
   	});
 
     detailsView.backButton.click(function(){
+  	ShowSearchSidebarView();
+  	});
+
+    summaryView.editButton.click(function(){
   	ShowSearchSidebarView();
   	});
 
@@ -34,6 +41,8 @@ $('#detailsView').hide();
 
     $('#welcomeView').hide();
     $('#searchView').hide();
+    $('#summaryView').hide();
+
 
     };
 

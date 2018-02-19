@@ -32,10 +32,14 @@ function summary () {
 	    var outerDiv = document.createElement('div');
 	    $(outerDiv).addClass('row');
 
+
 	    model.getFullMenu().forEach(function(id){
+				var colDiv = document.createElement('div');
+		    $(colDiv).addClass('col').appendTo(outerDiv);
+
 				console.log(id)
 	      var innerDiv = ItemView(container, model, id)
-	        .appendTo(outerDiv);
+	      .appendTo(colDiv);
 	    });
 
 			var menuSummary = container.find("#menuSummary");
