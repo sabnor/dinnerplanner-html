@@ -14,20 +14,16 @@
   <body>
 
 <!--HEADER-->
-<div class="header fluid">
-  <img class="headerburger" src='images/hamburgericon.png'>Dinner planner<img class="headerburger" src='images/hamburgericon.png'>
-</div>
-
+<div
+class="heading-light header fluid">Dinner planner</div>
 
 
 <!--WELCOMEVIEW-->
-    <div class="container-xs centerObjects">
+    <div class="container">
       <div id="welcomeView" class="text-center">
-        <img class="imgWelcome" src="images/spagetti.png"></img>
           <span id="textElement"></span>
           <button id="welcomeButton" type="button" class="btn btn-warning ">Create new dinner</button>
       </div>
-
     </div>
 
 
@@ -36,14 +32,16 @@
 
   <!--SIDEBARVIEW-->
   <div class="row">
-  <div class="regularContainer col-sm-3" id="sidebarView">
-      <div class="smallTitle">My dinner</div>
+  <div class="col-sm-3" id="sidebarView">
+      <div>
+        <label>My dinner</label>
+      </div>
       <div class="row">
           <div class="col">
             <label for="exampleFormControlSelect1">People:</label>
           <span id="numberOfGuests"></span>
-          <button id="plusGuest" type="button" class="btn-sm btn-warning">+</button>
-          <button id="minusGuest" type="button" class="btn-sm btn-warning ">-</button>
+          <button id="plusGuest" type="button" class="btn btn-warning ">+</button>
+          <button id="minusGuest" type="button" class="btn btn-warning ">-</button>
         </div>
   </div>
 
@@ -56,11 +54,12 @@
   </div>
   <span id="dishRows"></span>
 
+
+
   <div class="sum" id="printSum"></div>
 
   <div class="confirm">
-  <span id="confirmButton"></span>
-  <!-- <button class="btn-sm light" type="button" disabled>Confirm dinner</button> -->
+  <button type="button" disabled>Confirm dinner</button>
   </div>
 
   </div>
@@ -68,11 +67,11 @@
 
 
 
-  <!--FIND A DISH VIEW-->
+  <!--FIND A DISH/SEARCH VIEW-->
 <div class="col" id="searchView">
 
     <div class="container">
-      <div class="smallTitle">Find a dish</div>
+      <label>FIND A DISH</label>
 
     <form>
     <div class="form-row">
@@ -81,7 +80,7 @@
       </div>
 
       <div class="col">
-        <select class="form-control" id="chooseDish" onchange="handleChange">
+        <select class="form-control" id="exampleFormControlSelect2" onchange="handleChange">
         <option selected value="all">ALL</option>
         <option value="main dish">Main course</option>
         <option>Side dish</option>
@@ -91,7 +90,7 @@
       </div>
 
       <div class="col">
-      <button id="searchButton" type="button-center" class="btn btn-warning">Search</button>
+      <button type="button-center" class="btn btn-warning">Search</button>
       </div>
 
       </div>
@@ -106,7 +105,7 @@
 
 </div>
 
-<!--Find a dish view tar slut-->
+<!--Find a dish/Search view tar slut-->
 
 <!--Index2 tar slut-->
 
@@ -117,23 +116,22 @@
 
 
 <div class="col-sm-4">
-<div class="smallTitle" id="dishTitle"></div>
 <span id="dishLabel"></span>
 
 
   <div class="button">
-  <button id='backButton' type="button-center" class="btn btn-warning">Back to search</button>
+  <button type="button-center" class="btn btn-warning">Back to search</button>
   </div>
   </div>
 
   <div class="col">
-    <div class="solid orange regularContainer">
-      <div class='superSmallTitle text-center'>Ingredients for <span id="numberOfGuests"></span> people</div>
+    <div class="solid orange">
+      <label>Ingredients for <span id="numberOfGuests"></span> people</label>
       <div class="solid">
       </div>
       <span id="ingredientrows"></span>
-      <div class="button text-center">
-          <button id="addDishButton" type="button-center" class="btn btn-warning regularContainer">Add to menue</button>
+      <div class="button">
+          <button type="button-center" class="btn btn-warning">Add to menue</button>
       </div>
     </div>
   </div>
@@ -145,10 +143,10 @@
 <!--Index3 tar slut-->
 
 
+<!--Index5: SUMMARYVIEW-->
 
 
-
-
+<!--Summaryview tar slut-->
 
 
 
@@ -169,12 +167,8 @@
   <script src="js/view/DetailsView.js"></script>
   <script src="js/controller/GeneralStateController.js"></script>
   <!--<script src="js/controller/SomeController.js"></script>-->
-  <script src="js/controller/SelectedDishController.js"></script>
-  <script src="js/controller/SearchViewController.js"></script>
-
 
   <script src="js/controller/SidebarzViewController.js"></script>
-
 
 
 

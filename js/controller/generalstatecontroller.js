@@ -8,6 +8,8 @@ $('#welcomeView').show();
 $('#sidebarView').hide();
 $('#searchView').hide();
 $('#detailsView').hide();
+$('#summaryView').hide();
+
 
 //index2
   var ShowSearchSidebarView = function() {
@@ -16,6 +18,8 @@ $('#detailsView').hide();
 
     $('#welcomeView').hide();
     $('#detailsView').hide();
+    $('#detailsView').hide();
+    $('#summaryView').hide();
 
   	};
   	welcomeView.welcomeButton.click(function(){
@@ -34,6 +38,8 @@ $('#detailsView').hide();
 
     $('#welcomeView').hide();
     $('#searchView').hide();
+    $('#detailsView').hide();
+    $('#summaryView').hide();
 
     };
 
