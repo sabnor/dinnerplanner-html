@@ -16,7 +16,7 @@ $(function() {
 	//var dishThumbnailView = new DishThumbnailView($("#dishThumbnailView"),model);
 
 	//var dishView = new DishView($("#dishView"),model);
-	//var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
+	var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
 	//var summaryView = new SummaryView($("#summaryView"),model);
 
 
