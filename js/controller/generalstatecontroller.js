@@ -1,13 +1,14 @@
 //GeneralViewController Object constructor
 //hide and show pages
-var GeneralStateController = function(model,sidebarView, welcomeView, searchView, detailsView) {
+var GeneralStateController = function(model,sidebarView, welcomeView, searchView, detailsView, printSummaryView) {
 
 //start
 $('#welcomeView').show();
-
 $('#sidebarView').hide();
 $('#searchView').hide();
 $('#detailsView').hide();
+$('#printSummaryView').hide();
+
 
 
 //index2
