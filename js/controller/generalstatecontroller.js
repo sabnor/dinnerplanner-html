@@ -8,7 +8,7 @@ $('#welcomeView').show();
 $('#sidebarView').hide();
 $('#searchView').hide();
 $('#detailsView').hide();
-$('#summaryView').hide();
+//$('#summaryView').hide();
 
 
 //index2
@@ -19,7 +19,7 @@ $('#summaryView').hide();
     $('#welcomeView').hide();
     $('#detailsView').hide();
     $('#detailsView').hide();
-    $('#summaryView').hide();
+    //$('#summaryView').hide();
 
   	};
   	welcomeView.welcomeButton.click(function(){
