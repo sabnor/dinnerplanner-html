@@ -4,7 +4,6 @@ var GeneralStateController = function(model,sidebarView, welcomeView, searchView
 
 //start
 $('#welcomeView').show();
-
 $('#sidebarView').hide();
 $('#searchView').hide();
 $('#detailsView').hide();

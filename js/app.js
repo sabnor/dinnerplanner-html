@@ -25,6 +25,11 @@ $(function() {
 
 	//Controllers
 	var generalStateController = new GeneralStateController(model,sidebarView, welcomeView, searchView, detailsView);
+	//istället kalla på generalStateController i alla andra controllers där knapparna sitter
+	//och ge den en parameter på vad som ska döljas
+
+
+
 	//var sidebarViewController = new SidebarViewController(sidebarView,model);
 
 	var sidebarzViewController = new SidebarzViewController(sidebarView, model);
