@@ -13,17 +13,14 @@ $(function() {
 	var searchView = new SearchView($("#searchView"),model);
 	var detailsView = new DetailsView($("#detailsView"),model);
 
-<<<<<<< HEAD
-	var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
-	var summaryView = new SummaryView($("#summaryView"),model);
-=======
+	//var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
+	//var summaryView = new SummaryView($("#summaryView"),model);
 	//var dishThumbnailView = new DishThumbnailView($("#dishThumbnailView"),model);
 
 	//var dishView = new DishView($("#dishView"),model);
 	//var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
 	//var summaryView = new SummaryView($("#summaryView"),model);
 
->>>>>>> ae9ac1c62a522f39b943468683bff3c6c7fe2f45
 
 
 	//Controllers
