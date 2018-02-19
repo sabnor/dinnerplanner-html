@@ -64,13 +64,14 @@ dishRows.html(outerDiv);
 var printSum = container.find("#printSum");
 printSum.text(totalSum*model.getNumberOfGuests()+ " " +model.getCurrency());
 
-var confirmButton = container.find("#confirmButton");
+this.confirmButton = container.find("#confirmButton");
+
 if (model.getFullMenu().length ==0){
-  confirmButton.html('<button class="btn btn-light" type="button" disabled>Confirm dinner</button>');
+  confirmButton.html('<button id="confirmButtons" class="btn btn-light" type="button" disabled>Confirm dinner</button>');
 }
 else {
 
-  confirmButton.html('<button class="btn btn-warning" type="button">Confirm dinner</button>');
+  confirmButton.html('<button id="confirmButtons" class="btn btn-warning" type="button">Confirm dinner</button>');
 };
 
 }
