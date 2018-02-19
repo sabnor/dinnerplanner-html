@@ -13,8 +13,7 @@ $(function() {
 	var detailsView = new DetailsView($("#detailsView"),model);
 
 	var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
-	//var summaryView = new SummaryView($("#summaryView"),model);
-
+	var summaryView = new SummaryView($("#summaryView"),model);
 
 	//Controllers
 	var generalStateController = new GeneralStateController(model,sidebarView, welcomeView, searchView, detailsView, summaryView);
@@ -23,8 +22,6 @@ $(function() {
 	var searchViewController = new SearchViewController(searchView, model);
 
 //	var exampleViewController = new ExampleViewController(exampleView,model);
-
-
 
 	/**
 	 * IMPORTANT: app.js is the only place where you are allowed to
