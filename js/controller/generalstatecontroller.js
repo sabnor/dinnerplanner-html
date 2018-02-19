@@ -43,7 +43,7 @@ $('#summaryView').hide();
     $('#welcomeView').hide();
     $('#searchView').hide();
     $('#detailsView').hide();
-    $('#summaryView').hide();
+    //$('#summaryView').hide();
 
     };
 
