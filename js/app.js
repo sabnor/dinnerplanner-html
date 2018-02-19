@@ -3,7 +3,6 @@ $(function() {
 	//We instantiate our model
 	var model = new DinnerModel();
 
-
 	// And create the instance of ExampleView
 	var welcomeView= new WelcomeView($("#welcomeView"),model);
 	// var exampleView = new ExampleView($("#exampleView"),model);
@@ -13,16 +12,8 @@ $(function() {
 	var searchView = new SearchView($("#searchView"),model);
 	var detailsView = new DetailsView($("#detailsView"),model);
 
-<<<<<<< HEAD
 	//var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
 	var summaryView = new SummaryView($("#summaryView"),model);
-=======
-	//var dishThumbnailView = new DishThumbnailView($("#dishThumbnailView"),model);
-
-	//var dishView = new DishView($("#dishView"),model);
-	var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
-	//var summaryView = new SummaryView($("#summaryView"),model);
->>>>>>> d0b8179b55c69771b8538829a0849ff9ff33611b
 
 
 	//Controllers
