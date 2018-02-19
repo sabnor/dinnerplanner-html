@@ -7,6 +7,7 @@ $('#welcomeView').show();
 $('#sidebarView').hide();
 $('#searchView').hide();
 $('#detailsView').hide();
+$('#summaryView').hide();
 $('#printSummaryView').hide();
 
 
@@ -19,6 +20,8 @@ $('#printSummaryView').hide();
     $('#welcomeView').hide();
     $('#detailsView').hide();
     $('#summaryView').hide();
+    $('#printSummaryView').hide();
+
 
 
   	};
@@ -30,9 +33,14 @@ $('#printSummaryView').hide();
   	ShowSearchSidebarView();
   	});
 
-    summaryView.editButton.click(function(){
-  	ShowSearchSidebarView();
-  	});
+    // summaryView.editButton.click(function(){
+  	// ShowSearchSidebarView();
+  	// });
+
+
+    sidebarView.confirmButton.click(function(){
+    ShowSummaryView();
+    });
 
 
 //index3
@@ -43,9 +51,21 @@ $('#printSummaryView').hide();
     $('#welcomeView').hide();
     $('#searchView').hide();
     $('#summaryView').hide();
-
+    $('#printSummaryView').hide();
 
     };
+
+    var ShowSummaryView = function() {
+      $('#summaryView').show();
+
+      $('#sidebarView').hide();
+      $('#detailsView').hide();
+      $('#welcomeView').hide();
+      $('#searchView').hide();
+      $('#printSummaryView').hide();
+
+      };
+
 
     searchView.openImg.on("click", ".pictureview", function(event){
       //console.log(this.id); // will always be the element with .pictureview that was clicked

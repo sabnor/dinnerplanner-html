@@ -23,8 +23,7 @@ $(function() {
 
 
 	//Controllers
-	var generalStateController = new GeneralStateController(model,sidebarView, welcomeView, searchView, detailsView, summaryView, printSummaryView);
-
+	var generalStateController = new GeneralStateController(model,sidebarView, welcomeView, searchView, detailsView, printSummaryView, summaryView);
 	//istället kalla på generalStateController i alla andra controllers där knapparna sitter
 	//och ge den en parameter på vad som ska döljas
 
