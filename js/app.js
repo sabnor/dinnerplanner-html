@@ -13,7 +13,7 @@ $(function() {
 	var searchView = new SearchView($("#searchView"),model);
 	var detailsView = new DetailsView($("#detailsView"),model);
 
-	//var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
+	var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
 	//var summaryView = new SummaryView($("#summaryView"),model);
 	//var dishThumbnailView = new DishThumbnailView($("#dishThumbnailView"),model);
 
@@ -24,7 +24,7 @@ $(function() {
 
 
 	//Controllers
-	var generalStateController = new GeneralStateController(model,sidebarView, welcomeView, searchView, detailsView);
+	var generalStateController = new GeneralStateController(model,sidebarView, welcomeView, searchView, detailsView, printSummaryView);
 	//istället kalla på generalStateController i alla andra controllers där knapparna sitter
 	//och ge den en parameter på vad som ska döljas
 

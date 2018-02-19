@@ -20,10 +20,12 @@ var SearchView = function (container, model) {
 	/**
 	* Update total total number of guests.
 	*/
+	chooseDish.onchange = function(){
+		console.log(chooseDish.value)
+	};
 
 
-
-function Search() {
+function Search(value) {
 
 //loopar igenom alla dishes för bild och namn
 	    var outerDiv = document.createElement('div');
