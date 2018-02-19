@@ -8,7 +8,7 @@ $('#welcomeView').show();
 $('#sidebarView').hide();
 $('#searchView').hide();
 $('#detailsView').hide();
-$('#summaryView').hide();
+//$('#summaryView').hide();
 
 
 //index2
@@ -18,7 +18,11 @@ $('#summaryView').hide();
 
     $('#welcomeView').hide();
     $('#detailsView').hide();
+<<<<<<< HEAD
     //$('#detailsView').hide();
+=======
+    $('#detailsView').hide();
+>>>>>>> ca5b2b2fb97407b1876814e98f7ccb57f12ac855
     //$('#summaryView').hide();
 
   	};
@@ -43,7 +47,7 @@ $('#summaryView').hide();
     $('#welcomeView').hide();
     $('#searchView').hide();
     $('#detailsView').hide();
-    $('#summaryView').hide();
+    //$('#summaryView').hide();
 
     };
 

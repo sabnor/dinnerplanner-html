@@ -13,7 +13,7 @@ $(function() {
 	var detailsView = new DetailsView($("#detailsView"),model);
 
 	var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
-	var summaryView = new SummaryView($("#summaryView"),model);
+	//var summaryView = new SummaryView($("#summaryView"),model);
 
 
 	//Controllers
