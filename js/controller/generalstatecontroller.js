@@ -8,7 +8,7 @@ $('#welcomeView').show();
 $('#sidebarView').hide();
 $('#searchView').hide();
 $('#detailsView').hide();
-//$('#summaryView').hide();
+$('#summaryView').hide();
 
 
 //index2
