@@ -17,7 +17,7 @@ $(function() {
 
 
 	//Controllers
-	var generalStateController = new GeneralStateController(model,sidebarView, welcomeView, searchView, detailsView);
+	var generalStateController = new GeneralStateController(model,sidebarView, welcomeView, searchView, detailsView, summaryView);
 	var sidebarzViewController = new SidebarzViewController(sidebarView, model);
 	var selectedDishController = new SelectedDishController(detailsView, model);
 	var searchViewController = new SearchViewController(searchView, model);
