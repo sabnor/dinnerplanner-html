@@ -30,9 +30,9 @@ $('#summaryView').hide();
   	ShowSearchSidebarView();
   	});
 
-    summaryView.editButton.click(function(){
-  	ShowSearchSidebarView();
-  	});
+    //summaryView.editButton.click(function(){
+  	//ShowSearchSidebarView();
+  	//});
 
 
 //index3
