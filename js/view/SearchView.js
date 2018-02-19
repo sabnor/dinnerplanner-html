@@ -21,17 +21,14 @@ var SearchView = function (container, model) {
 	/**
 	* Update total total number of guests.
 	*/
-<<<<<<< HEAD
 	// chooseDish.onchange = function(){
 	// 	console.log(chooseDish.value)
 	// };
-=======
 
 	chooseDish.onchange = function(){
 		console.log(chooseDish.value)
 		Search(chooseDish.value)
 	};
->>>>>>> 2bcfced97cc71160a04f18f2f966b7d2bb1b869c
 
 this.searchFilter = function(type,filter){
 	console.log(filter)
