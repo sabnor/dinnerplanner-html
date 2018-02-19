@@ -3,6 +3,7 @@ $(function() {
 	//We instantiate our model
 	var model = new DinnerModel();
 
+
 	// And create the instance of ExampleView
 	var welcomeView= new WelcomeView($("#welcomeView"),model);
 	// var exampleView = new ExampleView($("#exampleView"),model);
@@ -12,12 +13,17 @@ $(function() {
 	var searchView = new SearchView($("#searchView"),model);
 	var detailsView = new DetailsView($("#detailsView"),model);
 
-	var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
+	//var dishThumbnailView = new DishThumbnailView($("#dishThumbnailView"),model);
+
+	//var dishView = new DishView($("#dishView"),model);
+	//var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
 	//var summaryView = new SummaryView($("#summaryView"),model);
 
 
 	//Controllers
-	var generalStateController = new GeneralStateController(model,sidebarView, welcomeView, searchView, detailsView, summaryView);
+	var generalStateController = new GeneralStateController(model,sidebarView, welcomeView, searchView, detailsView);
+	//var sidebarViewController = new SidebarViewController(sidebarView,model);
+
 	var sidebarzViewController = new SidebarzViewController(sidebarView, model);
 	var selectedDishController = new SelectedDishController(detailsView, model);
 	var searchViewController = new SearchViewController(searchView, model);

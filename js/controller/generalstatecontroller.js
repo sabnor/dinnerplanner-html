@@ -8,8 +8,6 @@ $('#welcomeView').show();
 $('#sidebarView').hide();
 $('#searchView').hide();
 $('#detailsView').hide();
-//$('#summaryView').hide();
-
 
 //index2
   var ShowSearchSidebarView = function() {
@@ -18,12 +16,6 @@ $('#detailsView').hide();
 
     $('#welcomeView').hide();
     $('#detailsView').hide();
-<<<<<<< HEAD
-    //$('#detailsView').hide();
-=======
-    $('#detailsView').hide();
->>>>>>> ca5b2b2fb97407b1876814e98f7ccb57f12ac855
-    //$('#summaryView').hide();
 
   	};
   	welcomeView.welcomeButton.click(function(){
@@ -34,10 +26,6 @@ $('#detailsView').hide();
   	ShowSearchSidebarView();
   	});
 
-    //summaryView.editButton.click(function(){
-  	//ShowSearchSidebarView();
-  	//});
-
 
 //index3
   var ShowDetailsSidebarView = function() {
@@ -46,8 +34,6 @@ $('#detailsView').hide();
 
     $('#welcomeView').hide();
     $('#searchView').hide();
-    $('#detailsView').hide();
-    //$('#summaryView').hide();
 
     };
 
@@ -55,9 +41,9 @@ $('#detailsView').hide();
       //console.log(this.id); // will always be the element with .pictureview that was clicked
       model.setChosenId(this.id)
       ShowDetailsSidebarView();
+
+
     });
-
-
 
 }
 
