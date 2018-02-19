@@ -4,11 +4,6 @@ var ItemView = function (container, model, dish) {
 	var divElement = document.createElement('div')
 	var divObject = $(divElement).addClass('col-xs-3');
 
-  //Card
-	//var link = document.createElement('a');
-	//$(link).attr('id','openImg')
-	//.attr('href','#')
-	//.appendTo(divObject);
 
 	var box = document.createElement('div');
 	$(box).addClass('pictureview centerr').attr('id',dish)
