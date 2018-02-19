@@ -20,6 +20,7 @@ $(function() {
 	//var summaryView = new SummaryView($("#summaryView"),model);
 
 
+
 	//Controllers
 	var generalStateController = new GeneralStateController(model,sidebarView, welcomeView, searchView, detailsView);
 	//var sidebarViewController = new SidebarViewController(sidebarView,model);
