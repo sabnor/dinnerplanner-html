@@ -12,7 +12,7 @@ $(function() {
 	var searchView = new SearchView($("#searchView"),model);
 	var detailsView = new DetailsView($("#detailsView"),model);
 
-	//var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
+	var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
 	var summaryView = new SummaryView($("#summaryView"),model);
 
 

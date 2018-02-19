@@ -5,7 +5,7 @@ var DinnerModel = function() {
 	// and selected dishes for the dinner menu
 //----------------------------------------------------------------------
 var numberOfGuests = 4;
-var fullMenu = [];
+var fullMenu = [1,101];
 //var selectedDish = [1,100];
 var currency = "SEK";
 var observers = [];
