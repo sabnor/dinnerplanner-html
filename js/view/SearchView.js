@@ -21,9 +21,6 @@ var SearchView = function (container, model) {
 	/**
 	* Update total total number of guests.
 	*/
-	// chooseDish.onchange = function(){
-	// 	console.log(chooseDish.value)
-	// };
 
 	chooseDish.onchange = function(){
 		console.log(chooseDish.value)
