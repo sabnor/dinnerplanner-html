@@ -21,20 +21,19 @@
     <div class="row">
   	<div class="col superSmallTitle">My dinner: <span id="numberOfGuests"></span> people</div>
   	<div class="col">
-      <div class="button"><button type="button" class="btn btn-warning">Go back and edit dinner</button></div>
+      <button id="editButton" type="button" class="btn btn-warning">Go back and edit dinner</button>
     </div>
   </div>
 
   <div class="solid"></div>
 
-<div class="printout">
 	<div class="row centerobjects col">
 
 		<div class="smallcontainer">
 			<div class="pictureview centerr">
         <div class ="container">
-          <div class="row" id='openImg'>
-            <span id="allDishImg"></span>
+          <div class="row">
+            <span id="menuSummary"></span>
           </div>
         </div>
 
@@ -42,19 +41,19 @@
     		<div class="sum">77.20</div>
     </div>
 
-      <div class="smallcontainer">
-        <div class="pictureview centerr">
-          <label id="FoodView"><span id="foodTitle"></span>Baked brie</label>
+    <div class="smallcontainer">
+      <div class="pictureview centerr">
+        <div class ="container">
+          <div class="row">
+            <span id="menuSummary"></span>
+          </div>
         </div>
-        <div class="sum">77.20</div>
-      </div>
 
-		<div class="smallcontainer">
-			<div class="pictureview centerr">
-    		<label id="FoodView"><span id="foodTitle"></span>Baked brie</label>
-			</div>
-    	<div class="sum">77.20</div>
-		</div>
+      </div>
+        <div class="sum">77.20</div>
+    </div>
+
+
 
 		<div class="smallcontainer">
 			<div class ="rightcorner">
@@ -67,7 +66,7 @@
 
 
     </div>
-  </div>
+
 
   <div class="row">
     <button type="button" class="btn btn-warning ">Print full recipe</button>
@@ -91,6 +90,7 @@
     <script src="js/view/SidebarView.js"></script>
     <script src="js/view/SearchView.js"></script>
     <script src="js/view/SummaryView.js"></script>
+    <script src="js/view/PrintSummaryView.js"></script>
     <script src="js/view/ItemView.js"></script>
     <script src="js/view/DetailsView.js"></script>
     <script src="js/controller/GeneralStateController.js"></script>

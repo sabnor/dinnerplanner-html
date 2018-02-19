@@ -8,7 +8,7 @@ $('#welcomeView').show();
 $('#sidebarView').hide();
 $('#searchView').hide();
 $('#detailsView').hide();
-//$('#summaryView').hide();
+$('#summaryView').hide();
 
 
 //index2
@@ -30,6 +30,10 @@ $('#detailsView').hide();
   	ShowSearchSidebarView();
   	});
 
+    //summaryView.editButton.click(function(){
+  	//ShowSearchSidebarView();
+  	//});
+
 
 //index3
   var ShowDetailsSidebarView = function() {
@@ -47,9 +51,9 @@ $('#detailsView').hide();
       //console.log(this.id); // will always be the element with .pictureview that was clicked
       model.setChosenId(this.id)
       ShowDetailsSidebarView();
-
-
     });
+
+
 
 }
 
