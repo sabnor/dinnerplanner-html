@@ -60,7 +60,6 @@
 
   <div class="confirm">
   <span id="confirmButton"></span>
-  <!-- <button class="btn-sm light" type="button" disabled>Confirm dinner</button> -->
   </div>
 
   </div>
@@ -77,16 +76,17 @@
     <form>
     <div class="form-row">
       <div class="col">
-        <input type="text" class="form-control" placeholder="Enter dishname">
+        <input type="text" id="filter" class="form-control" placeholder="Enter dishname">
       </div>
 
       <div class="col">
         <select class="form-control" id="chooseDish" onchange="handleChange">
-        <option selected value="all">ALL</option>
+        <!-- <option selected value="all">ALL</option> -->
+        <option selected value="starter">Starter</option>
         <option value="main dish">Main course</option>
-        <option>Side dish</option>
+        <!-- <option>Side dish</option> -->
         <option value="dessert">Dessert</option>
-        <option value="starter">Appetizer</option>
+
       </select>
       </div>
 
@@ -180,6 +180,7 @@
 <!--Index6 börjar-->
 <!--PRINT SUMMARY VIEW-->
 <div id="printSummaryView">
+
 <div id="mealSummary"></div>
 </div>
 <!--Index6 tar slut-->

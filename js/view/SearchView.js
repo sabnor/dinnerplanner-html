@@ -4,6 +4,7 @@ var SearchView = function (container, model) {
 	this.openImg = container.find("#openImg");
 	this.searchButton = container.find("#searchButton")
 
+
 	// Let this view observe the model.
 	 model.addObserver(this);
 
@@ -11,7 +12,7 @@ var SearchView = function (container, model) {
 	* Updates table data
 	*/
 	this.update = function() {
-		Search()
+		//Search()
 	}
 
 	// Initialize the update.
@@ -20,18 +21,31 @@ var SearchView = function (container, model) {
 	/**
 	* Update total total number of guests.
 	*/
+<<<<<<< HEAD
 	// chooseDish.onchange = function(){
 	// 	console.log(chooseDish.value)
 	// };
+=======
 
+	chooseDish.onchange = function(){
+		console.log(chooseDish.value)
+		Search(chooseDish.value)
+	};
+>>>>>>> 2bcfced97cc71160a04f18f2f966b7d2bb1b869c
 
-function Search(value) {
+this.searchFilter = function(type,filter){
+	console.log(filter)
+
+	Search(type,filter)
+}
+
+function Search(type,filter) {
 
 //loopar igenom alla dishes för bild och namn
 	    var outerDiv = document.createElement('div');
 	    $(outerDiv).addClass('row');
 
-	    model.getAllDishes("starter").forEach(function(key){
+	    model.getAllDishes(type,filter).forEach(function(key){
 	      var innerDiv = ItemView(container,model,key['id'])
 	        .appendTo(outerDiv);
 	    });
