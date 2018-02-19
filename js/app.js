@@ -13,11 +13,8 @@ $(function() {
 	var searchView = new SearchView($("#searchView"),model);
 	var detailsView = new DetailsView($("#detailsView"),model);
 
-<<<<<<< HEAD
-=======
 	var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
 	//var summaryView = new SummaryView($("#summaryView"),model);
->>>>>>> 85eae93e3820d79385e7954208ccc2c037ddd68a
 	//var dishThumbnailView = new DishThumbnailView($("#dishThumbnailView"),model);
 
 	//var dishView = new DishView($("#dishView"),model);
@@ -26,16 +23,13 @@ $(function() {
 
 
 	//Controllers
-<<<<<<< HEAD
-	var generalStateController = new GeneralStateController(model,sidebarView, welcomeView, searchView, detailsView, summaryView);
-=======
-	var generalStateController = new GeneralStateController(model,sidebarView, welcomeView, searchView, detailsView, printSummaryView);
+	var generalStateController = new GeneralStateController(model,sidebarView, welcomeView, searchView, detailsView, summaryView, printSummaryView);
+
 	//istället kalla på generalStateController i alla andra controllers där knapparna sitter
 	//och ge den en parameter på vad som ska döljas
 
 
 
->>>>>>> 85eae93e3820d79385e7954208ccc2c037ddd68a
 	//var sidebarViewController = new SidebarViewController(sidebarView,model);
 
 	var sidebarzViewController = new SidebarzViewController(sidebarView, model);
