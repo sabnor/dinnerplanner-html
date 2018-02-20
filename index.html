@@ -30,12 +30,12 @@
 
     </div>
 
+    <div class="row">
 
 <!--INDEX2-->
 
 
   <!--SIDEBARVIEW-->
-  <div class="row">
   <div class="regularContainer col-sm-3" id="sidebarView">
       <div class="smallTitle">My dinner</div>
       <div class="row">
@@ -60,7 +60,7 @@
 
   <div class="confirm">
   <span id="confirmButton"></span>
-  </div>
+</div>
 
   </div>
 <!--Sidebar tar slut-->
@@ -75,23 +75,23 @@
 
     <form>
     <div class="form-row">
-      <div class="col">
-        <input type="text" id="filter" class="form-control" placeholder="Enter dishname">
-      </div>
+
 
       <div class="col">
         <select class="form-control" id="chooseDish" onchange="handleChange">
-        <!-- <option selected value="all">ALL</option> -->
-        <option selected value="starter">Starter</option>
+        <option selected value="">ALL</option>
+        <option value="starter">Starter</option>
         <option value="main dish">Main course</option>
         <!-- <option>Side dish</option> -->
         <option value="dessert">Dessert</option>
-
-      </select>
+        </select>
+      </div>
+      <div class="col">
+        <input type="text" id="filter" class="form-control" placeholder="Filter by dishname">
       </div>
 
       <div class="col">
-      <button id="searchButton" type="button-center" class="btn btn-warning">Search</button>
+      <button id="searchButton" type="button-center" class="btn btn-warning">Filter</button>
       </div>
 
       </div>
@@ -149,7 +149,7 @@
 <div class="container">
     <div class="row">
   	<div class="col superSmallTitle">My dinner: <span id="numberOfGuests"></span> people</div>
-  	<div class="col">
+  	<div class="col-mb-1">
       <button id="editButton" type="button" class="btn btn-warning">Go back and edit dinner</button>
     </div>
   </div>
@@ -168,7 +168,7 @@
 
 
   <div class="row">
-    <button type="button" class="btn btn-warning ">Print full recipe</button>
+    <button id=printButton type="button" class="btn btn-warning ">Print full recipe</button>
   </div>
 
   </div>
@@ -180,8 +180,18 @@
 <!--Index6 börjar-->
 <!--PRINT SUMMARY VIEW-->
 <div id="printSummaryView">
+  <div class="container">
+      <div class="row">
+    	<div class="col superSmallTitle">My dinner: <span id="numberOfGuests"></span> people</div>
+    	<div class="col-mb-1">
+        <button id="editButton" type="button" class="btn btn-warning">Go back and edit dinner</button>
+      </div>
+    </div>
 
-<div id="mealSummary"></div>
+    <div class="solid"></div>
+
+    <div id="mealSummary"></div>
+  </div>
 </div>
 <!--Index6 tar slut-->
 

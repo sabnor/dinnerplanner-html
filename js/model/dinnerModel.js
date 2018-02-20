@@ -5,7 +5,7 @@ var DinnerModel = function() {
 	// and selected dishes for the dinner menu
 //----------------------------------------------------------------------
 var numberOfGuests = 4;
-var fullMenu = [1,101];
+var fullMenu = [];
 //var selectedDish = [1,100];
 var currency = "SEK";
 var observers = [];
@@ -120,7 +120,14 @@ return totalPrice;
 				found = true;
 			}
 		}
-	  	return dish.type == type && found;
+//--------------------- To get all dishes without choosing
+		if(type){
+		return dish.type == type && found;
+		}
+		
+		return dish.type
+//--------------------------------
+
 	  });
 	}
 

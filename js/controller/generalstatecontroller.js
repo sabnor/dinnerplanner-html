@@ -25,7 +25,15 @@ $('#printSummaryView').hide();
 
 
   	};
+
+    sidebarView.confirmButton.click(function(){
+      console.log('hej');
+
+  	ShowSummaryView();
+  	});
+
   	welcomeView.welcomeButton.click(function(){
+      console.log('hej');
   	ShowSearchSidebarView();
   	});
 
@@ -33,15 +41,26 @@ $('#printSummaryView').hide();
   	ShowSearchSidebarView();
   	});
 
-    // summaryView.editButton.click(function(){
-  	// ShowSearchSidebarView();
-  	// });
+    summaryView.editButton.click(function(){
+  	ShowSearchSidebarView();
+  	 });
+
+    summaryView.printButton.click(function(){
+   	ShowPrintSummaryView();
+   	 });
 
 
+     printSummaryView.editButton.click(function(){
+     ShowSearchSidebarView();
+      });
+
+<<<<<<< HEAD
     sidebarView.confirmButton.click(function(){
       console.log('summary view')
     //ShowSummaryView();
     });
+=======
+>>>>>>> 4578bc3ef1132b11b920d6a9833f80f81bdbf44b
 
 
 //index3
@@ -67,6 +86,18 @@ $('#printSummaryView').hide();
 
       };
 
+      var ShowPrintSummaryView = function() {
+        $('#printSummaryView').show();
+
+        $('#summaryView').hide();
+        $('#sidebarView').hide();
+        $('#detailsView').hide();
+        $('#welcomeView').hide();
+        $('#searchView').hide();
+
+        };
+
+
 
     searchView.openImg.on("click", ".pictureview", function(event){
       //console.log(this.id); // will always be the element with .pictureview that was clicked
@@ -75,7 +106,6 @@ $('#printSummaryView').hide();
 
 
     });
-
 
 }
 

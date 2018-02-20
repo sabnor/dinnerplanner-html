@@ -4,6 +4,7 @@ var SummaryView= function (container, model) {
 
 	//backbutton
 		this.editButton = container.find("#editButton")
+		this.printButton = container.find("#printButton")
 
 		// Let this view observe the model.
 		 model.addObserver(this);

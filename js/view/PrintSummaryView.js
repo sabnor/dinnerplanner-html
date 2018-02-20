@@ -1,6 +1,7 @@
 var PrintSummaryView = function (container, model) {
 
   var numberOfGuests = container.find("#numberOfGuests");
+  this.editButton = container.find("#editButton")
 
 
   // Let this view observe the model.
