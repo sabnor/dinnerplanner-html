@@ -124,8 +124,8 @@ return totalPrice;
 		if(type){
 		return dish.type == type && found;
 		}
-		
-		return dish.type
+
+		return dish.type && found
 //--------------------------------
 
 	  });
