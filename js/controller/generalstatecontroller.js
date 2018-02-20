@@ -54,13 +54,7 @@ $('#printSummaryView').hide();
      ShowSearchSidebarView();
       });
 
-<<<<<<< HEAD
-    sidebarView.confirmButton.click(function(){
-      console.log('summary view')
-    //ShowSummaryView();
-    });
-=======
->>>>>>> 4578bc3ef1132b11b920d6a9833f80f81bdbf44b
+
 
 
 //index3
