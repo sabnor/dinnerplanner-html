@@ -5,6 +5,21 @@ var SidebarView = function (container, model) {
   this.plusButton = container.find("#plusGuest");
   this.minusButton = container.find("#minusGuest");
 
+  this.confirmButton = container.find("#confirmButton");
+
+  var confirmButtonColor =function(button) {
+    if (model.getFullMenu().length ==0){
+      button.html('<button class="btn btn-light" type="button" disabled>Confirm dinner</button>');
+    }
+    else {
+
+      button.html('<button class="btn btn-warning" type="button">Confirm dinner</button>');
+    };
+
+  }
+
+
+
   // Let this view observe the model.
    model.addObserver(this);
 
@@ -14,6 +29,7 @@ var SidebarView = function (container, model) {
   this.update = function() {
   	updateNumberOfGuests()
     updateCost()
+    confirmButtonColor(this.confirmButton);
   }
 
   // Initialize the update.
@@ -64,15 +80,9 @@ dishRows.html(outerDiv);
 var printSum = container.find("#printSum");
 printSum.text(totalSum*model.getNumberOfGuests()+ " " +model.getCurrency());
 
-this.confirmButton = container.find("#confirmButton");
+this.confirmButton = container.find("#confirm");
 
-if (model.getFullMenu().length ==0){
-  confirmButton.html('<button id="confirmButtons" class="btn btn-light" type="button" disabled>Confirm dinner</button>');
-}
-else {
 
-  confirmButton.html('<button id="confirmButtons" class="btn btn-warning" type="button">Confirm dinner</button>');
-};
 
 }
 //----------------------------------------------------------

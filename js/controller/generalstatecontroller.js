@@ -25,7 +25,15 @@ $('#printSummaryView').hide();
 
 
   	};
+
+    sidebarView.confirmButton.click(function(){
+      console.log('hej');
+
+  	ShowSummaryView();
+  	});
+
   	welcomeView.welcomeButton.click(function(){
+      console.log('hej');
   	ShowSearchSidebarView();
   	});
 
@@ -38,10 +46,6 @@ $('#printSummaryView').hide();
   	// });
 
 
-    sidebarView.confirmButtons.click(function(){
-      console.log('summary view')
-    //ShowSummaryView();
-    });
 
 
 //index3
@@ -75,7 +79,6 @@ $('#printSummaryView').hide();
 
 
     });
-
 
 }
 
