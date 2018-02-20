@@ -4,7 +4,6 @@ var SearchView = function (container, model) {
 	this.openImg = container.find("#openImg");
 	this.searchButton = container.find("#searchButton")
 
-
 	// Let this view observe the model.
 	 model.addObserver(this);
 
@@ -24,14 +23,17 @@ var SearchView = function (container, model) {
 
 	chooseDish.onchange = function(){
 		console.log(chooseDish.value)
-		Search(chooseDish.value)
+		Search(chooseDish.value,filter.value)
 	};
 
 this.searchFilter = function(type,filter){
-	console.log(filter)
 
 	Search(type,filter)
 }
+Search("","")
+
+
+
 
 function Search(type,filter) {
 

@@ -120,7 +120,14 @@ return totalPrice;
 				found = true;
 			}
 		}
-	  	return dish.type == type && found;
+//--------------------- To get all dishes without choosing
+		if(type){
+		return dish.type == type && found;
+		}
+		
+		return dish.type
+//--------------------------------
+
 	  });
 	}
 
