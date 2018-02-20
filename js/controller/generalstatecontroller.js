@@ -41,10 +41,18 @@ $('#printSummaryView').hide();
   	ShowSearchSidebarView();
   	});
 
-    // summaryView.editButton.click(function(){
-  	// ShowSearchSidebarView();
-  	// });
+    summaryView.editButton.click(function(){
+  	ShowSearchSidebarView();
+  	 });
 
+    summaryView.printButton.click(function(){
+   	ShowPrintSummaryView();
+   	 });
+
+
+     printSummaryView.editButton.click(function(){
+     ShowSearchSidebarView();
+      });
 
 
 
@@ -70,6 +78,18 @@ $('#printSummaryView').hide();
       $('#printSummaryView').hide();
 
       };
+
+      var ShowPrintSummaryView = function() {
+        $('#printSummaryView').show();
+
+        $('#summaryView').hide();
+        $('#sidebarView').hide();
+        $('#detailsView').hide();
+        $('#welcomeView').hide();
+        $('#searchView').hide();
+
+        };
+
 
 
     searchView.openImg.on("click", ".pictureview", function(event){
