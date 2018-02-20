@@ -67,11 +67,11 @@ printSum.text(totalSum*model.getNumberOfGuests()+ " " +model.getCurrency());
 this.confirmButton = container.find("#confirmButton");
 
 if (model.getFullMenu().length ==0){
-  confirmButton.html('<button id="confirmButtons" class="btn btn-light" type="button" disabled>Confirm dinner</button>');
+  confirmButton.html('<button id="confirm" class="btn btn-light" type="button" disabled>Confirm dinner</button>');
 }
 else {
 
-  confirmButton.html('<button id="confirmButtons" class="btn btn-warning" type="button">Confirm dinner</button>');
+  confirmButton.html('<button id="confirm" class="btn btn-warning" type="button">Confirm dinner</button>');
 };
 
 }

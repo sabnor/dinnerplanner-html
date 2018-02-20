@@ -38,7 +38,7 @@ $('#printSummaryView').hide();
   	// });
 
 
-    sidebarView.confirmButtons.click(function(){
+    sidebarView.confirmButton.click(function(){
       console.log('summary view')
     //ShowSummaryView();
     });
