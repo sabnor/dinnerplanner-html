@@ -62,7 +62,7 @@ function summary () {
 			  });
 
 			var sumDiv = document.createElement('div');
-			$(sumDiv).addClass('col').text("Total: "+totalSum*model.getNumberOfGuests() +' '+model.getCurrency())
+			$(sumDiv).addClass('col sum').text("Total: "+totalSum*model.getNumberOfGuests() +' '+model.getCurrency())
 			.appendTo(outerDiv);
 
 			var menuSummary = container.find("#menuSummary");

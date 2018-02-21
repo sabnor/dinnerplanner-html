@@ -11,7 +11,10 @@ $('#summaryView').hide();
 $('#printSummaryView').hide();
 
 
+<<<<<<< HEAD
 //
+=======
+>>>>>>> de01b9696e50da9316cf467a0410c1344b14b3d6
 
 //index2
   var ShowSearchSidebarView = function() {
@@ -28,10 +31,13 @@ $('#printSummaryView').hide();
   	};
 
     sidebarView.confirmButton.click(function(){
+      console.log('hej');
+
   	ShowSummaryView();
   	});
 
   	welcomeView.welcomeButton.click(function(){
+      console.log('hej');
   	ShowSearchSidebarView();
   	});
 
@@ -52,7 +58,10 @@ $('#printSummaryView').hide();
      ShowSearchSidebarView();
       });
 
-
+    sidebarView.confirmButton.click(function(){
+      console.log('summary view')
+    //ShowSummaryView();
+    });
 
 
 //index3
