@@ -4,21 +4,17 @@ $(function() {
 	var model = new DinnerModel();
 
 
+	var apiModel = new ApiModel();
+	var testView= new TestView($("#testView"),apiModel);
+
+
+
 	// And create the instance of ExampleView
 	var welcomeView= new WelcomeView($("#welcomeView"),model);
-	// var exampleView = new ExampleView($("#exampleView"),model);
-	//var numberView = new NumberView($("#numberView"),model);
-
 	var sidebarView = new SidebarView($("#sidebarView"),model);
 	var searchView = new SearchView($("#searchView"),model);
 	var detailsView = new DetailsView($("#detailsView"),model);
-
 	var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
-	//var summaryView = new SummaryView($("#summaryView"),model);
-	//var dishThumbnailView = new DishThumbnailView($("#dishThumbnailView"),model);
-
-	//var dishView = new DishView($("#dishView"),model);
-	//var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
 	var summaryView = new SummaryView($("#summaryView"),model);
 
 
@@ -29,7 +25,6 @@ $(function() {
 
 
 
-	//var sidebarViewController = new SidebarViewController(sidebarView,model);
 
 	var sidebarzViewController = new SidebarzViewController(sidebarView, model);
 	var selectedDishController = new SelectedDishController(detailsView, model);
