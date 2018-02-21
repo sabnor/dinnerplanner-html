@@ -11,7 +11,7 @@ $('#summaryView').hide();
 $('#printSummaryView').hide();
 
 
-
+//
 
 //index2
   var ShowSearchSidebarView = function() {
