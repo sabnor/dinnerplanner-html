@@ -45,6 +45,7 @@ $(function() {
 	generalStateController.addScreen('SUMMARY', [summaryView]);
 	generalStateController.addScreen('PRINTSUMMARY', [printSummaryView]);
 
+	// intial start
 	generalStateController.showScreen('WELCOME');
 
 		//forwardButton to searchsidebar

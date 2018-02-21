@@ -25,15 +25,28 @@ var SidebarView = function (container, model) {
 
    /**
   * Updates table data
-  */
-  this.update = function() {
-  	updateNumberOfGuests()
-    updateCost()
-    confirmButtonColor(this.confirmButton);
-  }
+  // */
+  // this.update = function() {
+  // 	updateNumberOfGuests()
+  //   updateCost()
+  //   confirmButtonColor(this.confirmButton);
+  // }
 
   // Initialize the update.
-  this.update();
+  //this.update();
+
+  this.update = function(args){
+    if (args == 'numberOfGuests'){
+      updateNumberOfGuests();
+      updateCost();
+    }
+    if (args == 'addedDish'){
+      updateCost();
+      confirmButtonColor(this.confirmButton);
+    }
+}
+  this.update('numberOfGuests');
+  this.update('addedDish');
 
   /**
   * Update total total number of guests.
@@ -80,21 +93,18 @@ dishRows.html(outerDiv);
 var printSum = container.find("#printSum");
 printSum.text(totalSum*model.getNumberOfGuests()+ " " +model.getCurrency());
 
-this.confirmButton = container.find("#confirm");
-
-if (model.getFullMenu().length ==0){
-  confirmButton.html('<button id="confirm" class="btn btn-light" type="button" disabled>Confirm dinner</button>');
-}
-else {
-
-  confirmButton.html('<button id="confirm" class="btn btn-warning" type="button">Confirm dinner</button>');
-};
 
 }
 //----------------------------------------------------------
 
 
+this.hide = function() {
+  container.fadeOut();
+}
 
+this.show = function(){
+  container.fadeIn();
+}
 
 
 

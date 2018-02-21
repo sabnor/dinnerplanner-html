@@ -10,15 +10,30 @@ var SummaryView= function (container, model) {
 		 model.addObserver(this);
 
 
-		//Updates table data
-		this.update = function() {
-			updateNumberOfGuests()
-			summary()
+		// //Updates table data
+		// this.update = function() {
+		// 	updateNumberOfGuests()
+		// 	summary()
+		// }
+    //
+    //
+    //
+		// // Initialize the update.
+		// this.update();
+    //
+
+
+		  this.update = function(args){
+		    if (args == 'numberOfGuests'){
+		      updateNumberOfGuests();
+		      summary();
+		    }
+				if (args == 'addedDish'){
+		      summary();
 		}
+	}
 
-		// Initialize the update.
-		this.update();
-
+	this.update('numberOfGuests');
 
 		//Update total total number of guests.
 		function updateNumberOfGuests() {
@@ -78,4 +93,12 @@ function summary () {
 
 
 	}
+	this.hide = function() {
+		container.fadeOut();
+	}
+
+	this.show = function(){
+		container.fadeIn();
+	}
+
 }

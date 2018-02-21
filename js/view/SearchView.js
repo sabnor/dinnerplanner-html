@@ -7,19 +7,11 @@ var SearchView = function (container, model) {
 	// Let this view observe the model.
 	 model.addObserver(this);
 
-	 /**
-	* Updates table data
-	*/
-	this.update = function() {
-		//Search()
-	}
-
-	// Initialize the update.
-	this.update();
-
-	/**
-	* Update total total number of guests.
-	*/
+	 this.update = function(args){
+		 if (args == 'numberOfGuests'){
+			 console.log('Search update')
+		 }
+	 }
 
 	chooseDish.onchange = function(){
 		console.log(chooseDish.value)
@@ -50,4 +42,13 @@ function Search(type,filter) {
 			var allDishImg = container.find("#allDishImg");
 			allDishImg.html(outerDiv);
 		}
+
+	this.hide = function() {
+		container.fadeOut();
+	}
+
+	this.show = function(){
+		container.fadeIn();
+	}
+
 }

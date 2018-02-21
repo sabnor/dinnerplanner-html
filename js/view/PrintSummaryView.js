@@ -10,14 +10,24 @@ var PrintSummaryView = function (container, model) {
    /**
   * Updates table data
   */
-  this.update = function() {
-    updateNumberOfGuests();
-    updatePrintSummary();
-  }
+  // this.update = function() {
+  //   updateNumberOfGuests();
+  //   updatePrintSummary();
+  // }
+  //
+  // // Initialize the update.
+  // this.update();
+  this.update = function(args){
+    if (args == 'numberOfGuests'){
+      updateNumberOfGuests();
+      updatePrintSummary();
+    }
+    if (args == 'addedDish'){
+      updatePrintSummary();
+    }
+}
 
-  // Initialize the update.
-  this.update();
-
+this.update('numberOfGuests');
   /**
   * Update total total number of guests.
   */
@@ -83,6 +93,14 @@ var PrintSummaryView = function (container, model) {
 
       var mealSummary = container.find("#mealSummary");
     mealSummary.html(outerDiv);
+  }
+
+  this.hide = function() {
+    container.fadeOut();
+  }
+
+  this.show = function(){
+    container.fadeIn();
   }
 
 }

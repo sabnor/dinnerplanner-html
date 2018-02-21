@@ -8,5 +8,11 @@ var WelcomeView = function (container, model) {
 
 		this.welcomeButton = container.find("#welcomeButton");
 
+		this.hide = function() {
+			container.fadeOut();
+		}
 
+		this.show = function(){
+			container.fadeIn();
+		}
 }

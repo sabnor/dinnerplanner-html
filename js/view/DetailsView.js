@@ -9,19 +9,23 @@ var DetailsView = function (container, model) {
        /**
       * Updates table data
       */
-      // this.update = function() {
-      // 	updateIngredients()
-      // }
 
       // Initialize the update.
-      this.update = function(){
-        // if (args == 'numberOfGuests'){
-        //   updateNumberOfGuests();
-        //   updateIngredients();
-        // }
-        updateNumberOfGuests();
-        updateIngredients();
+      this.update = function(args){
+        if (args == 'numberOfGuests'){
+          updateNumberOfGuests();
+          updateIngredients();
+        }
+
+        if (args == 'chosenId'){
+          updateIngredients();
+        }
+        // updateNumberOfGuests();
+        // updateIngredients();
       }
+
+      this.update('numberOfGuests');
+      // }
 
       //Update total total number of guests.
       function updateNumberOfGuests() {
@@ -87,5 +91,12 @@ var ingredientrows = container.find("#ingredientrows");
 ingredientrows.html(outerDiv);
 }
 
+this.hide = function() {
+  container.fadeOut();
+}
+
+this.show = function(){
+  container.fadeIn();
+}
 
 }

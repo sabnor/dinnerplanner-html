@@ -9,9 +9,7 @@ var fullMenu = [];
 //var selectedDish = [1,100];
 var currency = "SEK";
 var observers = [];
-
 var chosenId = "3";
-
 var chosenType = "3";
 //----------------------------------------------------------------------
 this.setChosenType = function(type) {
@@ -24,7 +22,7 @@ this.setChosenType = function(type) {
 //----------------------------------------------------------------------
 this.setChosenId = function(id) {
 	chosenId = id;
-	notifyObservers();
+	notifyObservers('chosenId');
 }
 	this.getChosenId = function() {
 		return chosenId;
@@ -47,7 +45,6 @@ this.setChosenId = function(id) {
 			}
 		}
 	}
-
 
 
 	//Returns all the dishes on the menu.
@@ -90,7 +87,7 @@ return totalPrice;
 				fullMenu.splice(i,1);
 			}}
 		fullMenu.push(id);
-			notifyObservers();
+			notifyObservers('addedDish');
 }
 
 	//Removes dish from menu
@@ -153,7 +150,7 @@ this.addObserver = function(observer) {
 observers.push(observer);
  }
 
-var notifyObservers = function() {
+var notifyObservers = function(args) {
 	for(var i =0; i < observers.length; i++){
 			observers[i].update(args)
 }
