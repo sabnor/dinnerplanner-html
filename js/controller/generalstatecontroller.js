@@ -1,108 +1,60 @@
 //GeneralViewController Object constructor
 //hide and show pages
-var GeneralStateController = function(model,sidebarView, welcomeView, searchView, detailsView, printSummaryView, summaryView) {
+var GeneralStateController = function() {
 
-//start
-$('#welcomeView').show();
-$('#sidebarView').hide();
-$('#searchView').hide();
-$('#detailsView').hide();
-$('#summaryView').hide();
-$('#printSummaryView').hide();
+  var views = [];
+  var screens = {};
 
+  var hideAll = function(){
+    for (var key in views){
+      views[key].hide();
+    }
+  }
 
+this.addView = function(view){
+  views.push(view);
+}
 
-//index2
-  var ShowSearchSidebarView = function() {
-    $('#sidebarView').show();
-    $('#searchView').show();
+this.addScreen = function(name, views){
+  screens[name] = views;
+}
 
-    $('#welcomeView').hide();
-    $('#detailsView').hide();
-    $('#summaryView').hide();
-    $('#printSummaryView').hide();
+this.showScreen = function (name) {
+  hideAll();
+  for(var key in screens[name]){
+    screens[name][key].show();
+  }
+}
 
+  //initial start
+  // this.showScreen('WELCOME');
+  //
+  //   //forwardButton to searchsidebar
+  // 	$('#welcomeView').welcomeButton.click(function(){
+  //   this.showScreen('SEARCHSIDEBAR');
+  //   });
+  //
+  // //backButton to searchsidebar
+  //   $('#detailsView').backButton.click(function(){
+  // 	this.showScreen('SEARCHSIDEBAR');
+  // 	});
+  //
+  //   //editButton to searchsidebar
+  //   $('#summaryView').editButton.click(function(){
+  // 	this.showScreen('SEARCHSIDEBAR');
+  // 	 });
+  //
+  //   //forwardButton to PrintSummary
+  //   $('#summaryView').printButton.click(function(){
+  //   this.showScreen('PRINTSUMMARY');
+  //  	 });
+  //
+  //   //editButton to searchsidebar
+  //   $('#printSummaryView').editButton.click(function(){
+  //   this.showScreen('SEARCHSIDEBAR');
+  //     });
+  //
 
-
-  	};
-
-    sidebarView.confirmButton.click(function(){
-      console.log('hej');
-
-  	ShowSummaryView();
-  	});
-
-  	welcomeView.welcomeButton.click(function(){
-      console.log('hej');
-  	ShowSearchSidebarView();
-  	});
-
-    detailsView.backButton.click(function(){
-  	ShowSearchSidebarView();
-  	});
-
-    summaryView.editButton.click(function(){
-  	ShowSearchSidebarView();
-  	 });
-
-    summaryView.printButton.click(function(){
-   	ShowPrintSummaryView();
-   	 });
-
-
-     printSummaryView.editButton.click(function(){
-     ShowSearchSidebarView();
-      });
-
-    sidebarView.confirmButton.click(function(){
-      console.log('summary view')
-    //ShowSummaryView();
-    });
-
-
-//index3
-  var ShowDetailsSidebarView = function() {
-    $('#sidebarView').show();
-    $('#detailsView').show();
-
-    $('#welcomeView').hide();
-    $('#searchView').hide();
-    $('#summaryView').hide();
-    $('#printSummaryView').hide();
-
-    };
-
-    var ShowSummaryView = function() {
-      $('#summaryView').show();
-
-      $('#sidebarView').hide();
-      $('#detailsView').hide();
-      $('#welcomeView').hide();
-      $('#searchView').hide();
-      $('#printSummaryView').hide();
-
-      };
-
-      var ShowPrintSummaryView = function() {
-        $('#printSummaryView').show();
-
-        $('#summaryView').hide();
-        $('#sidebarView').hide();
-        $('#detailsView').hide();
-        $('#welcomeView').hide();
-        $('#searchView').hide();
-
-        };
-
-
-
-    searchView.openImg.on("click", ".pictureview", function(event){
-      //console.log(this.id); // will always be the element with .pictureview that was clicked
-      model.setChosenId(this.id)
-      ShowDetailsSidebarView();
-
-
-    });
 
 }
 

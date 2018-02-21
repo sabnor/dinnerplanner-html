@@ -1,6 +1,4 @@
-
-
-  var DetailsView = function (container, model) {
+var DetailsView = function (container, model) {
 
       this.backButton = container.find("#backButton");
       this.addDishButton = container.find("#addDishButton");
@@ -11,16 +9,21 @@
        /**
       * Updates table data
       */
-      this.update = function() {
-      	updateIngredients()
-      }
+      // this.update = function() {
+      // 	updateIngredients()
+      // }
 
       // Initialize the update.
-      this.update();
+      this.update = function(){
+        // if (args == 'numberOfGuests'){
+        //   updateNumberOfGuests();
+        //   updateIngredients();
+        // }
+        updateNumberOfGuests();
+        updateIngredients();
+      }
 
-      /**
-      * Update total total number of guests.
-      */
+      //Update total total number of guests.
       function updateNumberOfGuests() {
       	container.find("#numberOfGuests").html(model.getNumberOfGuests());
       }
@@ -85,7 +88,4 @@ ingredientrows.html(outerDiv);
 }
 
 
-    //var nameElement = document.createElement('div')
-    //var nameCol = $(nameElement).addClass('col').text(dishObject.name)
-      //.appendTo(rowElement);
 }

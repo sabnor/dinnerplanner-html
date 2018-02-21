@@ -32,7 +32,7 @@ this.setChosenId = function(id) {
 //----------------------------------------------------------------------
 	this.setNumberOfGuests = function(num) {
 		numberOfGuests = num;
-		notifyObservers();
+		notifyObservers('numberOfGuests');
 	}
 	this.getNumberOfGuests = function() {
 		return numberOfGuests;
@@ -153,9 +153,9 @@ this.addObserver = function(observer) {
 observers.push(observer);
  }
 
-var notifyObservers = function(obj) {
+var notifyObservers = function() {
 	for(var i =0; i < observers.length; i++){
-			observers[i].update()
+			observers[i].update(args)
 }
 }
 

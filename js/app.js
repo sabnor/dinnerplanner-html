@@ -7,37 +7,72 @@ $(function() {
 	var apiModel = new ApiModel();
 	var testView= new TestView($("#testView"),apiModel);
 
+	//GeneralStateControllers
+	var generalStateController = new GeneralStateController();
 
-
-	// And create the instance of ExampleView
+	//WelcomeView
 	var welcomeView= new WelcomeView($("#welcomeView"),model);
+	generalStateController.addView(welcomeView);
+
+	//SidebarView
 	var sidebarView = new SidebarView($("#sidebarView"),model);
+	generalStateController.addView(sidebarView);
+	var sidebarzViewController = new SidebarzViewController(sidebarView, model, generalStateController);
+
+	//SearchView
 	var searchView = new SearchView($("#searchView"),model);
+	generalStateController.addView(searchView);
+	var searchViewController = new SearchViewController(searchView, model, generalStateController);
+
+	//DetailsView
 	var detailsView = new DetailsView($("#detailsView"),model);
-	var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
+	generalStateController.addView(detailsView);
+	var addDishController = new AddDishController(detailsView, model, generalStateController);
+
+	//SummaryView
 	var summaryView = new SummaryView($("#summaryView"),model);
+	generalStateController.addView(summaryView);
+
+	//PrintSummaryView
+	var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
+	generalStateController.addView(printSummaryView);
 
 
-	//Controllers
-	var generalStateController = new GeneralStateController(model, sidebarView, welcomeView, searchView, detailsView, printSummaryView, summaryView);
-	//istället kalla på generalStateController i alla andra controllers där knapparna sitter
-	//och ge den en parameter på vad som ska döljas
+	//GeneralStateControllers screen
+	generalStateController.addScreen('WELCOME', [welcomeView]);
+	generalStateController.addScreen('SEARCHSIDEBAR', [sidebarView, searchView]);
+	generalStateController.addScreen('DETAILSSIDEBAR', [sidebarView, detailsView]);
+	generalStateController.addScreen('SUMMARY', [summaryView]);
+	generalStateController.addScreen('PRINTSUMMARY', [printSummaryView]);
+
+	generalStateController.showScreen('WELCOME');
+
+		//forwardButton to searchsidebar
+		welcomeView.welcomeButton.click(function(){
+		generalStateController.showScreen('SEARCHSIDEBAR');
+		});
+
+	//backButton to searchsidebar
+		detailsView.backButton.click(function(){
+		generalStateController.showScreen('SEARCHSIDEBAR');
+		});
+
+		//editButton to searchsidebar
+		summaryView.editButton.click(function(){
+		generalStateController.showScreen('SEARCHSIDEBAR');
+		 });
+
+		//forwardButton to PrintSummary
+		summaryView.printButton.click(function(){
+		generalStateController.showScreen('PRINTSUMMARY');
+		 });
+
+		//editButton to searchsidebar
+		printSummaryView.editButton.click(function(){
+		generalStateController.showScreen('SEARCHSIDEBAR');
+			});
 
 
-
-
-	var sidebarzViewController = new SidebarzViewController(sidebarView, model);
-	var selectedDishController = new SelectedDishController(detailsView, model);
-	var searchViewController = new SearchViewController(searchView, model);
-
-//	var exampleViewController = new ExampleViewController(exampleView,model);
-
-	/**
-	 * IMPORTANT: app.js is the only place where you are allowed to
-	 * use the $('someSelector') to search for elements in the whole HTML.
-	 * In other places you should limit the search only to the children
-	 * of the specific view you're working with (see exampleView.js).
-	 */
 
 
 });
