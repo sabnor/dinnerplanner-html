@@ -12,7 +12,6 @@ $('#printSummaryView').hide();
 
 
 
-
 //index2
   var ShowSearchSidebarView = function() {
     $('#sidebarView').show();
@@ -28,10 +27,13 @@ $('#printSummaryView').hide();
   	};
 
     sidebarView.confirmButton.click(function(){
+      console.log('hej');
+
   	ShowSummaryView();
   	});
 
   	welcomeView.welcomeButton.click(function(){
+      console.log('hej');
   	ShowSearchSidebarView();
   	});
 
@@ -52,7 +54,10 @@ $('#printSummaryView').hide();
      ShowSearchSidebarView();
       });
 
-
+    sidebarView.confirmButton.click(function(){
+      console.log('summary view')
+    //ShowSummaryView();
+    });
 
 
 //index3
