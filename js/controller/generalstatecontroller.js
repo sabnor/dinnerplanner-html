@@ -15,6 +15,7 @@ this.addView = function(view){
   views.push(view);
 }
 
+
 this.addScreen = function(name, views){
   screens[name] = views;
 }
