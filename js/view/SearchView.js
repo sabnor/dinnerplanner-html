@@ -35,8 +35,8 @@ function Search(type,filter) {
 
 
 			model.getAllDishes(type, filter, function(data){
-				data.forEach(function(key){
-		      var innerDiv = ItemView(container,model,key['id'])
+				data.results.forEach(function(key){
+		      var innerDiv = ItemView(container,model,key)
 		        .appendTo(outerDiv);
 		    });
 
