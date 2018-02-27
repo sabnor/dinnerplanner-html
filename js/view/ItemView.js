@@ -11,11 +11,11 @@ var ItemView = function (container, model, dish) {
 
 
   var dishImg = document.createElement('img');
-  $(dishImg).addClass('tumnagel xs-1').attr('src',''+dish.image)
+  $(dishImg).addClass('tumnagel xs-1').attr('src','https://spoonacular.com/recipeImages/'+dish.image)
 			.appendTo(box);
 
   var label = document.createElement('label');
-  $(label).text(dish.name)
+  $(label).text(dish.title)
   .appendTo(box)
     return divObject;
 

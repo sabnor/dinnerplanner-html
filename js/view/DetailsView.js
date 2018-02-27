@@ -42,7 +42,7 @@ function updateIngredients() {
     //Creating the dish-informations
     var labelElement = document.createElement('div')
     //var labelObject = $(labelElement).addClass('smallTitle').text(dishObject.name);
-    container.find("#dishTitle").html(dishObject.name);
+    container.find("#dishTitle").html(dishObject.title);
     var divElement = document.createElement('div');
     $(divElement).appendTo(labelElement);
 
@@ -77,7 +77,7 @@ dishObject.ingredients.forEach(function(ingredientObject){
     .appendTo(rowElement);
 
     var ingredientNameElement = document.createElement('div');
-    $(ingredientNameElement).addClass('col').text(ingredientObject['name'])
+    $(ingredientNameElement).addClass('col').text(ingredientObject['title'])
     .appendTo(rowElement);
 
     var ingredientPriceElement = document.createElement('div');
