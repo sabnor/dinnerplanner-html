@@ -122,39 +122,9 @@ return totalPrice;
  })
 
 
-// 	  return dishes.filter(function(dish) {
-// 		var found = true;
-// 		if(filter){
-// 			found = false;
-// 			dish.ingredients.forEach(function(ingredient) {
-// 				if(ingredient.name.indexOf(filter)!=-1) {
-// 					found = true;
-// 				}
-// 			});
-// 			if(dish.name.indexOf(filter) != -1)
-// 			{
-// 				found = true;
-// 			}
-// 		}
-// //--------------------- To get all dishes without choosing
-// 		if(type){
-// 		return dish.type == type && found;
-// 		}
-//
-// 		return dish.type && found
-// //--------------------------------
-//
-// 	  });
+
 	}
 
-	//function that returns a dish of specific ID
-	// this.getDish = function (id) {
-	//   for(key in dishes){
-	// 		if(dishes[key].id == id) {
-	// 			return dishes[key];
-	// 		}
-	// 	}
-	// }
 
 	this.getDish = function (id, callback, errorCallback) {
 	var urlQuery = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/"+id+"/information";
