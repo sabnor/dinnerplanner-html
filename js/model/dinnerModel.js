@@ -110,6 +110,7 @@ return totalPrice;
 
 	$.ajax( {
 	   url: urlQuery,
+		 dataType: "json",
 	   headers: {
 	     'X-Mashape-Key': 'Qu9grxVNWpmshA4Kl9pTwyiJxVGUp1lKzrZjsnghQMkFkfA4LB'
 	   },
