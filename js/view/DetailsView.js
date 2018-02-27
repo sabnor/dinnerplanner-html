@@ -36,59 +36,72 @@ var DetailsView = function (container, model) {
 
 function updateIngredients() {
 
-    var dishObject = model.getDish(model.getChosenId())
+    model.getDish(model.getChosenId(),function(data){
+       var dishObject = data
+       console.log('data',data)
 
+       var labelElement = document.createElement('div')
+       //var labelObject = $(labelElement).addClass('smallTitle').text(dishObject.name);
+       container.find("#dishTitle").html(dishObject.title);
+       var divElement = document.createElement('div');
+       $(divElement).appendTo(labelElement);
+
+       var dishImg = document.createElement('img');
+       $(dishImg).addClass('imgDetailsView mb-1').attr('src',''+dishObject.image)
+     			.appendTo(divElement);
+
+      var descriptionElement = document.createElement('p');
+
+      var description = dishObject.steps.forEach(function(step){
+      $(descriptionElement).text(step.step)
+      .appendTo(divElement);
+      })
+
+
+
+       var dishLabel = container.find("#dishLabel");
+       dishLabel.html(labelElement);
+
+       var numberOfGuests = container.find("#numberOfGuests");
+       numberOfGuests.html(model.getNumberOfGuests());
+
+
+   //--------------------------------------------------------------------
+   //Creating the ingredient-rows
+   var outerDiv = document.createElement('div')
+   $(outerDiv).addClass('text-center');
+
+   dishObject.ingredients.forEach(function(ingredientObject){
+       var price = ingredientObject['price']
+
+       var rowElement = document.createElement('div')
+       $(rowElement).addClass('row');
+
+       var ingredientQuantityElement = document.createElement('div');
+       $(ingredientQuantityElement).addClass('col').text(ingredientObject['quantity']*model.getNumberOfGuests()+' '+ingredientObject['unit'])
+       .appendTo(rowElement);
+
+       var ingredientNameElement = document.createElement('div');
+       $(ingredientNameElement).addClass('col').text(ingredientObject['title'])
+       .appendTo(rowElement);
+
+       var ingredientPriceElement = document.createElement('div');
+       $(ingredientPriceElement).addClass('col').text(ingredientObject['price']*model.getNumberOfGuests()+' '+model.getCurrency())
+       .appendTo(rowElement);
+
+       $(rowElement).appendTo(outerDiv)
+   });
+
+   var ingredientrows = container.find("#ingredientrows");
+   ingredientrows.html(outerDiv);
+
+    },
+    function(error){
+      window.alert("Error in detailsView")
+    });
     //--------------------------------------------------------------------
     //Creating the dish-informations
-    var labelElement = document.createElement('div')
-    //var labelObject = $(labelElement).addClass('smallTitle').text(dishObject.name);
-    container.find("#dishTitle").html(dishObject.title);
-    var divElement = document.createElement('div');
-    $(divElement).appendTo(labelElement);
 
-    var dishImg = document.createElement('img');
-    $(dishImg).addClass('imgDetailsView mb-1').attr('src','images/'+dishObject.image)
-  			.appendTo(divElement);
-
-    var descriptionElement = document.createElement('p');
-    $(descriptionElement).text(dishObject.description)
-    .appendTo(divElement);
-
-    var dishLabel = container.find("#dishLabel");
-    dishLabel.html(labelElement);
-
-    var numberOfGuests = container.find("#numberOfGuests");
-    numberOfGuests.html(model.getNumberOfGuests());
-
-
-//--------------------------------------------------------------------
-//Creating the ingredient-rows
-var outerDiv = document.createElement('div')
-$(outerDiv).addClass('text-center');
-
-dishObject.ingredients.forEach(function(ingredientObject){
-    var price = ingredientObject['price']
-
-    var rowElement = document.createElement('div')
-    $(rowElement).addClass('row');
-
-    var ingredientQuantityElement = document.createElement('div');
-    $(ingredientQuantityElement).addClass('col').text(ingredientObject['quantity']*model.getNumberOfGuests()+' '+ingredientObject['unit'])
-    .appendTo(rowElement);
-
-    var ingredientNameElement = document.createElement('div');
-    $(ingredientNameElement).addClass('col').text(ingredientObject['title'])
-    .appendTo(rowElement);
-
-    var ingredientPriceElement = document.createElement('div');
-    $(ingredientPriceElement).addClass('col').text(ingredientObject['price']*model.getNumberOfGuests()+' '+model.getCurrency())
-    .appendTo(rowElement);
-
-    $(rowElement).appendTo(outerDiv)
-});
-
-var ingredientrows = container.find("#ingredientrows");
-ingredientrows.html(outerDiv);
 }
 
 this.hide = function() {
