@@ -128,7 +128,7 @@ return totalPrice;
 
 
 	this.getDish = function (id, callback, errorCallback) {
-	var urlQuery = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/"+id+"/information";
+	var urlQuery = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/"+id+"/analyzedInstructions";
 
 	$.ajax( {
 		 url: urlQuery,
