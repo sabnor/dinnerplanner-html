@@ -9,7 +9,7 @@ var fullMenu = [];
 //var selectedDish = [1,100];
 var currency = "SEK";
 var observers = [];
-var chosenId = "10";
+var chosenId = "5";
 var chosenType = "3";
 //----------------------------------------------------------------------
 this.setChosenType = function(type) {

@@ -51,9 +51,9 @@ function updateIngredients() {
      			.appendTo(divElement);
 
       var descriptionElement = document.createElement('p');
-
-      var description = dishObject.steps.forEach(function(step){
-      $(descriptionElement).text(step.step)
+      console.log('steps',dishObject['0'].steps)
+      var description = dishObject['0'].steps.forEach(function(step){
+      $(descriptionElement).text(step.ingredients.step)
       .appendTo(divElement);
       })
 
