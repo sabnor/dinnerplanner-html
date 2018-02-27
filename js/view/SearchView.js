@@ -34,16 +34,19 @@ function Search(type,filter) {
 	    $(outerDiv).addClass('row');
 
 
-			model.getAllDishes(type,filter, function(data){
+			model.getAllDishes(type, filter, function(data){
 				data.forEach(function(key){
 		      var innerDiv = ItemView(container,model,key['id'])
 		        .appendTo(outerDiv);
 		    });
 
 			}, function(error){
-				console.log('error!!!!')
+				window.alert("('error!!!!')")
 
 			})
+
+
+
 
 
 

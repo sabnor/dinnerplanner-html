@@ -102,30 +102,49 @@ return totalPrice;
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
 	//you can use the filter argument to filter out the dish by name or ingredient (use for search)
 	//if you don't pass any filter all the dishes will be returned
-	this.getAllDishes = function (type,filter) {
-	  return dishes.filter(function(dish) {
-		var found = true;
-		if(filter){
-			found = false;
-			dish.ingredients.forEach(function(ingredient) {
-				if(ingredient.name.indexOf(filter)!=-1) {
-					found = true;
-				}
-			});
-			if(dish.name.indexOf(filter) != -1)
-			{
-				found = true;
-			}
-		}
-//--------------------- To get all dishes without choosing
-		if(type){
-		return dish.type == type && found;
-		}
 
-		return dish.type && found
-//--------------------------------
 
-	  });
+	this.getAllDishes = function (type, filter, callback, errorCallback) {
+
+		var urlQuery = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?type="+type+"&number=100&query="+filter;
+
+	$.ajax( {
+	   url: urlQuery,
+	   headers: {
+	     'X-Mashape-Key': 'Qu9grxVNWpmshA4Kl9pTwyiJxVGUp1lKzrZjsnghQMkFkfA4LB'
+	   },
+	   success: function(data) {
+	     callback(data)
+	   },
+	   error: function(error) {
+	     errorCallback(error)
+	   }
+ })
+
+
+// 	  return dishes.filter(function(dish) {
+// 		var found = true;
+// 		if(filter){
+// 			found = false;
+// 			dish.ingredients.forEach(function(ingredient) {
+// 				if(ingredient.name.indexOf(filter)!=-1) {
+// 					found = true;
+// 				}
+// 			});
+// 			if(dish.name.indexOf(filter) != -1)
+// 			{
+// 				found = true;
+// 			}
+// 		}
+// //--------------------- To get all dishes without choosing
+// 		if(type){
+// 		return dish.type == type && found;
+// 		}
+//
+// 		return dish.type && found
+// //--------------------------------
+//
+// 	  });
 	}
 
 	//function that returns a dish of specific ID
@@ -136,6 +155,24 @@ return totalPrice;
 			}
 		}
 	}
+
+	this.getDishDetails = function (id, callback, errorCallback) {
+	var urlQuery = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/"+id+"/information";
+
+	$.ajax( {
+		 url: urlQuery,
+		 headers: {
+			 'X-Mashape-Key': "Qu9grxVNWpmshA4Kl9pTwyiJxVGUp1lKzrZjsnghQMkFkfA4LB",
+		 },
+		 success: function(data) {
+			 callback(data)
+		 },
+		 error: function(error) {
+			 errorCallback(error)
+		 }
+
+	})
+}
 
 this.setCurrency = function (newCurrency) {
   currency = newCurrency.toUpperCase();
@@ -165,9 +202,11 @@ var notifyObservers = function(args) {
 	// defining the unit i.e. "g", "slices", "ml". Unit
 	// can sometimes be empty like in the example of eggs where
 	// you just say "5 eggs" and not "5 pieces of eggs" or anything else.
-
-
 	var dishes = [{
+
+
+
+
 		'id':1,
 		'name':'French toast',
 		'type':'starter',
