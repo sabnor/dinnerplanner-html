@@ -50,9 +50,14 @@ function updateIngredients() {
        $(dishImg).addClass('imgDetailsView mb-1').attr('src',''+dishObject.image)
      			.appendTo(divElement);
 
-       var descriptionElement = document.createElement('p');
-       $(descriptionElement).text(dishObject.description)
-       .appendTo(divElement);
+      var descriptionElement = document.createElement('p');
+
+      var description = dishObject.steps.forEach(function(step){
+      $(descriptionElement).text(step.step)
+      .appendTo(divElement);
+      })
+
+
 
        var dishLabel = container.find("#dishLabel");
        dishLabel.html(labelElement);
