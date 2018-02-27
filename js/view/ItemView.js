@@ -11,11 +11,11 @@ var ItemView = function (container, model, dish) {
 
 
   var dishImg = document.createElement('img');
-  $(dishImg).addClass('tumnagel xs-1').attr('src','images/'+model.getDish(dish).image)
+  $(dishImg).addClass('tumnagel xs-1').attr('src','images/'+dish.image)
 			.appendTo(box);
 
   var label = document.createElement('label');
-  $(label).text(model.getDish(dish).name)
+  $(label).text(dish.name)
   .appendTo(box)
     return divObject;
 
