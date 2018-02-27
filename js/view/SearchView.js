@@ -33,10 +33,18 @@ function Search(type,filter) {
 	    var outerDiv = document.createElement('div');
 	    $(outerDiv).addClass('row');
 
-	    model.getAllDishes(type,filter).forEach(function(key){
-	      var innerDiv = ItemView(container,model,key['id'])
-	        .appendTo(outerDiv);
-	    });
+
+			model.getAllDishes(type,filter, function(data){
+				data.forEach(function(key){
+		      var innerDiv = ItemView(container,model,key['id'])
+		        .appendTo(outerDiv);
+		    });
+
+			}, function(error){
+				console.log('error!!!!')
+
+			})
+
 
 
 			var allDishImg = container.find("#allDishImg");
