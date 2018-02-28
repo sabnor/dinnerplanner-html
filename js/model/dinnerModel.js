@@ -160,6 +160,7 @@ this.addDishToMenu = function(id) {
 
 	this.getDish = function (id, callback, errorCallback) {
 	var urlQuery = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/"+id+"/information";
+	generalStateController.showScreen('LOADER');
 
 	$.ajax( {
 		 url: urlQuery,
@@ -174,6 +175,8 @@ this.addDishToMenu = function(id) {
 		 }
 
 	})
+	generalStateController.showScreen('DETAILSSIDEBAR');
+
 }
 
 this.setCurrency = function (newCurrency) {
