@@ -1,14 +1,15 @@
 $(function() {
 
+		var generalStateController = new GeneralStateController();
 	//We instantiate our model
-	var model = new DinnerModel();
+	var model = new DinnerModel(generalStateController);
 
 
 	var apiModel = new ApiModel();
 	var testView= new TestView($("#testView"),apiModel);
 
 	//GeneralStateControllers
-	var generalStateController = new GeneralStateController();
+
 
 	//WelcomeView
 	var welcomeView= new WelcomeView($("#welcomeView"),model);
@@ -37,6 +38,9 @@ $(function() {
 	var printSummaryView = new PrintSummaryView($("#printSummaryView"),model);
 	generalStateController.addView(printSummaryView);
 
+	var loader = new Loader($("#loader"),model);
+	generalStateController.addView(loader);
+
 
 	//GeneralStateControllers screen
 	generalStateController.addScreen('WELCOME', [welcomeView]);
@@ -44,6 +48,8 @@ $(function() {
 	generalStateController.addScreen('DETAILSSIDEBAR', [sidebarView, detailsView]);
 	generalStateController.addScreen('SUMMARY', [summaryView]);
 	generalStateController.addScreen('PRINTSUMMARY', [printSummaryView]);
+	generalStateController.addScreen('LOADER', [loader]);
+
 
 	// intial start
 	generalStateController.showScreen('WELCOME');
@@ -73,6 +79,10 @@ $(function() {
 		generalStateController.showScreen('SEARCHSIDEBAR');
 			});
 
+
+	this.startLoader = function(){
+		generalStateController.showScreen('LOADER');
+		};
 
 
 

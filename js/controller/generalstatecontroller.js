@@ -8,24 +8,24 @@ var GeneralStateController = function() {
   var hideAll = function(){
     for (var key in views){
       views[key].hide();
-    }
-  }
+    };
+  };
 
 this.addView = function(view){
   views.push(view);
-}
+};
 
 
 this.addScreen = function(name, views){
   screens[name] = views;
-}
+};
 
 this.showScreen = function (name) {
   hideAll();
   for(var key in screens[name]){
     screens[name][key].show();
-  }
-}
+  };
+};
 
 }
 
