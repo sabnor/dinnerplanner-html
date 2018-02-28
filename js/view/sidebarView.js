@@ -71,7 +71,7 @@ function updateCost() {
   	var rowObject = $(rowElement).addClass('row');
 
     var nameElement = document.createElement('div')
-    var nameCol = $(nameElement).addClass('col').text(dishObject.name)
+    var nameCol = $(nameElement).addClass('col').text(dishObject.title)
       .appendTo(rowElement);
 
     var priceElement = document.createElement('div')
@@ -86,6 +86,12 @@ function updateCost() {
       rowObject
         .appendTo(outerDiv);
     totalSum = totalSum+sum
+    
+    var dishRows = container.find("#dishRows");
+    dishRows.html(outerDiv);
+
+    var printSum = container.find("#printSum");
+    printSum.text(totalSum*model.getNumberOfGuests()+ " " +model.getCurrency());
 
   },
   function(error){
@@ -95,11 +101,6 @@ function updateCost() {
   });
 
 
-var dishRows = container.find("#dishRows");
-dishRows.html(outerDiv);
-
-var printSum = container.find("#printSum");
-printSum.text(totalSum*model.getNumberOfGuests()+ " " +model.getCurrency());
 
 
 }

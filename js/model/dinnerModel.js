@@ -82,23 +82,26 @@ return totalPrice;
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
 
-		this.getDish(id.dishTypes, function(data) {
-			var type = data
+		this.getDish(id, function(data) {
+			var type = data.dishTypes
 
 		for (var i = 0; i < fullMenu.length; i++) {
-			if (type == this.getDish(fullMenu[i]).dishTypes){
+
+				this.getDish(fullMenu[i], function(data){
+					if (type == data.dishTypes){
 				fullMenu.splice(i,1);
-			}}
+			};
 		fullMenu.push(id);
 			notifyObservers('addedDish');
 
-		},
-		function(error){
+		},function(error){
 			window.alert("Error in addedDish")
 		});
-
+}},
+function(error){
+	window.alert("Error in addedDish")
+});
 }
-
 
 
 	//Removes dish from menu
