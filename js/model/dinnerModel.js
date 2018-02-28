@@ -1,5 +1,5 @@
 //DinnerModel Object constructor
-var DinnerModel = function() {
+var DinnerModel = function(generalStateController) {
 
 	//Todo Lab 1 implement the data structure that will hold number of guest
 	// and selected dishes for the dinner menu
@@ -134,7 +134,10 @@ this.addDishToMenu = function(id) {
 	this.getAllDishes = function (type, filter, callback, errorCallback) {
 
 		var urlQuery = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?type="+type+"&number=100&query="+filter;
+		console.log('Start Loader')
+		generalStateController.showScreen('LOADER');
 
+		//app.startLoader();
 	$.ajax( {
 	   url: urlQuery,
 		 dataType: "json",
@@ -148,6 +151,9 @@ this.addDishToMenu = function(id) {
 	     errorCallback(error)
 	   }
  })
+ generalStateController.showScreen('SEARCHSIDEBAR');
+ console.log('End Loader')
+
 
 	}
 
