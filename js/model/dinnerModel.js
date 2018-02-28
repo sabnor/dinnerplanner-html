@@ -87,10 +87,11 @@ this.addDishToMenu = function(id) {
 			//callback data
 			console.log("callback");
 			var type = data.dishTypes
-
+			console.log('dishType',data.dishTypes)
 			for (var i = 0; i < fullMenu.length; i++) {
 					this.getDish(fullMenu[i], function(data){
 						//callback data
+						console.log('dishType',data.dishTypes)
 						if (type == data.dishTypes){
 						fullMenu.splice(i,1);
 
