@@ -88,26 +88,26 @@ this.addDishToMenu = function(id) {
 			console.log("callback getDish");
 			var type = data.dishTypes
 			console.log('dishType',data.dishTypes)
-			for (var i = 0; i < fullMenu.length; i++) {
-					this.getDish(fullMenu[i], function(data){
-						//callback data
-						console.log('dishType',data.dishTypes)
-						if (type == data.dishTypes){
-						fullMenu.splice(i,1);
-						};
+			// for (var i = 0; i < fullMenu.length; i++) {
+			// 		this.getDish(fullMenu[i], function(data){
+			// 			//callback data
+			// 			console.log('dishType',data.dishTypes)
+			// 			if (type == data.dishTypes){
+			// 			fullMenu.splice(i,1);
+			// 			};
 
 						fullMenu.push(id);
 						notifyObservers('addedDish');
 
 
-					}, function(error){
-			 	 //error callback getDish fullmenu
-				  window.alert("Error in addedDish")
-				});
+				// 	}, function(error){
+			 	//  //error callback getDish fullmenu
+				//   window.alert("Error in addedDish")
+				// });
 			}
 
 
-		} //end getDish
+		//} //end getDish
 		, function(error){
 			// error callback	getDish
 			window.alert("Error in getDish")
