@@ -43,7 +43,6 @@ this.update('numberOfGuests');
   var outerDiv = document.createElement('div');
 
   model.getFullMenu().forEach(function(dish){
-    console.log(id)
     var dishObject = dish
 
     var rowElement = document.createElement('div')
