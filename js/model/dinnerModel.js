@@ -93,10 +93,11 @@ this.addDishToMenu = function(id) {
 						//callback data
 						if (type == data.dishTypes){
 						fullMenu.splice(i,1);
+						fullMenu.push(id);
+						notifyObservers('addedDish');
 						};
 
-			fullMenu.push(id);
-			notifyObservers('addedDish');
+
 
 
 					}, function(error){
