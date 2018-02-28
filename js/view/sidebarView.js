@@ -62,10 +62,10 @@ function updateCost() {
   var outerDiv = document.createElement('div');
   var totalSum = 0
 
-  model.getFullMenu().forEach(function(id){
+  model.getFullMenu().forEach(function(dish){
 
-    model.getDish(id,function(data){
-    var dishObject = data
+
+    var dishObject = dish
     //----------
     var rowElement = document.createElement('div')
   	var rowObject = $(rowElement).addClass('row');
@@ -93,10 +93,7 @@ function updateCost() {
     var printSum = container.find("#printSum");
     printSum.text(totalSum*model.getNumberOfGuests()+ " " +model.getCurrency());
 
-  },
-  function(error){
-    window.alert("Error in SidebarView")
-  });
+
 
   });
 
