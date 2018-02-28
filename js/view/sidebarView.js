@@ -63,8 +63,10 @@ function updateCost() {
   var totalSum = 0
 
   model.getFullMenu().forEach(function(id){
-    var dishObject = model.getDish(id)
 
+    model.getDish(model.getChosenId(),function(data){
+    var dishObject = data
+    //----------
     var rowElement = document.createElement('div')
   	var rowObject = $(rowElement).addClass('row');
 
@@ -73,17 +75,23 @@ function updateCost() {
       .appendTo(rowElement);
 
     var priceElement = document.createElement('div')
-    var sum = 0
-    var ingredients = dishObject.ingredients.forEach(function(ingredientObject){
-      var price = ingredientObject['price']
-      sum = sum+price
-    });
+    var sum = dishObject.pricePerServing
+    // var ingredients = dishObject.ingredients.forEach(function(ingredientObject){
+    //   var price = ingredientObject['price']
+    //   sum = sum+price
+    // });
     var priceCol = $(priceElement).addClass('col').text(sum*model.getNumberOfGuests() +' '+model.getCurrency())
       .appendTo(rowElement);
 
       rowObject
         .appendTo(outerDiv);
     totalSum = totalSum+sum
+
+  },
+  function(error){
+    window.alert("Error in SidebarView")
+  });
+
   });
 
 

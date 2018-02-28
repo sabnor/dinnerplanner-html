@@ -38,7 +38,6 @@ function updateIngredients() {
 
     model.getDish(model.getChosenId(),function(data){
        var dishObject = data
-       console.log('data',data)
 
        var labelElement = document.createElement('div')
        //var labelObject = $(labelElement).addClass('smallTitle').text(dishObject.name);
@@ -51,12 +50,8 @@ function updateIngredients() {
      			.appendTo(divElement);
 
       var descriptionElement = document.createElement('p');
-      console.log('steps',dishObject['0'].steps)
-      var description = dishObject['0'].steps.forEach(function(step){
-      $(descriptionElement).text(step.ingredients.step)
+      $(descriptionElement).text(dishObject.instructions)
       .appendTo(divElement);
-      })
-
 
 
        var dishLabel = container.find("#dishLabel");
@@ -71,23 +66,25 @@ function updateIngredients() {
    var outerDiv = document.createElement('div')
    $(outerDiv).addClass('text-center');
 
-   dishObject.ingredients.forEach(function(ingredientObject){
-       var price = ingredientObject['price']
+   dishObject.extendedIngredients.forEach(function(ingredientObject){
+       //var price = ingredientObject['price']
 
        var rowElement = document.createElement('div')
        $(rowElement).addClass('row');
 
-       var ingredientQuantityElement = document.createElement('div');
-       $(ingredientQuantityElement).addClass('col').text(ingredientObject['quantity']*model.getNumberOfGuests()+' '+ingredientObject['unit'])
-       .appendTo(rowElement);
-
        var ingredientNameElement = document.createElement('div');
-       $(ingredientNameElement).addClass('col').text(ingredientObject['title'])
+       $(ingredientNameElement).addClass('col').text(ingredientObject['name'])
        .appendTo(rowElement);
 
-       var ingredientPriceElement = document.createElement('div');
-       $(ingredientPriceElement).addClass('col').text(ingredientObject['price']*model.getNumberOfGuests()+' '+model.getCurrency())
+       var ingredientQuantityElement = document.createElement('div');
+       $(ingredientQuantityElement).addClass('col').text((ingredientObject['amount']/dishObject.servings)*model.getNumberOfGuests()+' '+ingredientObject['unit'])
        .appendTo(rowElement);
+
+
+
+       // var ingredientPriceElement = document.createElement('div');
+       // $(ingredientPriceElement).addClass('col').text(ingredientObject['price']*model.getNumberOfGuests()+' '+model.getCurrency())
+       // .appendTo(rowElement);
 
        $(rowElement).appendTo(outerDiv)
    });

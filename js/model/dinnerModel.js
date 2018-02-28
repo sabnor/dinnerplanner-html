@@ -9,7 +9,7 @@ var fullMenu = [];
 //var selectedDish = [1,100];
 var currency = "SEK";
 var observers = [];
-var chosenId = "5";
+var chosenId = "10";
 var chosenType = "3";
 //----------------------------------------------------------------------
 this.setChosenType = function(type) {
@@ -128,7 +128,7 @@ return totalPrice;
 
 
 	this.getDish = function (id, callback, errorCallback) {
-	var urlQuery = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/"+id+"/analyzedInstructions";
+	var urlQuery = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/"+id+"/information";
 
 	$.ajax( {
 		 url: urlQuery,
