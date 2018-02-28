@@ -77,7 +77,7 @@ function updateIngredients() {
        .appendTo(rowElement);
 
        var ingredientQuantityElement = document.createElement('div');
-       $(ingredientQuantityElement).addClass('col').text((ingredientObject['amount']/dishObject.servings)*model.getNumberOfGuests()+' '+ingredientObject['unit'])
+       $(ingredientQuantityElement).addClass('col').text((((ingredientObject['amount']/dishObject.servings)*model.getNumberOfGuests())).toPrecision(3)+' '+ingredientObject['unit'])
        .appendTo(rowElement);
 
 
