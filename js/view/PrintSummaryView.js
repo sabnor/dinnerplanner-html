@@ -42,9 +42,9 @@ this.update('numberOfGuests');
 
   var outerDiv = document.createElement('div');
 
-  model.getFullMenu().forEach(function(id){
+  model.getFullMenu().forEach(function(dish){
     console.log(id)
-    var dishObject = model.getDish(id)
+    var dishObject = dish
 
     var rowElement = document.createElement('div')
   	var rowObject = $(rowElement).addClass('row');
@@ -54,7 +54,7 @@ this.update('numberOfGuests');
     .appendTo(rowElement);
 
     var dishImg = document.createElement('img');
-    $(dishImg).addClass('imgDetailsView').attr('src','images/'+dishObject.image)
+    $(dishImg).addClass('imgDetailsView').attr('src',dishObject.image)
   			.appendTo(colElement);
 
     var colElement2 = document.createElement('div');
@@ -62,11 +62,11 @@ this.update('numberOfGuests');
     .appendTo(rowElement);
 
     var labelElement = document.createElement('div');
-    $(labelElement).addClass("smallTitle").html(dishObject.name)
+    $(labelElement).addClass("smallTitle").html(dishObject.title)
     .appendTo(colElement2);
 
     var descriptionElement = document.createElement('p');
-    $(descriptionElement).text(dishObject.description)
+    $(descriptionElement).text(dishObject.instructions)
     .appendTo(colElement2);
 
     var colElement3 = document.createElement('div');
@@ -78,7 +78,7 @@ this.update('numberOfGuests');
     .appendTo(colElement3);
 
     var descriptionElement = document.createElement('p');
-    $(descriptionElement).text(dishObject.description)
+    $(descriptionElement).text(dishObject.instructions)
     .appendTo(colElement3);
 
 

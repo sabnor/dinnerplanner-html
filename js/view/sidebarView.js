@@ -64,7 +64,6 @@ function updateCost() {
 
   model.getFullMenu().forEach(function(dish){
 
-
     var dishObject = dish
     //----------
     var rowElement = document.createElement('div')
