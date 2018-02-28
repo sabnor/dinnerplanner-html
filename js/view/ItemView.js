@@ -11,7 +11,7 @@ var ItemView = function (container, model, dish) {
 
 
   var dishImg = document.createElement('img');
-  $(dishImg).addClass('tumnagel xs-1').attr('src','https://spoonacular.com/recipeImages/'+dish.image)
+  $(dishImg).addClass('tumnagel xs-1').attr('src',dish.baseUri +dish.image)
 			.appendTo(box);
 
   var label = document.createElement('label');
