@@ -86,7 +86,7 @@ function updateCost() {
       rowObject
         .appendTo(outerDiv);
     totalSum = totalSum+sum
-    
+
     var dishRows = container.find("#dishRows");
     dishRows.html(outerDiv);
 
