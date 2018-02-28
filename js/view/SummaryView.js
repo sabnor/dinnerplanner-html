@@ -10,18 +10,6 @@ var SummaryView= function (container, model) {
 		 model.addObserver(this);
 
 
-		// //Updates table data
-		// this.update = function() {
-		// 	updateNumberOfGuests()
-		// 	summary()
-		// }
-    //
-    //
-    //
-		// // Initialize the update.
-		// this.update();
-    //
-
 
 		  this.update = function(args){
 		    if (args == 'numberOfGuests'){
@@ -49,24 +37,25 @@ function summary () {
 			var totalSum = 0
 
 
-	    model.getFullMenu().forEach(function(id){
-				var dishObject = model.getDish(id)
+	    model.getFullMenu().forEach(function(dish){
+				var dishObject = dish
+				//var dishObject = model.getDish(id)
 				var colDiv = document.createElement('div');
 		    $(colDiv).addClass('col').appendTo(outerDiv);
 
-				console.log(id)
-	      var innerDiv = ItemView(container, model, id)
+				console.log(dish)
+	      var innerDiv = ItemView(container, model, dish)
 	      .appendTo(colDiv);
 
 			    var rowElement = document.createElement('div')
 			  	var rowObject = $(rowElement).addClass('row');
 
 			    var priceElement = document.createElement('div')
-			    var sum = 0
-			    var ingredients = dishObject.ingredients.forEach(function(ingredientObject){
-			      var price = ingredientObject['price']
-			      sum = sum+price
-			    });
+			    var sum = dishObject.pricePerServing
+			    // var ingredients = dishObject.ingredients.forEach(function(ingredientObject){
+			    //   var price = ingredientObject['price']
+			    //   sum = sum+price
+			    // });
 			    var priceCol = $(priceElement).addClass('col').text(sum*model.getNumberOfGuests() +' '+model.getCurrency())
 			      .appendTo(colDiv);
 
