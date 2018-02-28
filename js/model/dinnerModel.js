@@ -81,14 +81,25 @@ return totalPrice;
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
-		var type = this.getDish(id).type;
+
+		this.getDish(id.dishTypes, function(data) {
+			var type = data
+
 		for (var i = 0; i < fullMenu.length; i++) {
-			if (type == this.getDish(fullMenu[i]).type){
+			if (type == this.getDish(fullMenu[i]).dishTypes){
 				fullMenu.splice(i,1);
 			}}
 		fullMenu.push(id);
 			notifyObservers('addedDish');
+
+		},
+		function(error){
+			window.alert("Error in addedDish")
+		});
+
 }
+
+
 
 	//Removes dish from menu
 	this.removeDishFromMenu = function(id) {
@@ -121,8 +132,6 @@ return totalPrice;
 	     errorCallback(error)
 	   }
  })
-
-
 
 	}
 

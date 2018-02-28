@@ -87,7 +87,7 @@ function updateIngredients() {
        // .appendTo(rowElement);
 
        $(rowElement).appendTo(outerDiv)
-   });
+    });
 
    var ingredientrows = container.find("#ingredientrows");
    ingredientrows.html(outerDiv);
