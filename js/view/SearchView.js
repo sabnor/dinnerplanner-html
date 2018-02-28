@@ -18,6 +18,7 @@ var SearchView = function (container, model) {
 		Search(chooseDish.value,filter.value)
 	};
 
+
 this.searchFilter = function(type,filter){
 
 	Search(type,filter)
@@ -55,7 +56,7 @@ function Search(type,filter) {
 		}
 
 	this.hide = function() {
-		container.fadeOut();
+		container.hide();
 	}
 
 	this.show = function(){
