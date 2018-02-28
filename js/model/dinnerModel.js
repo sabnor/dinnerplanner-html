@@ -150,6 +150,8 @@ this.addDishToMenu = function(id) {
 	   },
 	   error: function(error) {
 	     errorCallback(error)
+			 console.log(error)
+				alert(error.statusText + '. You seem to have lost your internet connection')
 	   }
  })
  generalStateController.showScreen('SEARCHSIDEBAR');
@@ -173,6 +175,8 @@ this.addDishToMenu = function(id) {
 		 },
 		 error: function(error) {
 			 errorCallback(error)
+			 console.log(error)
+				alert(error.statusText + '. You seem to have lost your internet connection')
 		 }
 
 	})
