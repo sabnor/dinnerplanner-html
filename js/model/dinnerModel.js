@@ -86,8 +86,9 @@ this.addDishToMenu = function(id) {
 		this.getDish(id, function(data) {
 			//callback data
 			console.log("callback getDish");
-			var type = data.dishTypes
+			//var type = data.dishTypes
 			console.log('dishType',data.dishTypes)
+
 			// for (var i = 0; i < fullMenu.length; i++) {
 			// 		this.getDish(fullMenu[i], function(data){
 			// 			//callback data
@@ -96,7 +97,7 @@ this.addDishToMenu = function(id) {
 			// 			fullMenu.splice(i,1);
 			// 			};
 
-						fullMenu.push(id);
+						fullMenu.push(data);
 						notifyObservers('addedDish');
 
 
