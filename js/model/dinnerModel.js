@@ -81,11 +81,11 @@ return totalPrice;
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
 this.addDishToMenu = function(id) {
-	console.log("add");
+	console.log("start addDishToMenu");
 
 		this.getDish(id, function(data) {
 			//callback data
-			console.log("callback");
+			console.log("callback getDish");
 			var type = data.dishTypes
 
 			for (var i = 0; i < fullMenu.length; i++) {
@@ -93,7 +93,6 @@ this.addDishToMenu = function(id) {
 						//callback data
 						if (type == data.dishTypes){
 						fullMenu.splice(i,1);
-
 						};
 
 						fullMenu.push(id);

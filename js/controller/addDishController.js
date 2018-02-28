@@ -4,7 +4,7 @@ var AddDishController = function(view, model, generalStateController){
     //generalStateController(view)
     console.log("addDishview");
   model.addDishToMenu(model.getChosenId())
-
+  console.log("addDishtoSidebar");
   });
 
 };
