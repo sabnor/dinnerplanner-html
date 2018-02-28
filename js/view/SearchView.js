@@ -41,7 +41,7 @@ function Search(type,filter) {
 		    });
 
 			}, function(error){
-				window.alert("('error!!!!')")
+				window.alert("Error in SearchView")
 
 			})
 

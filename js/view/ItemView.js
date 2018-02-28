@@ -6,7 +6,7 @@ var ItemView = function (container, model, dish) {
 
 
 	var box = document.createElement('div');
-	$(box).addClass('pictureview centerr').attr('id',dish)
+	$(box).addClass('pictureview centerr').attr('id',dish.id)
 		.appendTo(divObject);
 
 
