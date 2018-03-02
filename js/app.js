@@ -1,6 +1,6 @@
 $(function() {
 
-		var generalStateController = new GeneralStateController();
+	var generalStateController = new GeneralStateController();
 	//We instantiate our model
 	var model = new DinnerModel(generalStateController);
 
@@ -11,20 +11,7 @@ $(function() {
 	var welcomeView= new WelcomeView($("#welcomeView"),model);
 	generalStateController.addView(welcomeView);
 
-	//SidebarView
-	var sidebarView = new SidebarView($("#sidebarView"),model);
-	generalStateController.addView(sidebarView);
-	var sidebarzViewController = new SidebarzViewController(sidebarView, model, generalStateController);
 
-	//SearchView
-	var searchView = new SearchView($("#searchView"),model, generalStateController);
-	generalStateController.addView(searchView);
-	var searchViewController = new SearchViewController(searchView, model, generalStateController);
-
-	//DetailsView
-	var detailsView = new DetailsView($("#detailsView"),model);
-	generalStateController.addView(detailsView);
-	var addDishController = new AddDishController(detailsView, model, generalStateController);
 
 	//SummaryView
 	var summaryView = new SummaryView($("#summaryView"),model);
@@ -40,12 +27,25 @@ $(function() {
 	var noInternetView = new NoInternetView($('#noInternetView'),model);
 	generalStateController.addView(noInternetView);
 
+	// SidebarView
+	var sidebarView = new SidebarView($("#sidebarView"),model);
+	generalStateController.addView(sidebarView);
+	var sidebarzViewController = new SidebarzViewController(sidebarView, model, generalStateController);
+	console.log('SidebarView skapad');
+
+	//SearchView
+	var searchView = new SearchView($("#searchView"),model, generalStateController);
+	generalStateController.addView(searchView);
+	var searchViewController = new SearchViewController(searchView, model, generalStateController);
+	console.log('searchView skapad');
+
+	generalStateController.addScreen('SEARCHSIDEBAR', [sidebarView, searchView]);
+	generalStateController.showScreen('SEARCHSIDEBAR');
+
 
 
 	//GeneralStateControllers screen
 	generalStateController.addScreen('WELCOME', [welcomeView]);
-	generalStateController.addScreen('SEARCHSIDEBAR', [sidebarView, searchView]);
-	generalStateController.addScreen('DETAILSSIDEBAR', [sidebarView, detailsView]);
 	generalStateController.addScreen('SUMMARY', [summaryView]);
 	generalStateController.addScreen('PRINTSUMMARY', [printSummaryView]);
 	generalStateController.addScreen('LOADER', [sidebarView,loader]);
@@ -58,13 +58,32 @@ $(function() {
 
 		//forwardButton to searchsidebar
 		welcomeView.welcomeButton.click(function(){
-		generalStateController.showScreen('SEARCHSIDEBAR');
+					console.log('Welcome Button');
+
+
+
+
 		});
 
-	//backButton to searchsidebar
-		detailsView.backButton.click(function(){
-		generalStateController.showScreen('SEARCHSIDEBAR');
+		if(sidebarView !== 'undefined'){
+			console.log(' defined')
+		};
+
+		if(sidebarView !== "undefined"){
+     //DetailsView
+	     this.detailsView = new DetailsView($("#detailsView"),model);
+	     generalStateController.addView(detailsView);
+	     var addDishController = new AddDishController(detailsView, model, generalStateController);
+	     generalStateController.addScreen('DETAILSSIDEBAR', [sidebarView, detailsView]);
+
+	     generalStateController.showScreen('DETAILSSIDEBAR');
+
+		//backButton to searchsidebar
+
+			this.detailsView.backButton.click(function(){
+			generalStateController.showScreen('SEARCHSIDEBAR');
 		});
+		};
 
 		//editButton to searchsidebar
 		summaryView.editButton.click(function(){

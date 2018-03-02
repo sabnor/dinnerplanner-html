@@ -16,7 +16,6 @@ var SearchViewController = function(view, model, generalStateController){
          //window.alert("Error in detailsView")
        });
 
-    generalStateController.showScreen('DETAILSSIDEBAR');
       });
 
 
