@@ -1,5 +1,5 @@
 
-var SearchView = function (container, model) {
+var SearchView = function (container, model,generalStateController) {
 
 	this.openImg = container.find("#openImg");
 	this.searchButton = container.find("#searchButton")
@@ -42,7 +42,7 @@ function Search(type,filter) {
 		    });
 
 			}, function(error){
-				window.alert("Error in SearchView")
+				//generalStateController.showScreen('NOINTERNET');
 
 			})
 

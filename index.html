@@ -12,14 +12,29 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
   <body>
-  <div id="loader"></div>
+
 
 
 <!--HEADER-->
 <div class="header fluid">
   <img class="headerburger" src='images/hamburgericon.png'>Dinner planner<img class="headerburger" src='images/hamburgericon.png'>
 </div>
+<div id="loader"></div>
 
+<div id="noInternetView" class="">
+    <span id="image"></span>
+    <div class='text-center errorTextBox'>
+      <h1>Whoops!
+        <br/>Something seems to have gone wrong.
+      </h1>
+      <p>Please check your internet connection and refresh your page.</p>
+    </div>
+
+
+
+
+
+</div>
 
 
 <!--WELCOMEVIEW-->
@@ -81,6 +96,7 @@
         <select class="form-control" id="chooseDish" onchange="handleChange">
         <option selected value="">ALL</option>
         <option value="starter">Starter</option>
+        <option value="side dish">Side dish</option>
         <option value="main dish">Main course</option>
         <!-- <option>Side dish</option> -->
         <option value="dessert">Dessert</option>
@@ -204,9 +220,7 @@
   <script src="js/app.js"></script>
 
 	<script src="js/model/dinnerModel.js"></script>
-  <script src="js/model/ApiModel.js"></script>
 
-  <script src="js/view/testView.js"></script>
 	<script src="js/view/WelcomeView.js"></script>
   <script src="js/view/SidebarView.js"></script>
   <script src="js/view/SearchView.js"></script>
@@ -214,6 +228,8 @@
   <script src="js/view/PrintSummaryView.js"></script>
   <script src="js/view/ItemView.js"></script>
   <script src="js/view/Loader.js"></script>
+  <script src="js/view/NoInternetView.js"></script>
+
 
   <script src="js/view/DetailsView.js"></script>
 

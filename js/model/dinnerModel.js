@@ -149,6 +149,7 @@ this.addDishToMenu = function(id) {
 	     callback(data)
 	   },
 	   error: function(error) {
+			 generalStateController.showScreen('NOINTERNET');
 	     errorCallback(error)
 	   }
  })
@@ -172,6 +173,7 @@ this.addDishToMenu = function(id) {
 			 callback(data)
 		 },
 		 error: function(error) {
+			 generalStateController.showScreen('NOINTERNET');
 			 errorCallback(error)
 		 }
 

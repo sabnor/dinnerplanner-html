@@ -94,7 +94,7 @@ function updateIngredients() {
 
     },
     function(error){
-      window.alert("Error in detailsView")
+      //window.alert("Error in detailsView")
     });
     //--------------------------------------------------------------------
     //Creating the dish-informations
