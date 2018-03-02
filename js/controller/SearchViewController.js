@@ -9,7 +9,13 @@ var SearchViewController = function(view, model, generalStateController){
 
   view.openImg.on("click", ".pictureview", function(event){
    // will always be the element with .pictureview that was clicked
-    model.setChosenId(this.id)
+     model.getDish(this.id,function(data){
+       console.log('data',data)
+     model.setChosenDish(data) },
+       function(error){
+         //window.alert("Error in detailsView")
+       });
+
     generalStateController.showScreen('DETAILSSIDEBAR');
       });
 

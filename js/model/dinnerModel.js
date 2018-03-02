@@ -9,7 +9,7 @@ var fullMenu = [];
 //var selectedDish = [1,100];
 var currency = "SEK";
 var observers = [];
-var chosenId = "10";
+var chosenDish = "10";
 var chosenType = "3";
 //----------------------------------------------------------------------
 this.setChosenType = function(type) {
@@ -20,12 +20,12 @@ this.setChosenType = function(type) {
 		return chosenType;
 }
 //----------------------------------------------------------------------
-this.setChosenId = function(id) {
-	chosenId = id;
-	notifyObservers('chosenId');
+this.setChosenDish = function(dish) {
+	chosenDish = dish;
+	notifyObservers('chosenDish');
 }
-	this.getChosenId = function() {
-		return chosenId;
+	this.getChosenDish = function() {
+		return chosenDish;
 }
 //----------------------------------------------------------------------
 	this.setNumberOfGuests = function(num) {

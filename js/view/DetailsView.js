@@ -17,7 +17,7 @@ var DetailsView = function (container, model) {
           updateIngredients();
         }
 
-        if (args == 'chosenId'){
+        if (args == 'chosenDish'){
           updateIngredients();
         }
         // updateNumberOfGuests();
@@ -36,8 +36,9 @@ var DetailsView = function (container, model) {
 
 function updateIngredients() {
 
-    model.getDish(model.getChosenId(),function(data){
-       var dishObject = data
+
+       var dishObject = model.getChosenDish()
+       console.log('Dish',dishObject)
 
        var labelElement = document.createElement('div')
        //var labelObject = $(labelElement).addClass('smallTitle').text(dishObject.name);
@@ -92,13 +93,7 @@ function updateIngredients() {
    var ingredientrows = container.find("#ingredientrows");
    ingredientrows.html(outerDiv);
 
-    },
-    function(error){
-      window.alert(error.statusText + '. You seem to have lost your internet connection')
 
-
-      //window.alert("Error in detailsView")
-    });
     //--------------------------------------------------------------------
     //Creating the dish-informations
 
