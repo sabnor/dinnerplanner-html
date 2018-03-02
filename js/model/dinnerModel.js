@@ -111,7 +111,7 @@ this.addDishToMenu = function(id) {
 		//} //end getDish
 		, function(error){
 			// error callback	getDish
-			window.alert("Error in getDish")
+			window.alert(error.statusText + '. You seem to have lost your internet connection')
 		});
 
 
@@ -151,7 +151,7 @@ this.addDishToMenu = function(id) {
 	   error: function(error) {
 	     errorCallback(error)
 			 console.log(error)
-				alert(error.statusText + '. You seem to have lost your internet connection')
+				window.alert(error.statusText + '. You seem to have lost your internet connection')
 	   }
  })
  generalStateController.showScreen('SEARCHSIDEBAR');

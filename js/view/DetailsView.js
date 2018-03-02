@@ -94,7 +94,8 @@ function updateIngredients() {
 
     },
     function(error){
-      window.alert("Error in detailsView")
+      window.alert(error.statusText + '. You seem to have lost your internet connection')
+
     });
     //--------------------------------------------------------------------
     //Creating the dish-informations

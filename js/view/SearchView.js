@@ -42,7 +42,7 @@ function Search(type,filter) {
 		    });
 
 			}, function(error){
-				window.alert("Error in SearchView")
+				window.alert(error.statusText + '. You seem to have lost your internet connection')
 
 			})
 
