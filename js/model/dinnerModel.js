@@ -149,6 +149,7 @@ this.addDishToMenu = function(id) {
 	     callback(data)
 	   },
 	   error: function(error) {
+			 generalStateController.showScreen('NOINTERNET');
 	     errorCallback(error)
 			 console.log(error)
 				window.alert(error.statusText + '. You seem to have lost your internet connection')
@@ -174,6 +175,7 @@ this.addDishToMenu = function(id) {
 			 callback(data)
 		 },
 		 error: function(error) {
+			 generalStateController.showScreen('NOINTERNET');
 			 errorCallback(error)
 			 console.log(error)
 				alert(error.statusText + '. You seem to have lost your internet connection')

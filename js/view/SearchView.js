@@ -1,5 +1,5 @@
 
-var SearchView = function (container, model) {
+var SearchView = function (container, model,generalStateController) {
 
 	this.openImg = container.find("#openImg");
 	this.searchButton = container.find("#searchButton")
@@ -42,7 +42,11 @@ function Search(type,filter) {
 		    });
 
 			}, function(error){
+<<<<<<< HEAD
 				window.alert(error.statusText + '. You seem to have lost your internet connection')
+=======
+				//generalStateController.showScreen('NOINTERNET');
+>>>>>>> a8f0bd217905e47854f24d276c778d95cbf8cf1c
 
 			})
 

@@ -4,10 +4,6 @@ $(function() {
 	//We instantiate our model
 	var model = new DinnerModel(generalStateController);
 
-
-	var apiModel = new ApiModel();
-	var testView= new TestView($("#testView"),apiModel);
-
 	//GeneralStateControllers
 
 
@@ -21,7 +17,7 @@ $(function() {
 	var sidebarzViewController = new SidebarzViewController(sidebarView, model, generalStateController);
 
 	//SearchView
-	var searchView = new SearchView($("#searchView"),model);
+	var searchView = new SearchView($("#searchView"),model, generalStateController);
 	generalStateController.addView(searchView);
 	var searchViewController = new SearchViewController(searchView, model, generalStateController);
 
@@ -41,6 +37,10 @@ $(function() {
 	var loader = new Loader($("#loader"),model);
 	generalStateController.addView(loader);
 
+	var noInternetView = new NoInternetView($('#noInternetView'),model);
+	generalStateController.addView(noInternetView);
+
+
 
 	//GeneralStateControllers screen
 	generalStateController.addScreen('WELCOME', [welcomeView]);
@@ -48,7 +48,9 @@ $(function() {
 	generalStateController.addScreen('DETAILSSIDEBAR', [sidebarView, detailsView]);
 	generalStateController.addScreen('SUMMARY', [summaryView]);
 	generalStateController.addScreen('PRINTSUMMARY', [printSummaryView]);
-	generalStateController.addScreen('LOADER', [loader]);
+	generalStateController.addScreen('LOADER', [sidebarView,loader]);
+	generalStateController.addScreen('NOINTERNET', [noInternetView]);
+
 
 
 	// intial start
