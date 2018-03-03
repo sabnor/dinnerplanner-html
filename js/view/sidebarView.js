@@ -104,11 +104,11 @@ function updateCost() {
 
 
 this.hide = function() {
-  container.fadeOut();
+  container.hide();
 }
 
 this.show = function(){
-  container.fadeIn();
+  container.show();
 }
 
 
