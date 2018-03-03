@@ -3,7 +3,7 @@ var AddDishController = function(view, model, generalStateController){
     //console.log(model.getChosenId())
     //generalStateController(view)
     console.log("addDishview");
-  model.addDishToMenu(model.getChosenId())
+  model.addDishToMenu(model.getChosenDish())
   console.log("addDishtoSidebar");
   });
 

@@ -9,7 +9,7 @@ var fullMenu = [];
 //var selectedDish = [1,100];
 var currency = "SEK";
 var observers = [];
-var chosenDish = {};
+var chosenDish = {title:'dish',image:'#',instructions:'How to',extendedIngredients:[{id: 93607, name:'name',amount:'amount',unit:'unit'}]};
 var chosenType = "3";
 //----------------------------------------------------------------------
 this.setChosenType = function(type) {
@@ -80,39 +80,12 @@ return totalPrice;
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
-this.addDishToMenu = function(id) {
+this.addDishToMenu = function(dish) {
 	console.log("start addDishToMenu");
-
-		this.getDish(id, function(data) {
-			//callback data
-			console.log("callback getDish");
-			//var type = data.dishTypes
-			console.log('dishType',data.dishTypes)
-
-			// for (var i = 0; i < fullMenu.length; i++) {
-			// 		this.getDish(fullMenu[i], function(data){
-			// 			//callback data
-			// 			console.log('dishType',data.dishTypes)
-			// 			if (type == data.dishTypes){
-			// 			fullMenu.splice(i,1);
-			// 			};
-
-						fullMenu.push(data);
-						notifyObservers('addedDish');
+	fullMenu.push(dish);
+	notifyObservers('addedDish');
 
 
-				// 	}, function(error){
-			 	//  //error callback getDish fullmenu
-				//   window.alert("Error in addedDish")
-				// });
-			}
-
-
-		//} //end getDish
-		, function(error){
-			// error callback	getDish
-			window.alert(error.statusText + '. You seem to have lost your internet connection')
-		});
 
 
 } //end addDishToMenu
