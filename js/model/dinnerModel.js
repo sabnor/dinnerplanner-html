@@ -11,6 +11,8 @@ var currency = "SEK";
 var observers = [];
 var chosenDish = {title:'dish',image:'#',instructions:'How to',extendedIngredients:[{id: 93607, name:'name',amount:'amount',unit:'unit'}]};
 var chosenType = "3";
+var cacheStorage = caches;
+
 //----------------------------------------------------------------------
 this.setChosenType = function(type) {
 	chosenType = type;
@@ -108,25 +110,23 @@ this.addDishToMenu = function(dish) {
 
 		var urlQuery = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?type="+type+"&number=100&query="+filter;
 
-	$.ajax( {
-	   url: urlQuery,
-		 dataType: "json",
-	   headers: {
-	     'X-Mashape-Key': 'Qu9grxVNWpmshA4Kl9pTwyiJxVGUp1lKzrZjsnghQMkFkfA4LB'
-	   },
-	   success: function(data) {
-	     callback(data)
-	   },
-	   error: function(error) {
+		$.ajax( {
+				   url: urlQuery,
+					 dataType: "json",
+				   headers: {
+				     'X-Mashape-Key': 'Qu9grxVNWpmshA4Kl9pTwyiJxVGUp1lKzrZjsnghQMkFkfA4LB'
+				   		},
+				   success: function(data) {
 
-	     errorCallback(error)
-			 console.log(error)
-				//window.alert(error.statusText + '. You seem to have lost your internet connection')
-	   }
- })
+				     callback(data)
+				   		},
+				   error: function(error) {
 
-
-
+				     errorCallback(error)
+						 console.log(error)
+							//window.alert(error.statusText + '. You seem to have lost your internet connection')
+				   		}
+ 			})
 	}
 
 
