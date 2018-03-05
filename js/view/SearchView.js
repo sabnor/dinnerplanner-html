@@ -34,7 +34,7 @@ function Search(type,filter) {
 	    var outerDiv = document.createElement('div');
 	    $(outerDiv).addClass('row');
 
-
+			generalStateController.showScreen('LOADER');
 			model.getAllDishes(type, filter, function(data){
 				data.results.forEach(function(key){
 		      var innerDiv = ItemView(container,model,key)
@@ -42,12 +42,13 @@ function Search(type,filter) {
 		    });
 
 			}, function(error){
-
-				window.alert(error.statusText + '. You seem to have lost your internet connection')
+				generalStateController.showScreen('NOINTERNET');
+				//window.alert(error.statusText + '. You seem to have lost your internet connection')
 
 				//generalStateController.showScreen('NOINTERNET');
 
 			})
+			generalStateController.showScreen('SEARCHSIDEBAR');
 
 
 

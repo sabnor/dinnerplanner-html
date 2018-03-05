@@ -43,7 +43,6 @@ function summary () {
 				var colDiv = document.createElement('div');
 		    $(colDiv).addClass('col').appendTo(outerDiv);
 
-				console.log(dish)
 	      var innerDiv = ItemView(container, model, dish)
 	      .appendTo(colDiv);
 

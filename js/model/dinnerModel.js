@@ -81,7 +81,6 @@ return totalPrice;
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
 this.addDishToMenu = function(dish) {
-	console.log("start addDishToMenu");
 	fullMenu.push(dish);
 	notifyObservers('addedDish');
 
@@ -108,10 +107,7 @@ this.addDishToMenu = function(dish) {
 	this.getAllDishes = function (type, filter, callback, errorCallback) {
 
 		var urlQuery = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?type="+type+"&number=100&query="+filter;
-		console.log('Start Loader')
-		generalStateController.showScreen('LOADER');
 
-		//app.startLoader();
 	$.ajax( {
 	   url: urlQuery,
 		 dataType: "json",
@@ -122,14 +118,13 @@ this.addDishToMenu = function(dish) {
 	     callback(data)
 	   },
 	   error: function(error) {
-			 generalStateController.showScreen('NOINTERNET');
+
 	     errorCallback(error)
 			 console.log(error)
 				//window.alert(error.statusText + '. You seem to have lost your internet connection')
 	   }
  })
- generalStateController.showScreen('SEARCHSIDEBAR');
- console.log('End Loader')
+
 
 
 	}
@@ -137,7 +132,7 @@ this.addDishToMenu = function(dish) {
 
 	this.getDish = function (id, callback, errorCallback) {
 	var urlQuery = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/"+id+"/information";
-	generalStateController.showScreen('LOADER');
+
 
 	$.ajax( {
 		 url: urlQuery,
@@ -148,14 +143,14 @@ this.addDishToMenu = function(dish) {
 			 callback(data)
 		 },
 		 error: function(error) {
-			 generalStateController.showScreen('NOINTERNET');
+
 			 errorCallback(error)
 			 console.log(error)
 				//alert(error.statusText + '. You seem to have lost your internet connection')
 		 }
 
 	})
-	generalStateController.showScreen('DETAILSSIDEBAR');
+
 
 }
 
