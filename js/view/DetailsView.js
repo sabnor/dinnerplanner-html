@@ -38,7 +38,6 @@ function updateIngredients() {
 
 
        var dishObject = model.getChosenDish()
-       console.log('Dish',dishObject)
 
        var labelElement = document.createElement('div')
        //var labelObject = $(labelElement).addClass('smallTitle').text(dishObject.name);

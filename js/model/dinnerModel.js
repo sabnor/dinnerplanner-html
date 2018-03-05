@@ -125,7 +125,7 @@ this.addDishToMenu = function(dish) {
 			 generalStateController.showScreen('NOINTERNET');
 	     errorCallback(error)
 			 console.log(error)
-				window.alert(error.statusText + '. You seem to have lost your internet connection')
+				//window.alert(error.statusText + '. You seem to have lost your internet connection')
 	   }
  })
  generalStateController.showScreen('SEARCHSIDEBAR');
@@ -151,7 +151,7 @@ this.addDishToMenu = function(dish) {
 			 generalStateController.showScreen('NOINTERNET');
 			 errorCallback(error)
 			 console.log(error)
-				alert(error.statusText + '. You seem to have lost your internet connection')
+				//alert(error.statusText + '. You seem to have lost your internet connection')
 		 }
 
 	})
