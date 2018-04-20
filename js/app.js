@@ -1,6 +1,6 @@
 $(function() {
 
-		var generalStateController = new GeneralStateController();
+	var generalStateController = new GeneralStateController();
 	//We instantiate our model
 	var model = new DinnerModel(generalStateController);
 
